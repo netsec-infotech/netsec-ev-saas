@@ -658,10 +658,10 @@ const CSS = `
   background: #F5F3FF;
 }
 
-/* Row 2 (4 Columns layout) */
+/* Row 2 (3 Columns layout) */
 .vd-grid-2 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -1278,32 +1278,6 @@ export default function VehicleDetailPage() {
                 </div>
               </div>
 
-              {/* Last Known Location */}
-              <div className="vd-card">
-                <div className="vd-card-hdr">
-                  <div className="vd-card-hdr-left"><ILocate/> Last Known Location</div>
-                </div>
-                <div className="vd-card-body">
-                  <div className="vd-info-row">
-                    <span className="vd-info-lbl" style={{ marginTop: 2 }}><ILocate/></span>
-                    <span className="vd-info-val">
-                      Palika Bazaar, Connaught Place
-                      <div style={{ fontSize: 10.5, color: '#94A3B8', fontWeight: 500, marginTop: 1 }}>New Delhi, Delhi - 110001</div>
-                    </span>
-                  </div>
-                  <div className="vd-info-row">
-                    <span className="vd-info-lbl"><IClock/></span>
-                    <span className="vd-info-val">20 May 2024, 10:15 AM</span>
-                  </div>
-                  <div className="vd-info-row">
-                    <span className="vd-info-lbl">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
-                    </span>
-                    <span className="vd-info-val">28.6315, 77.2167</span>
-                  </div>
-                  <button className="vd-card-btn primary-outline" style={{ marginTop: 'auto' }}><ILocate/> Locate Vehicle</button>
-                </div>
-              </div>
 
               {/* Today's Summary */}
               <div className="vd-card">

@@ -825,6 +825,14 @@ function ZoneManagementContent() {
   }, [dbZones]);
 
   const [activeTab, setActiveTab] = useState(initialTab);
+
+  useEffect(() => {
+    const tabParam = searchParams.get('tab');
+    if (tabParam) {
+      setActiveTab(tabParam);
+    }
+  }, [searchParams]);
+
   const [selectedZoneId, setSelectedZoneId] = useState('1');
   const [subtab, setSubtab] = useState('Geo Fence');
 
@@ -1207,7 +1215,10 @@ function ZoneManagementContent() {
                   <button
                     key={tab}
                     className={`zm-tab ${activeTab === tab ? 'active' : ''}`}
-                    onClick={() => setActiveTab(tab)}
+                    onClick={() => {
+                      setActiveTab(tab);
+                      router.push(`/zones?tab=${encodeURIComponent(tab)}`, { scroll: false });
+                    }}
                   >
                     {tab}
                   </button>
@@ -2378,7 +2389,10 @@ function ZoneManagementContent() {
                     </table>
                     <span 
                       style={{ fontSize: '12.5px', fontWeight: '700', color: '#8B5CF6', textAlign: 'center', cursor: 'pointer', borderTop: '1px solid #F1F5F9', paddingTop: '10px', display: 'block' }}
-                      onClick={() => setActiveTab('Zone List')}
+                      onClick={() => {
+                        setActiveTab('Zone List');
+                        router.push(`/zones?tab=Zone List`, { scroll: false });
+                      }}
                     >
                       View All Zones &rarr;
                     </span>

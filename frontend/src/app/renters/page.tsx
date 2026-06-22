@@ -6,7 +6,7 @@ import TopBar from '@/components/TopBar';
 import { api } from '@/lib/api';
 
 const CSS = `
-.re-shell { display: flex; min-height: 100vh; background: #F3F4F9; font-family: 'Inter', sans-serif; }
+.re-shell { display: flex; min-height: 100vh; background: #ffffff; font-family: 'Inter', sans-serif; }
 .re-main { margin-left: 230px; display: flex; flex-direction: column; min-height: 100vh; width: calc(100% - 230px); }
 .re-page { flex: 1; padding: 20px 22px 70px; display: flex; flex-direction: column; gap: 20px; }
 
@@ -24,17 +24,47 @@ const CSS = `
 
 /* Stat Cards Grid (5 Cards) */
 .re-stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
-.re-sc { background: #fff; border: 1px solid #E5E7EB; border-radius: 12px; padding: 15px 16px 13px; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
-.re-sc-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 2px; }
+.re-sc { background: #fff; border: 1px solid #E5E7EB; border-radius: 12px; padding: 16px; box-shadow: 0 1px 3px rgba(0,0,0,.04); display: flex; flex-direction: column; gap: 10px; transition: all 0.2s; }
+.re-sc:hover { transform: translateY(-1px); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.re-sc-top { display: flex; align-items: center; justify-content: space-between; width: 100%; }
 .re-sc-ic { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.re-sc-tit { font-size: 11.5px; font-weight: 500; color: #6B7280; }
-.re-sc-per { font-size: 10.5px; color: #9CA3AF; margin-top: 1px; }
-.re-sc-val { font-size: 24px; font-weight: 800; color: #111827; line-height: 1; margin: 6px 0; }
+.re-sc-tit { font-size: 11px; font-weight: 600; color: #6B7280; }
+.re-sc-val { font-size: 22px; font-weight: 800; color: #111827; line-height: 1; margin: 2px 0; }
+.re-sc-bot { display: flex; align-items: center; justify-content: space-between; width: 100%; border-top: 1px solid #F3F4F6; padding-top: 8px; margin-top: 2px; }
+.re-sc-chg { font-size: 11px; font-weight: 700; display: inline-flex; align-items: center; }
+.re-sc-chg.up { color: #10B981; }
+.re-sc-chg.dn { color: #EF4444; }
+.re-sc-sub { font-size: 10px; color: #94A3B8; margin-left: 2px; }
 
-.ic-purple { background: #8B5CF6; color: #fff; }
-.ic-green { background: #10B981; color: #fff; }
-.ic-orange { background: #F97316; color: #fff; }
-.ic-blue { background: #3B82F6; color: #fff; }
+.ic-purple { background: #EBE5FC; color: #8B5CF6; }
+.ic-green { background: #D1FAE5; color: #10B981; }
+.ic-orange { background: #FFE8D6; color: #F97316; }
+.ic-blue { background: #DBEAFE; color: #3B82F6; }
+
+/* Custom Selector */
+.re-select {
+  padding: 8px 14px;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #374151;
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: all .15s;
+  font-family: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239CA3AF' stroke-width='2.5' stroke-linecap='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+}
+.re-select:focus {
+  border-color: #2a195c;
+  box-shadow: 0 0 0 3px rgba(42, 25, 92, 0.08);
+}
 
 /* Directory Container Card */
 .re-card { background: #fff; border: 1px solid #E2E8F0; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.02); overflow: hidden; display: flex; flex-direction: column; }
@@ -631,73 +661,34 @@ export default function RentersPage() {
                 <p className="re-sub">Manage rider subscriptions, rentals, and payments</p>
               </div>
             </div>
-
             {/* Stat Counters Grid (5 Cards matching screenshot) */}
             <div className="re-stats">
-              <div className="re-sc">
-                <div className="re-sc-top">
-                  <div>
-                    <div className="re-sc-tit">Total Rides</div>
-                    <div className="re-sc-per">All rides</div>
+              {[
+                { lbl: 'Total Rides', val: '1,248', sub: 'All rides', ic: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="5" r="3"/><circle cx="19" cy="5" r="3"/><line x1="5" y1="5" x2="12" y2="12"/><line x1="19" y1="5" x2="12" y2="12"/></svg>, cls: 'ic-purple', chg: '14.2', up: true, pts: "0,28 14,22 28,18 40,20 52,12 64,15 76,8 82,10", clr: "#8B5CF6" },
+                { lbl: 'Active Rides', val: '582', sub: 'In progress', ic: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>, cls: 'ic-green', chg: '8.7', up: true, pts: "0,30 14,24 28,18 40,14 52,18 64,10 76,13 82,6", clr: "#10B981" },
+                { lbl: 'Retain Rides', val: '243', sub: 'Retained', ic: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>, cls: 'ic-orange', chg: '2.4', up: false, pts: "0,8 14,13 28,10 40,18 52,14 64,22 76,17 82,20", clr: "#F97316" },
+                { lbl: 'Returned', val: '389', sub: 'Completed', ic: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>, cls: 'ic-blue', chg: '11.3', up: true, pts: "0,22 14,20 28,24 40,16 52,20 64,13 76,17 82,11", clr: "#3B82F6" },
+                { lbl: 'Extended', val: '34', sub: 'Extended', ic: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/></svg>, cls: 'ic-purple', chg: '0.8', up: false, pts: "0,8 14,13 28,10 40,18 52,14 64,22 76,17 82,20", clr: "#8B5CF6" }
+              ].map(s => (
+                <div className="re-sc" key={s.lbl}>
+                  <div className="re-sc-top">
+                    <div className={`re-sc-ic ${s.cls}`}>{s.ic}</div>
+                    <svg width="45" height="15" viewBox="0 0 80 30" fill="none">
+                      <polyline className="animate-draw" points={s.pts} stroke={s.clr} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
                   </div>
-                  <div className="re-sc-ic ic-purple">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="5" r="3"/><circle cx="19" cy="5" r="3"/><line x1="5" y1="5" x2="12" y2="12"/><line x1="19" y1="5" x2="12" y2="12"/></svg>
+                  <div>
+                    <div className="re-sc-tit">{s.lbl}</div>
+                    <div className="re-sc-val">{s.val}</div>
+                  </div>
+                  <div className="re-sc-bot">
+                    <span className={`re-sc-chg ${s.up ? 'up' : 'dn'}`} style={{ fontSize: '11px', fontWeight: 'bold' }}>
+                      {s.up ? '↑' : '↓'} {s.chg}%
+                    </span>
+                    <span className="re-sc-sub">from last month</span>
                   </div>
                 </div>
-                <div className="re-sc-val">1,248</div>
-              </div>
-
-              <div className="re-sc">
-                <div className="re-sc-top">
-                  <div>
-                    <div className="re-sc-tit">Active Rides</div>
-                    <div className="re-sc-per">In progress</div>
-                  </div>
-                  <div className="re-sc-ic ic-green">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-                  </div>
-                </div>
-                <div className="re-sc-val">582</div>
-              </div>
-
-              <div className="re-sc">
-                <div className="re-sc-top">
-                  <div>
-                    <div className="re-sc-tit">Retain Rides</div>
-                    <div className="re-sc-per">Retained</div>
-                  </div>
-                  <div className="re-sc-ic ic-orange">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-                  </div>
-                </div>
-                <div className="re-sc-val">243</div>
-              </div>
-
-              <div className="re-sc">
-                <div className="re-sc-top">
-                  <div>
-                    <div className="re-sc-tit">Returned</div>
-                    <div className="re-sc-per">Completed</div>
-                  </div>
-                  <div className="re-sc-ic ic-blue">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  </div>
-                </div>
-                <div className="re-sc-val">389</div>
-              </div>
-
-              <div className="re-sc">
-                <div className="re-sc-top">
-                  <div>
-                    <div className="re-sc-tit">Extended</div>
-                    <div className="re-sc-per">Extended</div>
-                  </div>
-                  <div className="re-sc-ic ic-purple">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/></svg>
-                  </div>
-                </div>
-                <div className="re-sc-val">34</div>
-              </div>
+              ))}
             </div>
 
             {/* Directory Card */}
