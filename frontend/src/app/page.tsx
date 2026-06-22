@@ -51,9 +51,9 @@ function AnimatedCount({ value }: { value: string | number }) {
 }
 
 const COMMON_CSS = `
-.role-switcher-fab { position: fixed; bottom: 20px; right: 20px; background: #2a195c; color: #fff; border: none; border-radius: 30px; padding: 10px 18px; font-size: 11.5px; font-weight: 800; cursor: pointer; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; gap: 6px; transition: all 0.15s; }
+.role-switcher-fab { position: fixed; bottom: 20px; right: 80px; background: #2a195c; color: #fff; border: none; border-radius: 30px; padding: 10px 18px; font-size: 11.5px; font-weight: 800; cursor: pointer; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; gap: 6px; transition: all 0.15s; }
 .role-switcher-fab:hover { background: #4338CA; transform: scale(1.03); }
-.role-dropdown-panel { position: fixed; bottom: 65px; right: 20px; background: #fff; border: 1.5px solid #E2E8F0; border-radius: 12px; padding: 12px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.15); z-index: 1000; width: 220px; display: flex; flex-direction: column; gap: 6px; }
+.role-dropdown-panel { position: fixed; bottom: 65px; right: 80px; background: #fff; border: 1.5px solid #E2E8F0; border-radius: 12px; padding: 12px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.15); z-index: 1000; width: 220px; display: flex; flex-direction: column; gap: 6px; }
 .role-opt { padding: 8px 12px; font-size: 11.5px; font-weight: 700; color: #475569; border: 1px solid transparent; border-radius: 6px; cursor: pointer; text-align: left; background: none; width: 100%; transition: all 0.15s; }
 .role-opt:hover { background: #EEF2FF; color: #6366F1; }
 .role-opt.act { background: #2a195c; color: #fff; }
@@ -79,6 +79,27 @@ const COMMON_CSS = `
   transform-origin: center;
   animation: scaleIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
+
+/* Chatbot Widget */
+.chatbot-fab { position: fixed; bottom: 20px; right: 20px; width: 52px; height: 52px; background: linear-gradient(135deg, #7C3AED, #6366F1); color: #fff; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 6px 20px rgba(99,102,241,0.4); z-index: 1001; transition: all 0.2s; }
+.chatbot-fab:hover { transform: scale(1.08); box-shadow: 0 8px 28px rgba(99,102,241,0.5); }
+.chatbot-panel { position: fixed; bottom: 82px; right: 20px; width: 360px; height: 480px; background: #fff; border: 1.5px solid #E2E8F0; border-radius: 16px; box-shadow: 0 20px 60px -12px rgba(0,0,0,0.2); z-index: 1001; display: flex; flex-direction: column; overflow: hidden; }
+.chatbot-hdr { background: linear-gradient(135deg, #2a195c, #4338CA); color: #fff; padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; }
+.chatbot-hdr-title { font-size: 14px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.chatbot-hdr-dot { width: 8px; height: 8px; background: #22C55E; border-radius: 50%; }
+.chatbot-close { background: none; border: none; color: rgba(255,255,255,0.7); cursor: pointer; display: flex; align-items: center; padding: 4px; border-radius: 6px; transition: all 0.15s; }
+.chatbot-close:hover { color: #fff; background: rgba(255,255,255,0.15); }
+.chatbot-body { flex: 1; padding: 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; background: #F8FAFC; }
+.chatbot-msg { max-width: 85%; padding: 10px 14px; border-radius: 12px; font-size: 12.5px; line-height: 1.5; }
+.chatbot-msg.bot { background: #fff; border: 1px solid #E2E8F0; color: #334155; align-self: flex-start; border-bottom-left-radius: 4px; }
+.chatbot-msg.user { background: #6366F1; color: #fff; align-self: flex-end; border-bottom-right-radius: 4px; }
+.chatbot-input-row { padding: 12px 14px; border-top: 1px solid #E2E8F0; display: flex; align-items: center; gap: 8px; background: #fff; }
+.chatbot-input { flex: 1; border: 1.5px solid #E2E8F0; border-radius: 8px; padding: 8px 12px; font-size: 12.5px; outline: none; font-family: inherit; transition: border-color 0.15s; }
+.chatbot-input:focus { border-color: #6366F1; }
+.chatbot-upload-btn { width: 34px; height: 34px; border: 1.5px solid #E2E8F0; border-radius: 8px; background: #fff; color: #64748B; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; flex-shrink: 0; }
+.chatbot-upload-btn:hover { border-color: #6366F1; color: #6366F1; }
+.chatbot-send-btn { width: 34px; height: 34px; background: #6366F1; border: none; border-radius: 8px; color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; flex-shrink: 0; }
+.chatbot-send-btn:hover { background: #4F46E5; }
 `;
 
 /* ── Employee Dashboard CSS & Components ── */
@@ -239,6 +260,12 @@ const ZONE_CSS = `
 export default function DynamicDashboard() {
   const [role, setRole] = useState<string | null>(null);
   const [showRoleDropdown, setShowRoleDropdown] = useState(false);
+  const [chatOpen, setChatOpen] = useState(false);
+  const [chatMsg, setChatMsg] = useState('');
+  const [chatHistory, setChatHistory] = useState([
+    { from: 'bot', text: 'Hi! I\'m your Evegah AI assistant. How can I help you today?' },
+    { from: 'bot', text: 'You can ask me about riders, vehicles, zones, or any dashboard data.' }
+  ]);
   const router = useRouter();
 
   useEffect(() => {
@@ -268,6 +295,15 @@ export default function DynamicDashboard() {
     setShowRoleDropdown(false);
   };
 
+  const handleChatSend = () => {
+    if (!chatMsg.trim()) return;
+    setChatHistory(prev => [...prev, { from: 'user', text: chatMsg }]);
+    setChatMsg('');
+    setTimeout(() => {
+      setChatHistory(prev => [...prev, { from: 'bot', text: 'I\'m processing your request. This feature will be connected to the dashboard API soon!' }]);
+    }, 800);
+  };
+
   // Condition 0: Checking auth state
   if (role === null) {
     return null;
@@ -294,6 +330,49 @@ export default function DynamicDashboard() {
           <button className={`role-opt ${role === 'admin' ? 'act' : ''}`} onClick={() => handleRoleChange('admin')}>Platform Admin</button>
           <button className={`role-opt ${role === 'zone_manager' ? 'act' : ''}`} onClick={() => handleRoleChange('zone_manager')}>Zone Manager</button>
           <button className={`role-opt ${role === 'first_time_franchise' ? 'act' : ''}`} onClick={() => handleRoleChange('first_time_franchise')}>Franchise Owner Onboarding</button>
+        </div>
+      )}
+
+      {/* AI Chatbot Widget */}
+      <button className="chatbot-fab" onClick={() => setChatOpen(!chatOpen)} title="AI Assistant">
+        {chatOpen ? (
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        ) : (
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h4"/></svg>
+        )}
+      </button>
+
+      {chatOpen && (
+        <div className="chatbot-panel">
+          <div className="chatbot-hdr">
+            <div className="chatbot-hdr-title">
+              <div className="chatbot-hdr-dot" />
+              Evegah AI Assistant
+            </div>
+            <button className="chatbot-close" onClick={() => setChatOpen(false)}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          </div>
+          <div className="chatbot-body">
+            {chatHistory.map((m, i) => (
+              <div key={i} className={`chatbot-msg ${m.from === 'bot' ? 'bot' : 'user'}`}>{m.text}</div>
+            ))}
+          </div>
+          <div className="chatbot-input-row">
+            <button className="chatbot-upload-btn" title="Upload file">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+            </button>
+            <input
+              className="chatbot-input"
+              placeholder="Ask me anything..."
+              value={chatMsg}
+              onChange={(e) => setChatMsg(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleChatSend()}
+            />
+            <button className="chatbot-send-btn" onClick={handleChatSend} title="Send">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
         </div>
       )}
 
@@ -768,11 +847,11 @@ const ROWS = [
 ];
 
 const T_CFG: Record<string, { label: string; ic: string; icon: React.ReactNode }> = {
-  new_rider: { label: "New Rider", ic: "ic-purple", icon: <span>👤</span> },
-  retain_rider: { label: "Retain Rider", ic: "ic-green", icon: <span>✓</span> },
-  return_ride: { label: "Return Ride", ic: "ic-orange", icon: <span>🔄</span> },
-  extend_ride: { label: "Extend Ride", ic: "ic-blue", icon: <span>📅</span> },
-  battery_swap: { label: "Battery Swap", ic: "ic-teal", icon: <span>🔋</span> }
+  new_rider: { label: "New Rider", ic: "ic-purple", icon: <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg> },
+  retain_rider: { label: "Retain Rider", ic: "ic-green", icon: <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg> },
+  return_ride: { label: "Return Ride", ic: "ic-orange", icon: <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.49"/></svg> },
+  extend_ride: { label: "Extend Ride", ic: "ic-blue", icon: <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="12" y1="14" x2="12" y2="18"/><line x1="10" y1="16" x2="14" y2="16"/></svg> },
+  battery_swap: { label: "Battery Swap", ic: "ic-teal", icon: <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/><line x1="7" y1="12" x2="11" y2="8"/><line x1="11" y1="8" x2="11" y2="12"/><line x1="11" y1="12" x2="15" y2="12"/></svg> }
 };
 
 const S_LBL: Record<string, string> = {
@@ -844,10 +923,10 @@ function EmployeeDashboard() {
             {/* Stat Cards */}
             <div className="ev-stats">
               {[
-                { tit: "Requests Created", per: "This Month", v: 128, chg: 18.4, up: true, pts: "0,28 14,22 28,18 40,20 52,12 64,15 76,8 82,10", clr: "#6366F1", ic: "📝", cls: "ic-purple" },
-                { tit: "Completed Requests", per: "This Month", v: 96, chg: 16.7, up: true, pts: "0,30 14,24 28,18 40,14 52,18 64,10 76,13 82,6", clr: "#22C55E", ic: "✓", cls: "ic-green" },
-                { tit: "Pending Requests", per: "Currently", v: 32, chg: 5.2, up: false, pts: "0,8 14,13 28,10 40,18 52,14 64,22 76,17 82,20", clr: "#F59E0B", ic: "🕒", cls: "ic-orange" },
-                { tit: "Total Riders", per: "Managed", v: 356, chg: 12.3, up: true, pts: "0,22 14,20 28,24 40,16 52,20 64,13 76,17 82,11", clr: "#14B8A6", ic: "👥", cls: "ic-teal" }
+                { tit: "Requests Created", per: "This Month", v: 128, chg: 18.4, up: true, pts: "0,28 14,22 28,18 40,20 52,12 64,15 76,8 82,10", clr: "#6366F1", icSvg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>, cls: "ic-purple" },
+                { tit: "Completed Requests", per: "This Month", v: 96, chg: 16.7, up: true, pts: "0,30 14,24 28,18 40,14 52,18 64,10 76,13 82,6", clr: "#22C55E", icSvg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>, cls: "ic-green" },
+                { tit: "Pending Requests", per: "Currently", v: 32, chg: 5.2, up: false, pts: "0,8 14,13 28,10 40,18 52,14 64,22 76,17 82,20", clr: "#F59E0B", icSvg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>, cls: "ic-orange" },
+                { tit: "Total Riders", per: "Managed", v: 356, chg: 12.3, up: true, pts: "0,22 14,20 28,24 40,16 52,20 64,13 76,17 82,11", clr: "#14B8A6", icSvg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>, cls: "ic-teal" }
               ].map(c => (
                 <div className="ev-sc" key={c.tit}>
                   <div className="ev-sc-top">
@@ -855,7 +934,7 @@ function EmployeeDashboard() {
                       <div className="ev-sc-tit">{c.tit}</div>
                       <div className="ev-sc-per">{c.per}</div>
                     </div>
-                    <div className={`ev-sc-ic ${c.cls}`} style={{ fontSize: '14px' }}>{c.ic}</div>
+                    <div className={`ev-sc-ic ${c.cls}`}>{c.icSvg}</div>
                   </div>
                   <div className="ev-sc-val"><AnimatedCount value={c.v} /></div>
                   <div className="ev-sc-bot">
@@ -881,14 +960,14 @@ function EmployeeDashboard() {
                 
                 <div className="ev-cr-grid">
                   {[
-                    { oc: "orb-purple", icon: "👤", tit: "New Rider", desc: "Onboard a new rider and create a new ride.", lnk: "Create New Rider", lc: "lnk-purple", href: "/new-rider" },
-                    { oc: "orb-green", icon: "✓", tit: "Retain Rider", desc: "Retain existing rider and start a new ride.", lnk: "Retain Rider", lc: "lnk-green", href: "/retain-rider" },
-                    { oc: "orb-orange", icon: "🔄", tit: "Return Ride", desc: "Complete the ride and initiate return.", lnk: "Return Ride", lc: "lnk-orange", href: "/return-ride" },
-                    { oc: "orb-blue", icon: "📅", tit: "Extend Ride", desc: "Extend the current ride duration.", lnk: "Extend Ride", lc: "lnk-blue", href: "/extend-ride" },
-                    { oc: "orb-teal", icon: "🔋", tit: "Battery Swap", desc: "Request battery swap for active ride.", lnk: "Battery Swap", lc: "lnk-teal", href: "/battery-swap" }
+                    { oc: "orb-purple", iconSvg: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>, tit: "New Rider", desc: "Onboard a new rider and create a new ride.", lnk: "Create New Rider", lc: "lnk-purple", href: "/new-rider" },
+                    { oc: "orb-green", iconSvg: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>, tit: "Retain Rider", desc: "Retain existing rider and start a new ride.", lnk: "Retain Rider", lc: "lnk-green", href: "/retain-rider" },
+                    { oc: "orb-orange", iconSvg: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.49"/></svg>, tit: "Return Ride", desc: "Complete the ride and initiate return.", lnk: "Return Ride", lc: "lnk-orange", href: "/return-ride" },
+                    { oc: "orb-blue", iconSvg: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="12" y1="14" x2="12" y2="18"/><line x1="10" y1="16" x2="14" y2="16"/></svg>, tit: "Extend Ride", desc: "Extend the current ride duration.", lnk: "Extend Ride", lc: "lnk-blue", href: "/extend-ride" },
+                    { oc: "orb-teal", iconSvg: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/><line x1="7" y1="12" x2="11" y2="8"/><line x1="11" y1="8" x2="11" y2="12"/><line x1="11" y1="12" x2="15" y2="12"/></svg>, tit: "Battery Swap", desc: "Request battery swap for active ride.", lnk: "Battery Swap", lc: "lnk-teal", href: "/battery-swap" }
                   ].map(c => (
                     <a href={c.href} className="ev-rc" key={c.tit}>
-                      <div className={`ev-rc-orb ${c.oc}`} style={{ fontSize: '16px' }}>{c.icon}</div>
+                      <div className={`ev-rc-orb ${c.oc}`}>{c.iconSvg}</div>
                       <div className="ev-rc-tit">{c.tit}</div>
                       <div className="ev-rc-desc">{c.desc}</div>
                       <span className={`ev-rc-lnk ${c.lc}`}>
@@ -901,7 +980,7 @@ function EmployeeDashboard() {
                 {/* Table */}
                 <div className="ev-tcard">
                   <div className="ev-tcard-hdr">
-                    <div className="ev-tcard-tit">My Recent Requests</div>
+                    <div className="ev-tcard-tit">Rider Payment View</div>
                     <a className="ev-va" href="/registrations">View All</a>
                   </div>
                   <table className="ev-dt">
@@ -962,14 +1041,14 @@ function EmployeeDashboard() {
                     <div className="ev-pc-dt">May 18, 2024</div>
                   </div>
                   {[
-                    { ic: "📝", cls: "ic-purple", lbl: "Requests Created", v: 12 },
-                    { ic: "✓", cls: "ic-green", lbl: "Requests Completed", v: 8 },
-                    { ic: "🕒", cls: "ic-orange", lbl: "Pending Requests", v: 4 },
-                    { ic: "🔋", cls: "ic-teal", lbl: "Battery Swap Requests", v: 6 }
+                    { icSvg: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>, cls: "ic-purple", lbl: "Requests Created", v: 12 },
+                    { icSvg: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>, cls: "ic-green", lbl: "Requests Completed", v: 8 },
+                    { icSvg: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>, cls: "ic-orange", lbl: "Pending Requests", v: 4 },
+                    { icSvg: <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/></svg>, cls: "ic-teal", lbl: "Battery Swap Requests", v: 6 }
                   ].map(s => (
                     <div className="ev-sum-row" key={s.lbl}>
                       <div className="ev-sum-l">
-                        <div className={`ev-sum-ic ${s.cls}`} style={{ fontSize: '10px' }}>{s.ic}</div>
+                        <div className={`ev-sum-ic ${s.cls}`}>{s.icSvg}</div>
                         <span className="ev-sum-lbl">{s.lbl}</span>
                       </div>
                       <span className="ev-sum-val">{s.v}</span>

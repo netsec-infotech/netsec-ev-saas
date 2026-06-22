@@ -10,8 +10,8 @@ import TopBar from '@/components/TopBar';
 
 const CSS = `
 /* ── shell & layout ── */
-.nr-shell { display: flex; min-height: 100vh; background: #F3F4F9; }
-.nr-main  { margin-left: 240px; display: flex; flex-direction: column; min-height: 100vh; width: calc(100% - 240px); }
+.nr-shell { display: flex; min-height: 100vh; background: #ffffff; }
+.nr-main  { margin-left: 230px; display: flex; flex-direction: column; min-height: 100vh; width: calc(100% - 230px); }
 .nr-page  { flex: 1; padding: 0 28px 80px; }
 
 /* ── breadcrumb ── */
@@ -96,18 +96,30 @@ const CSS = `
 /* method cards grid */
 .nr-methods { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 18px 24px; }
 .nr-mc {
-  border: 2px solid #E5E7EB; border-radius: 12px; padding: 20px;
-  cursor: pointer; transition: border-color .15s, background .15s;
-  display: flex; flex-direction: column; min-height: 280px;
+  border: 2px solid #E5E7EB; border-radius: 16px; padding: 24px;
+  cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex; flex-direction: column; min-height: 420px;
+  background: #ffffff;
+  position: relative;
 }
-.nr-mc.sel  { border-color: #2a195c; background: #FAFAFF; }
-.nr-mc:hover:not(.sel) { border-color: #C7D2FE; background: #FEFEFF; }
+.nr-mc.sel { 
+  border-color: #7C3AED; 
+  background: linear-gradient(145deg, #FAF8FF 0%, #F5F3FF 100%); 
+  box-shadow: 0 12px 24px -10px rgba(124, 58, 237, 0.15), 0 4px 12px -5px rgba(124, 58, 237, 0.1);
+  transform: translateY(-2px);
+}
+.nr-mc:hover:not(.sel) { 
+  border-color: #C7D2FE; 
+  background: #fdfdfd;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.08);
+}
 .nr-mc-top  { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
 .nr-radio   { width: 20px; height: 20px; border-radius: 50%; border: 2px solid #D1D5DB; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all .15s; }
-.nr-radio.on { border-color: #2a195c; background: #2a195c; }
+.nr-radio.on { border-color: #7C3AED; background: #7C3AED; }
 .nr-radio-dot { width: 8px; height: 8px; border-radius: 50%; background: #fff; }
 .nr-mc-title { font-size: 14px; font-weight: 700; color: #111827; }
-.nr-rec-badge { background: #EEF2FF; color: #2a195c; border-radius: 5px; font-size: 11px; font-weight: 700; padding: 2px 9px; white-space: nowrap; }
+.nr-rec-badge { background: #F3E8FF; color: #7C3AED; border-radius: 6px; font-size: 11px; font-weight: 700; padding: 3px 10px; white-space: nowrap; }
 .nr-mc-desc  { font-size: 12.5px; color: #6B7280; margin-bottom: 14px; line-height: 1.5; }
 .nr-bullets  { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
 .nr-bullet   { display: flex; align-items: center; gap: 9px; font-size: 12.5px; color: #374151; }
@@ -348,6 +360,26 @@ const DigiIllus = () => (
         <circle cx="40" cy="14" r="8" fill="#F0B429"/>
         <text x="35.5" y="18.5" fontFamily="Arial,sans-serif" fontSize="9" fontWeight="700" fill="#fff">gi</text>
       </svg>
+    </div>
+  </div>
+);
+
+/* ── Manual entry illustration ── */
+const ManualIllus = () => (
+  <div className="nr-digi-illus" style={{ background: '#FFFDF5', border: '1.5px dashed #F59E0B', flex: 1 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 5 }}>
+      <div style={{ fontSize: 11, fontWeight: 700, color: '#D97706', marginBottom: 4 }}>Manual Submission…</div>
+      <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#D97706" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+          <polyline points="10 9 9 9 8 9"/>
+        </svg>
+        <span style={{ fontSize: 24 }}>📝</span>
+      </div>
+      <div style={{ fontSize: 10, color: '#B45309', marginTop: 3 }}>Fill Fields &amp; Upload Files</div>
     </div>
   </div>
 );
@@ -716,7 +748,7 @@ export default function NewRiderPage() {
                             </div>
                             <span className="nr-mc-title">Enter Details Manually</span>
                           </div>
-                          <p className="nr-mc-desc">Fill rider details and upload documents manually.</p>
+                          <div className="nr-mc-desc">Fill rider details and upload documents manually.</div>
                           <div className="nr-bullets">
                             {['Enter details manually', 'Upload documents', 'Verification will be done later'].map(b => (
                               <div key={b} className="nr-bullet">
@@ -725,6 +757,7 @@ export default function NewRiderPage() {
                               </div>
                             ))}
                           </div>
+                          <ManualIllus/>
                           <button
                             className="nr-btn-out"
                             onClick={e => { e.stopPropagation(); goManual(); }}

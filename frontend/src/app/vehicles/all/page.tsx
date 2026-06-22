@@ -10,16 +10,16 @@ import TopBar from '@/components/TopBar';
 
 const CSS = `
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-.vl-shell{display:flex;min-height:100vh;background:#F3F4F9;font-family:Inter,sans-serif;}
-.vl-main{margin-left:240px;display:flex;flex-direction:column;min-height:100vh;width:calc(100% - 240px);}
+.vl-shell{display:flex;min-height:100vh;background:#ffffff;font-family:Inter,sans-serif;}
+.vl-main{margin-left:230px;display:flex;flex-direction:column;min-height:100vh;width:calc(100% - 230px);}
 .vl-page{flex:1;padding:0 28px 60px;}
 
 /* breadcrumb */
 .vl-bc{display:flex;align-items:center;gap:6px;padding:14px 0 0;font-size:12px;color:#9CA3AF;}
 .vl-bc a{color:#9CA3AF;text-decoration:none;}
-.vl-bc a:hover{color:#2A195C;}
+.vl-bc a:hover{color:#2a195c;}
 .vl-bc-sep{color:#D1D5DB;}
-.vl-bc-cur{color:#2A195C;font-weight:600;}
+.vl-bc-cur{color:#2a195c;font-weight:600;}
 
 /* Header Title row */
 .vl-title-row{display:flex;align-items:flex-start;justify-content:space-between;margin:12px 0 18px;gap:16px;}
@@ -27,17 +27,24 @@ const CSS = `
 .vl-sub{font-size:13px;color:#6B7280;margin:0;}
 .vl-hdr-actions{display:flex;align-items:center;gap:10px;}
 .vl-hdr-btn{display:flex;align-items:center;gap:7px;padding:9px 16px;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;font-size:13px;font-weight:600;color:#374151;cursor:pointer;font-family:inherit;box-shadow:0 1px 3px rgba(0,0,0,.06);transition:all .15s;}
-.vl-hdr-btn:hover{border-color:#2A195C;color:#2A195C;}
-.vl-hdr-btn.primary{background:#2A195C;color:#fff;border-color:#2A195C;box-shadow:0 2px 6px rgba(79,70,229,.35);}
+.vl-hdr-btn:hover{border-color:#2a195c;color:#2a195c;}
+.vl-hdr-btn.primary{background:#2a195c;color:#fff;border-color:#2a195c;box-shadow:0 2px 6px rgba(79,70,229,.35);}
 .vl-hdr-btn.primary:hover{background:#4338CA;color:#fff;border-color:#4338CA;}
 
 /* Stats cards (5 in a row) */
 .vl-stats-row{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:20px;}
-.vl-stat-card{background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 3px rgba(0,0,0,.05);}
-.vl-stat-ic{width:36px;height:36px;border-radius:8px;background:#F5F3FF;color:#2A195C;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.vl-stat-card{background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px;box-shadow:0 1px 3px rgba(0,0,0,.05);transition:all 0.2s;}
+.vl-stat-card:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(0,0,0,0.05);}
+.vl-stat-top{display:flex;align-items:center;justify-content:space-between;width:100%;}
+.vl-stat-ic{width:36px;height:36px;border-radius:8px;background:#F5F3FF;color:#2a195c;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .vl-stat-info{min-width:0;flex:1;}
-.vl-stat-lbl{font-size:10.5px;color:#9CA3AF;font-weight:600;margin-bottom:2px;}
-.vl-stat-val{font-size:18px;font-weight:800;color:#111827;line-height:1;}
+.vl-stat-lbl{font-size:11px;color:#6B7280;font-weight:600;margin-bottom:2px;}
+.vl-stat-val{font-size:20px;font-weight:800;color:#111827;line-height:1;}
+.vl-stat-bot{display:flex;align-items:center;justify-content:space-between;width:100%;border-top:1px solid #F3F4F6;padding-top:8px;margin-top:2px;}
+.vl-stat-chg{font-size:11px;font-weight:700;display:inline-flex;align-items:center;}
+.vl-stat-chg.up{color:#10B981;}
+.vl-stat-chg.dn{color:#EF4444;}
+.vl-stat-sub{font-size:10px;color:#94A3B8;margin-left:2px;}
 .vl-dot{width:7px;height:7px;border-radius:50%;display:inline-block;}
 .vl-dot.online{background:#10B981;}
 .vl-dot.in_ride{background:#2A195C;}
@@ -110,6 +117,7 @@ const ILock    = () => <Sv><rect x="3" y="11" width="18" height="11" rx="2" ry="
 const IUnlock  = () => <Sv><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></Sv>;
 const IPlus    = () => <Sv><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></Sv>;
 const IFilter  = () => <Sv><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></Sv>;
+const IQR      = () => <Sv><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="3" height="3"/><rect x="7" y="17" width="3" height="3"/><rect x="3" y="17" width="3" height="3"/><rect x="7" y="14" width="3" height="3"/></Sv>;
 
 interface EVListItem {
   code: string;
@@ -122,17 +130,21 @@ interface EVListItem {
   hub: string;
   lastSeen: string;
   imgSrc: string;
+  model: string;
+  iotId: string;
+  zone: string;
+  regDate: string;
 }
 
 const VEHICLES_MOCK: EVListItem[] = [
-  { code: 'EV-12KA-1234', type: 'Electric Scooter', battery: 78, speed: 25, status: 'In Ride', badgeCls: 'in_ride', renter: 'Rahul Sharma', hub: 'Palika Bazaar Hub', lastSeen: 'Just now', imgSrc: '/assets/v1.webp' },
-  { code: 'EV-12KA-5678', type: 'Electric Scooter', battery: 92, speed: 0, status: 'Online', badgeCls: 'online', renter: 'None (Available)', hub: 'Karol Bagh Hub', lastSeen: '2 mins ago', imgSrc: '/assets/v2.webp' },
-  { code: 'EV-12KA-6789', type: 'Electric Scooter', battery: 12, speed: 12, status: 'Low Battery', badgeCls: 'low_bat', renter: 'Pooja Kapoor', hub: 'Rajendra Place Hub', lastSeen: '1 min ago', imgSrc: '/assets/v1.webp' },
-  { code: 'EV-12KA-9012', type: 'Electric Scooter', battery: 45, speed: 0, status: 'Offline', badgeCls: 'offline', renter: 'None (Available)', hub: 'Nehru Place Hub', lastSeen: '15 mins ago', imgSrc: '/assets/v2.webp' },
-  { code: 'EV-12KA-3456', type: 'Electric Scooter', battery: 64, speed: 32, status: 'In Ride', badgeCls: 'in_ride', renter: 'Neha Singh', hub: 'Janpath Hub', lastSeen: 'Just now', imgSrc: '/assets/v1.webp' },
-  { code: 'EV-ER-0098', type: 'E-Rickshaw', battery: 88, speed: 0, status: 'Online', badgeCls: 'online', renter: 'None (Available)', hub: 'Connaught Place Hub', lastSeen: '5 mins ago', imgSrc: '/assets/v2.webp' },
-  { code: 'EV-ER-0077', type: 'E-Rickshaw', battery: 18, speed: 10, status: 'Low Battery', badgeCls: 'low_bat', renter: 'Manoj Yadav', hub: 'Karol Bagh Hub', lastSeen: 'Just now', imgSrc: '/assets/v1.webp' },
-  { code: 'EV-12KA-8877', type: 'Electric Scooter', battery: 98, speed: 0, status: 'Online', badgeCls: 'online', renter: 'None (Available)', hub: 'Dwarka Sector 10 Hub', lastSeen: '12 mins ago', imgSrc: '/assets/v2.webp' }
+  { code: 'EV-12KA-1234', type: 'Electric Scooter', battery: 78, speed: 25, status: 'In Ride', badgeCls: 'in_ride', renter: 'Rahul Sharma', hub: 'Palika Bazaar Hub', lastSeen: 'Just now', imgSrc: '/assets/v1.webp', model: 'Sleek S1', iotId: 'IOT-9823-A', zone: 'Connaught Place Zone', regDate: '12 May 2024' },
+  { code: 'EV-12KA-5678', type: 'Electric Scooter', battery: 92, speed: 0, status: 'Online', badgeCls: 'online', renter: 'None (Available)', hub: 'Karol Bagh Hub', lastSeen: '2 mins ago', imgSrc: '/assets/v2.webp', model: 'City Commuter', iotId: 'IOT-1204-B', zone: 'Karol Bagh Zone', regDate: '18 Feb 2024' },
+  { code: 'EV-12KA-6789', type: 'Electric Scooter', battery: 12, speed: 12, status: 'Low Battery', badgeCls: 'low_bat', renter: 'Pooja Kapoor', hub: 'Rajendra Place Hub', lastSeen: '1 min ago', imgSrc: '/assets/v1.webp', model: 'Sleek S1', iotId: 'IOT-7711-X', zone: 'Rajendra Place Zone', regDate: '03 Jan 2024' },
+  { code: 'EV-12KA-9012', type: 'Electric Scooter', battery: 45, speed: 0, status: 'Offline', badgeCls: 'offline', renter: 'None (Available)', hub: 'Nehru Place Hub', lastSeen: '15 mins ago', imgSrc: '/assets/v2.webp', model: 'City Commuter', iotId: 'IOT-8812-Y', zone: 'Nehru Place Zone', regDate: '29 Dec 2023' },
+  { code: 'EV-12KA-3456', type: 'Electric Scooter', battery: 64, speed: 32, status: 'In Ride', badgeCls: 'in_ride', renter: 'Neha Singh', hub: 'Janpath Hub', lastSeen: 'Just now', imgSrc: '/assets/v1.webp', model: 'Sleek S1', iotId: 'IOT-4455-C', zone: 'Janpath Zone', regDate: '15 Apr 2024' },
+  { code: 'EV-ER-0098', type: 'E-Rickshaw', battery: 88, speed: 0, status: 'Online', badgeCls: 'online', renter: 'None (Available)', hub: 'Connaught Place Hub', lastSeen: '5 mins ago', imgSrc: '/assets/v2.webp', model: 'Heavy Cargo', iotId: 'IOT-5566-D', zone: 'Connaught Place Zone', regDate: '10 Jan 2024' },
+  { code: 'EV-ER-0077', type: 'E-Rickshaw', battery: 18, speed: 10, status: 'Low Battery', badgeCls: 'low_bat', renter: 'Manoj Yadav', hub: 'Karol Bagh Hub', lastSeen: 'Just now', imgSrc: '/assets/v1.webp', model: 'Heavy Cargo', iotId: 'IOT-2233-E', zone: 'Karol Bagh Zone', regDate: '22 Mar 2024' },
+  { code: 'EV-12KA-8877', type: 'Electric Scooter', battery: 98, speed: 0, status: 'Online', badgeCls: 'online', renter: 'None (Available)', hub: 'Dwarka Sector 10 Hub', lastSeen: '12 mins ago', imgSrc: '/assets/v2.webp', model: 'City Commuter', iotId: 'IOT-9900-F', zone: 'Dwarka Zone', regDate: '01 Jun 2024' }
 ];
 
 export default function VehicleListPage() {
@@ -141,7 +153,7 @@ export default function VehicleListPage() {
   const [typeFilter, setTypeFilter] = useState('All');
 
   const filtered = VEHICLES_MOCK.filter(v => {
-    const matchesSearch = v.code.toLowerCase().includes(search.toLowerCase()) || v.renter.toLowerCase().includes(search.toLowerCase()) || v.hub.toLowerCase().includes(search.toLowerCase());
+    const matchesSearch = v.code.toLowerCase().includes(search.toLowerCase()) || v.renter.toLowerCase().includes(search.toLowerCase()) || v.zone.toLowerCase().includes(search.toLowerCase());
     const matchesStatus = statusFilter === 'All' || v.status === statusFilter;
     const matchesType = typeFilter === 'All' || v.type === typeFilter;
     return matchesSearch && matchesStatus && matchesType;
@@ -179,22 +191,56 @@ export default function VehicleListPage() {
             {/* Metric KPI cards */}
             <div className="vl-stats-row">
               {[
-                { lbl: 'Total Vehicles', val: 120, ic: <IScooter s={16}/> },
-                { lbl: 'Online', val: 72, dot: 'online' },
-                { lbl: 'In Ride', val: 18, dot: 'in_ride' },
-                { lbl: 'Offline', val: 28, dot: 'offline' },
-                { lbl: 'Low Battery', val: 8, dot: 'low_bat' }
+                { lbl: 'Total Vehicles', val: 120, ic: <IScooter s={16}/>, chg: 8.4, up: true, pts: "0,28 14,22 28,18 40,20 52,12 64,15 76,8 82,10", clr: "#6366F1" },
+                { lbl: 'Online', val: 72, dot: 'online', chg: 12.5, up: true, pts: "0,30 14,24 28,18 40,14 52,18 64,10 76,13 82,6", clr: "#10B981" },
+                { lbl: 'In Ride', val: 18, dot: 'in_ride', chg: 4.2, up: true, pts: "0,22 14,20 28,24 40,16 52,20 64,13 76,17 82,11", clr: "#2A195C" },
+                { lbl: 'Offline', val: 28, dot: 'offline', chg: 2.1, up: false, pts: "0,8 14,13 28,10 40,18 52,14 64,22 76,17 82,20", clr: "#9CA3AF" },
+                { lbl: 'Low Battery', val: 8, dot: 'low_bat', chg: 15.3, up: false, pts: "0,8 14,13 28,10 40,18 52,14 64,22 76,17 82,20", clr: "#F59E0B" }
               ].map(s => (
                 <div className="vl-stat-card" key={s.lbl}>
-                  <div className="vl-stat-ic">
-                    {s.ic ? s.ic : <div className={`vl-dot ${s.dot}`}/>}
+                  <div className="vl-stat-top">
+                    <div className="vl-stat-ic">
+                      {s.ic ? s.ic : <div className={`vl-dot ${s.dot}`}/>}
+                    </div>
+                    <svg width="45" height="15" viewBox="0 0 80 30" fill="none">
+                      <polyline className="animate-draw" points={s.pts} stroke={s.clr} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
                   </div>
-                  <div className="vl-stat-info">
+                  <div>
                     <div className="vl-stat-lbl">{s.lbl}</div>
                     <div className="vl-stat-val">{s.val}</div>
                   </div>
+                  <div className="vl-stat-bot">
+                    <span className={`vl-stat-chg ${s.up ? 'up' : 'dn'}`} style={{ fontSize: '11px', fontWeight: 'bold' }}>
+                      {s.up ? '↑' : '↓'} {s.chg}%
+                    </span>
+                    <span className="vl-stat-sub">vs last week</span>
+                  </div>
                 </div>
               ))}
+            </div>
+
+            {/* Zone Selection Row */}
+            <div className="vl-zone-select-row" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: '#ffffff', border: '1.5px solid #E5E7EB', borderRadius: '12px', padding: '12px 18px', marginBottom: '16px', boxShadow: '0 1px 3px rgba(0,0,0,0.03)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <span style={{ fontSize: '13px', fontWeight: 700, color: '#374151' }}>Zone Selection:</span>
+                <div style={{ display: 'flex', gap: '8px' }}>
+                  <button className="vl-hdr-btn" style={{ padding: '6px 12px', fontSize: '12px' }}>Manual Selection</button>
+                  <button className="vl-hdr-btn" style={{ padding: '6px 12px', fontSize: '12px' }}>Select All</button>
+                </div>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <select className="vl-select" style={{ padding: '6px 12px', fontSize: '12.5px' }}>
+                  <option>Select Zone...</option>
+                  <option>Connaught Place Zone</option>
+                  <option>Karol Bagh Zone</option>
+                  <option>Rajendra Place Zone</option>
+                  <option>Nehru Place Zone</option>
+                  <option>Janpath Zone</option>
+                  <option>Dwarka Zone</option>
+                </select>
+                <button className="vl-hdr-btn" style={{ padding: '6px 12px', fontSize: '12px', borderColor: '#EF4444', color: '#EF4444' }}>Delete</button>
+              </div>
             </div>
 
             {/* Search and filter panel */}
@@ -204,7 +250,7 @@ export default function VehicleListPage() {
                 <input 
                   type="text" 
                   className="vl-search-input" 
-                  placeholder="Search by Code, Renter name, or Hub..." 
+                  placeholder="Search by Code, Renter name, or Zone..." 
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                 />
@@ -243,17 +289,18 @@ export default function VehicleListPage() {
                   <thead>
                     <tr>
                       <th>Vehicle</th>
+                      <th>Model</th>
+                      <th>IoT ID</th>
                       <th>Status</th>
-                      <th>Battery</th>
                       <th>Speed</th>
-                      <th>Hub Location / Renter</th>
-                      <th>Last Seen</th>
+                      <th>Zone</th>
+                      <th>Reg. Date</th>
+                      <th style={{ textAlign: 'center' }}>QR</th>
                       <th style={{ textAlign: 'right' }}>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     {filtered.map(v => {
-                      const barColor = v.battery < 20 ? '#EF4444' : v.battery < 50 ? '#F59E0B' : '#10B981';
                       return (
                         <tr key={v.code}>
                           <td>
@@ -267,39 +314,42 @@ export default function VehicleListPage() {
                               </div>
                             </div>
                           </td>
-                          <td>
-                            <span className={`vl-badge ${v.badgeCls}`}>{v.status}</span>
+                          <td style={{ fontWeight: 600, color: '#111827' }}>
+                            {v.model}
+                          </td>
+                          <td style={{ fontFamily: 'monospace', color: '#4B5563', fontSize: '12px' }}>
+                            {v.iotId}
                           </td>
                           <td>
-                            <div className="vl-bat-bar-wrap">
-                              <span className="vl-bat-pct">{v.battery}%</span>
-                              <div className="vl-bat-bar">
-                                <div className="vl-bat-bar-fill" style={{ width: `${v.battery}%`, background: barColor }} />
-                              </div>
-                            </div>
+                            <span className={`vl-badge ${v.badgeCls}`}>{v.status}</span>
                           </td>
                           <td>
                             <span style={{ fontWeight: 600 }}>{v.speed} km/h</span>
                           </td>
                           <td>
                             <div>
-                              <div style={{ fontWeight: 600, color: '#111827' }}>{v.hub}</div>
+                              <div style={{ fontWeight: 600, color: '#111827' }}>{v.zone}</div>
                               {v.renter !== 'None (Available)' && (
                                 <div style={{ fontSize: 11, color: '#6B7280', marginTop: 2 }}>Renter: {v.renter}</div>
                               )}
                             </div>
                           </td>
                           <td style={{ color: '#6B7280', fontWeight: 500 }}>
-                            {v.lastSeen}
+                            {v.regDate}
+                          </td>
+                          <td style={{ textAlign: 'center' }}>
+                            <div style={{ display: 'inline-flex', padding: '6px', background: '#F9FAFB', border: '1px solid #E5E7EB', borderRadius: '6px', cursor: 'pointer' }} title="Scan QR Code">
+                              <IQR/>
+                            </div>
                           </td>
                           <td>
                             <div className="vl-actions" style={{ justifyContent: 'flex-end' }}>
-                              <button className="vl-act-btn" title="Lock"><ILock/></button>
-                              <button className="vl-act-btn" title="Unlock"><IUnlock/></button>
-                              <Link href="/vehicles/map" className="vl-act-btn" title="Locate on Map">
+                              <button className="vl-act-btn" title="Lock" style={{ border: '1px solid #E5E7EB', boxShadow: '0 1px 2px rgba(0,0,0,0.03)' }}><ILock/></button>
+                              <button className="vl-act-btn" title="Unlock" style={{ border: '1px solid #E5E7EB', boxShadow: '0 1px 2px rgba(0,0,0,0.03)' }}><IUnlock/></button>
+                              <Link href="/vehicles/detail" className="vl-act-btn" title="Locate on Map" style={{ border: '1px solid #E5E7EB', boxShadow: '0 1px 2px rgba(0,0,0,0.03)' }}>
                                 <ILocate/>
                               </Link>
-                              <Link href="/vehicles/map" className="vl-act-link" style={{ marginLeft: 6 }}>
+                              <Link href="/vehicles/detail" className="vl-act-link" style={{ marginLeft: 6, textDecoration: 'none', background: '#F5F3FF', color: '#7C3AED', padding: '6px 12px', borderRadius: '8px', fontSize: '12px' }}>
                                 Details
                               </Link>
                             </div>
@@ -309,7 +359,7 @@ export default function VehicleListPage() {
                     })}
                     {filtered.length === 0 && (
                       <tr>
-                        <td colSpan={7} style={{ textAlign: 'center', padding: '36px 0', color: '#9CA3AF', fontWeight: 600 }}>
+                        <td colSpan={9} style={{ textAlign: 'center', padding: '36px 0', color: '#9CA3AF', fontWeight: 600 }}>
                           No vehicles found matching the selected filters.
                         </td>
                       </tr>
