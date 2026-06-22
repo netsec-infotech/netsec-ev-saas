@@ -24,14 +24,14 @@ const CSS = `
 
 /* Header title */
 .an-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-top: 4px; }
-.an-back-link { display: flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 700; color: #4F46E5; text-decoration: none; cursor: pointer; margin-bottom: 6px; }
+.an-back-link { display: flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 700; color: #2A195C; text-decoration: none; cursor: pointer; margin-bottom: 6px; }
 .an-back-link:hover { text-decoration: underline; }
 .an-h1 { font-size: 24px; font-weight: 800; color: #0F172A; margin: 0 0 6px; letter-spacing: -0.02em; }
 .an-sub { font-size: 13.5px; color: #64748B; margin: 0; font-weight: 400; }
 
 .an-btn { display: flex; align-items: center; gap: 7px; padding: 10px 16px; background: #fff; border: 1.5px solid #E2E8F0; border-radius: 10px; font-size: 13px; font-weight: 600; color: #475569; cursor: pointer; transition: all .15s; }
 .an-btn:hover { border-color: #2a195c; color: #2a195c; }
-.an-btn-primary { background: #4F46E5; color: #fff; border-color: #4F46E5; }
+.an-btn-primary { background: #2A195C; color: #fff; border-color: #2A195C; }
 .an-btn-primary:hover { background: #4338CA; border-color: #4338CA; color: #fff; }
 
 /* Layout Grid */
@@ -41,19 +41,19 @@ const CSS = `
 /* Wizard Form Step Card */
 .an-form-card { background: #fff; border: 1px solid #E2E8F0; border-radius: 14px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,.02); display: flex; flex-direction: column; gap: 20px; }
 .an-step-title { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 700; color: #0F172A; border-bottom: 1px solid #F1F5F9; padding-bottom: 14px; }
-.an-step-num { width: 22px; height: 22px; border-radius: 50%; background: #4F46E5; color: #fff; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.an-step-num { width: 22px; height: 22px; border-radius: 50%; background: #2A195C; color: #fff; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
 
 .an-field-group { display: flex; flex-direction: column; gap: 6px; }
 .an-field-lbl { font-size: 12.5px; font-weight: 600; color: #334155; }
 .an-field-lbl span { color: #EF4444; margin-left: 2px; }
 .an-input { padding: 10px 12px; border: 1.5px solid #E2E8F0; border-radius: 8px; font-size: 13px; outline: none; width: 100%; color: #1E293B; }
-.an-input:focus { border-color: #4F46E5; }
+.an-input:focus { border-color: #2A195C; }
 
 /* Type Select Grid */
 .an-type-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 .an-type-card { border: 1.5px solid #E2E8F0; border-radius: 10px; padding: 12px; cursor: pointer; display: flex; flex-direction: column; gap: 6px; text-align: left; transition: all .15s; }
 .an-type-card:hover { border-color: #C7D2FE; }
-.an-type-card.active { border-color: #4F46E5; background: #F5F3FF; }
+.an-type-card.active { border-color: #2A195C; background: #F5F3FF; }
 .an-type-card-ic { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; }
 .an-type-name { font-size: 13px; font-weight: 700; color: #1E293B; }
 .an-type-desc { font-size: 11px; color: #64748B; line-height: 1.3; }
@@ -69,7 +69,7 @@ const CSS = `
 /* Step 2 Inputs */
 .an-audience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .an-select { width: 100%; padding: 10px 12px; border: 1.5px solid #E2E8F0; border-radius: 8px; font-size: 13px; outline: none; background: #fff; color: #334155; cursor: pointer; font-weight: 500; }
-.an-select:focus { border-color: #4F46E5; }
+.an-select:focus { border-color: #2A195C; }
 
 /* Step 3 Expiry date inputs */
 .an-date-row { display: grid; grid-template-columns: 1.2fr 1.2fr auto; gap: 12px; align-items: center; }
@@ -88,7 +88,7 @@ const CSS = `
 .an-switch input { opacity: 0; width: 0; height: 0; }
 .an-slider { position: absolute; cursor: pointer; inset: 0; background-color: #CBD5E1; transition: .3s; border-radius: 20px; }
 .an-slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 2px; bottom: 2px; background-color: white; transition: .3s; border-radius: 50%; }
-input:checked + .an-slider { background-color: #4F46E5; }
+input:checked + .an-slider { background-color: #2A195C; }
 input:checked + .an-slider:before { transform: translateX(18px); }
 
 /* Right Column Sidebar */

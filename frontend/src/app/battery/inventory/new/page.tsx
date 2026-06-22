@@ -12,9 +12,9 @@ const CSS = `
 /* Breadcrumb */
 .ab-bc { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #64748B; font-weight: 500; }
 .ab-bc a { color: #64748B; text-decoration: none; }
-.ab-bc a:hover { color: #4F46E5; }
+.ab-bc a:hover { color: #2A195C; }
 .ab-bc-sep { color: #94A3B8; }
-.ab-bc-cur { color: #4F46E5; font-weight: 600; }
+.ab-bc-cur { color: #2A195C; font-weight: 600; }
 
 /* Header title */
 .ab-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
@@ -579,7 +579,7 @@ export default function AddBatteryPage() {
                 <div className="ab-sum-list">
                   <div className="ab-sum-item">
                     <span className="ab-sum-lbl">Battery ID</span>
-                    <span className="ab-sum-val" style={{ color: '#4F46E5', fontWeight: '700' }}>{batteryId || '-'}</span>
+                    <span className="ab-sum-val" style={{ color: '#2A195C', fontWeight: '700' }}>{batteryId || '-'}</span>
                   </div>
                   <div className="ab-sum-item">
                     <span className="ab-sum-lbl">Battery Type</span>

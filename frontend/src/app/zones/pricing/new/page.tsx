@@ -542,7 +542,7 @@ function PricingForm() {
                     ) : (
                       packages.map((pkg) => (
                         <tr key={pkg.id}>
-                          <td style={{ fontWeight: 700, color: '#4F46E5' }}>{pkg.model || 'All Models'}</td>
+                          <td style={{ fontWeight: 700, color: '#2A195C' }}>{pkg.model || 'All Models'}</td>
                           <td style={{ fontWeight: 700 }}>{pkg.name}</td>
                           <td style={{ fontWeight: 600 }}>{pkg.duration} Hours</td>
                           <td style={{ fontWeight: 700 }}>₹{pkg.price}</td>

@@ -12,9 +12,9 @@ const CSS = `
 /* Breadcrumb */
 .bms-bc { display: flex; align-items: center; gap: 6px; padding: 0 0 14px; font-size: 12px; color: #9CA3AF; }
 .bms-bc a { color: #9CA3AF; text-decoration: none; }
-.bms-bc a:hover { color: #4F46E5; }
+.bms-bc a:hover { color: #2A195C; }
 .bms-bc-sep { color: #D1D5DB; }
-.bms-bc-cur { color: #4F46E5; font-weight: 600; }
+.bms-bc-cur { color: #2A195C; font-weight: 600; }
 
 /* Header */
 .bms-title-row { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 20px; gap: 16px; }
@@ -23,7 +23,7 @@ const CSS = `
 
 .bms-select-wrap { display: flex; align-items: center; gap: 8px; }
 .bms-select { padding: 8px 14px; border: 1.5px solid #E5E7EB; border-radius: 10px; font-size: 13px; font-weight: 600; outline: none; background: #fff; color: #374151; cursor: pointer; }
-.bms-select:focus { border-color: #4F46E5; }
+.bms-select:focus { border-color: #2A195C; }
 
 /* Top SOC card with gradient */
 .soc-grad-card {
@@ -81,7 +81,7 @@ const CSS = `
 .bms-tab:hover { color: #2a195c; }
 .bms-tab.active { color: #2a195c; border-bottom-color: #2a195c; }
 .bms-tab-act-btn { margin-bottom: 10px; display: flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1.5px solid #E5E7EB; border-radius: 8px; font-size: 12px; font-weight: 700; color: #374151; background: #fff; cursor: pointer; }
-.bms-tab-act-btn:hover { border-color: #4F46E5; color: #4F46E5; }
+.bms-tab-act-btn:hover { border-color: #2A195C; color: #2A195C; }
 
 .bms-tabs-body { padding: 20px; }
 

@@ -204,7 +204,7 @@ const ADMIN_CSS = `
 .health-item { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #F1F5F9; }
 .health-item:last-child { border-bottom: none; }
 .health-l { display: flex; align-items: center; gap: 8px; }
-.health-icon { width: 24px; height: 24px; background: #EEF2FF; color: #4F46E5; border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+.health-icon { width: 24px; height: 24px; background: #EEF2FF; color: #2A195C; border-radius: 6px; display: flex; align-items: center; justify-content: center; }
 .health-lbl { font-size: 12px; font-weight: 700; color: #1E293B; }
 .health-badge { padding: 2px 6px; background: #ECFDF5; color: #047857; border-radius: 4px; font-size: 9.5px; font-weight: 700; text-transform: uppercase; }
 
@@ -337,7 +337,7 @@ function AdminDashboard() {
                 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9"/></svg>
               </div>
 
-              <button style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '8px 16px', background: '#4F46E5', color: '#fff', border: 'none', borderRadius: '10px', fontSize: '12.5px', fontWeight: '700', cursor: 'pointer' }}>
+              <button style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '8px 16px', background: '#2A195C', color: '#fff', border: 'none', borderRadius: '10px', fontSize: '12.5px', fontWeight: '700', cursor: 'pointer' }}>
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
                 Export Report
               </button>

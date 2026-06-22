@@ -34,7 +34,7 @@ const CSS = `
 .wl-btn { display: flex; align-items: center; gap: 6px; padding: 9px 16px; border: 1.5px solid #E2E8F0; border-radius: 10px; font-size: 12.5px; font-weight: 700; color: #475569; background: #fff; cursor: pointer; transition: all 0.15s; font-family: inherit; }
 .wl-btn:hover { border-color: #6366F1; color: #6366F1; }
 .wl-btn-primary { background: #6366F1; color: #fff; border-color: #6366F1; }
-.wl-btn-primary:hover { background: #4F46E5; border-color: #4F46E5; }
+.wl-btn-primary:hover { background: #2A195C; border-color: #2A195C; }
 
 /* Tabs Selector */
 .wl-tabs { display: flex; border-bottom: 1.5px solid #E2E8F0; gap: 24px; margin-top: 6px; }
@@ -893,7 +893,7 @@ export default function WhiteLabelManagement() {
                           <span className="wl-lbl">App Icon</span>
                           <div style={{ border: '1.5px dashed #CBD5E1', borderRadius: '8px', padding: '16px', textAlign: 'center', background: '#F8FAFC', cursor: 'pointer' }}>
                             <span style={{ fontSize: '18px' }}>📤</span>
-                            <div style={{ fontSize: '11px', fontWeight: 'bold', color: '#4F46E5', marginTop: '4px' }}>Upload Icon</div>
+                            <div style={{ fontSize: '11px', fontWeight: 'bold', color: '#2A195C', marginTop: '4px' }}>Upload Icon</div>
                             <span style={{ fontSize: '8.5px', color: '#94A3B8' }}>PNG, 512x512px</span>
                           </div>
                         </div>
@@ -901,7 +901,7 @@ export default function WhiteLabelManagement() {
                           <span className="wl-lbl">Splash Screen</span>
                           <div style={{ border: '1.5px dashed #CBD5E1', borderRadius: '8px', padding: '16px', textAlign: 'center', background: '#F8FAFC', cursor: 'pointer' }}>
                             <span style={{ fontSize: '18px' }}>📤</span>
-                            <div style={{ fontSize: '11px', fontWeight: 'bold', color: '#4F46E5', marginTop: '4px' }}>Upload Splash</div>
+                            <div style={{ fontSize: '11px', fontWeight: 'bold', color: '#2A195C', marginTop: '4px' }}>Upload Splash</div>
                             <span style={{ fontSize: '8.5px', color: '#94A3B8' }}>PNG, 1080x1920px</span>
                           </div>
                         </div>

@@ -6,7 +6,9 @@ import 'package:flutter_blue_plus/flutter_blue_plus.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'dart:io';
 import 'package:dio/dio.dart';
+import 'package:dio/io.dart';
 import 'package:evegah_maintenance/core/constants/api_constants.dart';
 import 'package:evegah_maintenance/core/services/location_service.dart';
 import '../../data/models/battery_model.dart';
@@ -114,6 +116,16 @@ class BatteryNotifier extends StateNotifier<BatteryState> {
   final Map<String, bool> _authenticated = {};
 
   BatteryNotifier() : super(BatteryState()) {
+    // Configure Dio to ignore bad SSL certificates (essential for domains behind self-signed/proxy setups or custom VPS connections)
+    try {
+      (_dio.httpClientAdapter as IOHttpClientAdapter).createHttpClient = () {
+        final client = HttpClient();
+        client.badCertificateCallback = (X509Certificate cert, String host, int port) => true;
+        return client;
+      };
+    } catch (e) {
+      debugPrint('Failed to configure SSL bypass for Dio: $e');
+    }
     _init();
   }
 

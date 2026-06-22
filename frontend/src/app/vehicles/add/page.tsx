@@ -14,7 +14,7 @@ const CSS = `
 .add-veh-bc-link { color: #64748B; text-decoration: none; cursor: pointer; }
 .add-veh-bc-link:hover { color: #2a195c; }
 .add-veh-bc-sep { color: #CBD5E1; }
-.add-veh-bc-curr { color: #4F46E5; }
+.add-veh-bc-curr { color: #2A195C; }
 
 /* Header and Actions bar */
 .add-veh-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 4px; }
@@ -68,7 +68,7 @@ const CSS = `
 .add-veh-dropzone { border: 1.5px dashed #C084FC; background: #FAF5FF; border-radius: 10px; padding: 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 8px; cursor: pointer; transition: background .15s; height: 160px; }
 .add-veh-dropzone:hover { background: #F3E8FF; }
 .add-veh-dropzone-ic { color: #A855F7; display: flex; align-items: center; }
-.add-veh-dropzone-t { font-size: 12px; font-weight: 600; color: #4F46E5; }
+.add-veh-dropzone-t { font-size: 12px; font-weight: 600; color: #2A195C; }
 .add-veh-dropzone-b { font-size: 11.5px; color: #64748B; }
 .add-veh-dropzone-s { font-size: 9.5px; color: #94A3B8; margin-top: 4px; }
 
@@ -723,7 +723,7 @@ export default function AddVehiclePage() {
                         <polyline points="17 8 12 3 7 8" />
                         <line x1="12" y1="3" x2="12" y2="15" />
                       </svg>
-                      <span style={{ fontSize: '12px', fontWeight: '700', color: '#4F46E5' }}>Click to upload vehicle photo</span>
+                      <span style={{ fontSize: '12px', fontWeight: '700', color: '#2A195C' }}>Click to upload vehicle photo</span>
                       <span style={{ fontSize: '9.5px', color: '#94A3B8', marginTop: '4px' }}>Supported: PNG, JPG, JPEG (Max 4MB)</span>
                     </label>
 

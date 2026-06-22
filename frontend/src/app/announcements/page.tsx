@@ -25,35 +25,35 @@ const CSS = `
 /* Header title */
 .an-title-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 4px; }
 .an-header-title-wrap { display: flex; align-items: center; gap: 14px; }
-.an-header-ic { width: 44px; height: 44px; border-radius: 10px; background: #EEF2FF; color: #4F46E5; display: flex; align-items: center; justify-content: center; }
+.an-header-ic { width: 44px; height: 44px; border-radius: 10px; background: #EEF2FF; color: #2A195C; display: flex; align-items: center; justify-content: center; }
 .an-h1 { font-size: 24px; font-weight: 800; color: #0F172A; margin: 0 0 4px; letter-spacing: -0.02em; }
 .an-sub { font-size: 13px; color: #64748B; margin: 0; font-weight: 400; }
 
 .an-btn { display: flex; align-items: center; gap: 7px; padding: 10px 16px; background: #fff; border: 1.5px solid #E2E8F0; border-radius: 10px; font-size: 13px; font-weight: 600; color: #475569; cursor: pointer; transition: all .15s; }
 .an-btn:hover { border-color: #2a195c; color: #2a195c; }
-.an-btn-primary { background: #4F46E5; color: #fff; border-color: #4F46E5; }
+.an-btn-primary { background: #2A195C; color: #fff; border-color: #2A195C; }
 .an-btn-primary:hover { background: #4338CA; border-color: #4338CA; color: #fff; }
 
 /* Tabs categories */
 .an-tabs-card { border-bottom: 1px solid #E2E8F0; margin-bottom: 4px; overflow-x: auto; }
 .an-tabs-list { display: flex; gap: 24px; }
 .an-tab { padding: 12px 4px 14px; font-size: 13.5px; font-weight: 600; color: #64748B; cursor: pointer; border-bottom: 2.5px solid transparent; transition: all .15s; white-space: nowrap; background: transparent; border-top: none; border-left: none; border-right: none; }
-.an-tab:hover { color: #4F46E5; }
-.an-tab.active { color: #4F46E5; border-color: #4F46E5; font-weight: 700; }
+.an-tab:hover { color: #2A195C; }
+.an-tab.active { color: #2A195C; border-color: #2A195C; font-weight: 700; }
 
 /* Filter bar panel */
 .an-filter-card { background: #fff; border: 1px solid #E2E8F0; border-radius: 14px; padding: 14px 16px; box-shadow: 0 1px 3px rgba(0,0,0,.02); }
 .an-filter-grid { display: grid; grid-template-columns: 2.5fr 1.25fr 1.25fr 1.25fr 1.25fr auto auto; gap: 10px; align-items: center; }
 .an-search-wrap { position: relative; }
 .an-search-input { width: 100%; padding: 8px 12px 8px 34px; border: 1.5px solid #E2E8F0; border-radius: 8px; font-size: 12.5px; outline: none; transition: border-color .15s; }
-.an-search-input:focus { border-color: #4F46E5; }
+.an-search-input:focus { border-color: #2A195C; }
 .an-search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #94A3B8; display: flex; align-items: center; }
 
 .an-select { width: 100%; padding: 8px 10px; border: 1.5px solid #E2E8F0; border-radius: 8px; font-size: 12.5px; outline: none; background: #fff; color: #334155; cursor: pointer; }
-.an-select:focus { border-color: #4F46E5; }
+.an-select:focus { border-color: #2A195C; }
 
 .an-filter-btn { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; background: #fff; border: 1.5px solid #E2E8F0; border-radius: 8px; color: #64748B; cursor: pointer; }
-.an-filter-btn:hover { border-color: #4F46E5; color: #4F46E5; }
+.an-filter-btn:hover { border-color: #2A195C; color: #2A195C; }
 
 /* Layout Grid */
 .an-layout-grid { display: grid; grid-template-columns: 2.2fr 1fr; gap: 20px; align-items: start; }
@@ -104,15 +104,15 @@ const CSS = `
 /* Table Actions buttons */
 .an-action-row { display: flex; align-items: center; gap: 6px; }
 .an-eye-btn { width: 26px; height: 26px; border: 1.5px solid #E2E8F0; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; color: #64748B; background: #fff; cursor: pointer; }
-.an-eye-btn:hover { border-color: #4F46E5; color: #4F46E5; }
+.an-eye-btn:hover { border-color: #2A195C; color: #2A195C; }
 .an-dots-btn { background: none; border: none; color: #94A3B8; cursor: pointer; display: flex; align-items: center; font-size: 16px; }
 
 .an-tcard-ft { display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; border-top: 1px solid #E2E8F0; background: #FAFBFD; }
 .an-tcard-ft-lbl { font-size: 12.5px; color: #64748B; font-weight: 500; }
 .an-pg { display: flex; align-items: center; gap: 4px; }
 .an-pgb { width: 28px; height: 28px; border: 1.5px solid #E2E8F0; border-radius: 6px; background: #fff; font-size: 12.5px; font-weight: 700; color: #475569; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all .15s; }
-.an-pgb:hover:not(:disabled) { border-color: #4F46E5; color: #4F46E5; }
-.an-pgb.cur { background: #4F46E5; color: #fff; border-color: #4F46E5; }
+.an-pgb:hover:not(:disabled) { border-color: #2A195C; color: #2A195C; }
+.an-pgb.cur { background: #2A195C; color: #fff; border-color: #2A195C; }
 .an-pgb:disabled { opacity: 0.5; cursor: not-allowed; }
 
 .an-limit-select { padding: 6px 10px; border: 1.5px solid #E2E8F0; border-radius: 6px; font-size: 12px; font-weight: 600; outline: none; background: #fff; color: #475569; cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748B' stroke-width='2.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19.5 8.25l-7.5 7.5-7.5-7.5' /%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 8px center; background-size: 10px; padding-right: 24px; }
@@ -132,8 +132,8 @@ const CSS = `
 /* Quick actions */
 .an-qa-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #F8FAFC; cursor: pointer; }
 .an-qa-row:last-child { border-bottom: none; }
-.an-qa-row:hover .an-qa-name { color: #4F46E5; }
-.an-qa-ic { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #EEF2FF; color: #4F46E5; }
+.an-qa-row:hover .an-qa-name { color: #2A195C; }
+.an-qa-ic { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #EEF2FF; color: #2A195C; }
 .an-qa-meta { display: flex; flex-direction: column; }
 .an-qa-name { font-size: 12.5px; font-weight: 700; color: #1E293B; transition: color .12s; }
 .an-qa-sub { font-size: 11px; color: #64748B; margin-top: 1px; }
@@ -583,7 +583,7 @@ export default function AnnouncementsPage() {
                   <div className="an-summary-list">
                     <div className="an-sum-item">
                       <div className="an-sum-l">
-                        <div className="an-sum-ic" style={{ background: '#EEF2FF', color: '#4F46E5' }}>
+                        <div className="an-sum-ic" style={{ background: '#EEF2FF', color: '#2A195C' }}>
                           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                             <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" />
                           </svg>
@@ -702,7 +702,7 @@ export default function AnnouncementsPage() {
                 <div className="an-side-card">
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12, borderBottom: '1px solid #F1F5F9', paddingBottom: 10 }}>
                     <span className="an-preview-tit" style={{ margin: 0, fontSize: '13.5px', fontWeight: 'bold' }}>Recent Announcements</span>
-                    <Link href="/announcements" style={{ fontSize: '11px', fontWeight: '700', color: '#4F46E5', textDecoration: 'none' }}>View All</Link>
+                    <Link href="/announcements" style={{ fontSize: '11px', fontWeight: '700', color: '#2A195C', textDecoration: 'none' }}>View All</Link>
                   </div>
                   <div>
                     <div className="an-rec-row">

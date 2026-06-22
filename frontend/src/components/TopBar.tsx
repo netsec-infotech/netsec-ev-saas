@@ -161,8 +161,16 @@ export default function TopBar({
         {/* User greeting / Page title */}
         <div className="ev-tb-user">
           {!hideLeftAvatar && (
-            <div className="ev-tb-av">
-              {leftAvatarText}
+            <div className="ev-tb-av" style={{ background: userAvatar ? 'transparent' : undefined }}>
+              {userAvatar ? (
+                <img
+                  src={userAvatar}
+                  alt={title}
+                  style={{ width: '34px', height: '34px', borderRadius: '50%', objectFit: 'cover', display: 'block' }}
+                />
+              ) : (
+                leftAvatarText
+              )}
             </div>
           )}
           <div>

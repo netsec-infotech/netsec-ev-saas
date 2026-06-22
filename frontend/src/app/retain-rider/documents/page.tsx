@@ -10,43 +10,43 @@ const CSS = `
 .nr-main{margin-left:230px;display:flex;flex-direction:column;min-height:100vh;flex:1;min-width:0;background:#fff;}
 .nr-page{flex:1;padding:20px 22px 70px;}
 .nr-bc{display:flex;align-items:center;gap:7px;padding:14px 0 0;font-size:12px;color:#9CA3AF;}
-.nr-bc a{color:#9CA3AF;text-decoration:none;} .nr-bc a:hover{color:#4F46E5;} .nr-bc-sep{color:#D1D5DB;} .nr-bc-cur{color:#4F46E5;font-weight:600;}
+.nr-bc a{color:#9CA3AF;text-decoration:none;} .nr-bc a:hover{color:#2A195C;} .nr-bc-sep{color:#D1D5DB;} .nr-bc-cur{color:#2A195C;font-weight:600;}
 .nr-title-row{display:flex;align-items:flex-start;justify-content:space-between;margin:14px 0 20px;gap:16px;}
 .nr-h1{font-size:24px;font-weight:800;color:#111827;line-height:1.2;margin:0;}
 .nr-sub{font-size:13px;color:#6B7280;margin-top:4px;}
 .nr-back-btn{display:flex;align-items:center;gap:7px;padding:10px 20px;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;font-size:13px;font-weight:600;color:#374151;cursor:pointer;white-space:nowrap;font-family:inherit;box-shadow:0 1px 3px rgba(0,0,0,.06);transition:border-color .15s;flex-shrink:0;}
-.nr-back-btn:hover{border-color:#4F46E5;color:#4F46E5;}
+.nr-back-btn:hover{border-color:#2A195C;color:#2A195C;}
 .nr-stepper{display:flex;align-items:center;background:#fff;border:1px solid #E5E7EB;border-radius:14px;padding:18px 24px;margin-bottom:22px;box-shadow:0 1px 4px rgba(0,0,0,.05);}
 .nr-step-wrap{display:flex;align-items:center;flex:1;}
 .nr-step{display:flex;align-items:center;gap:10px;}
 .nr-step-num{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;}
-.nr-step-num.active{background:#4F46E5;color:#fff;} .nr-step-num.done{background:#22C55E;color:#fff;} .nr-step-num.pend{background:#fff;color:#9CA3AF;border:2px solid #E5E7EB;}
+.nr-step-num.active{background:#2A195C;color:#fff;} .nr-step-num.done{background:#22C55E;color:#fff;} .nr-step-num.pend{background:#fff;color:#9CA3AF;border:2px solid #E5E7EB;}
 .nr-step-label{font-size:13px;font-weight:600;color:#111827;white-space:nowrap;} .nr-step-label.pend{color:#9CA3AF;font-weight:500;}
 .nr-step-stat{font-size:11.5px;margin-top:2px;white-space:nowrap;}
-.nr-step-stat.active-s{color:#4F46E5;} .nr-step-stat.done-s{color:#22C55E;} .nr-step-stat.pend-s{color:#9CA3AF;}
+.nr-step-stat.active-s{color:#2A195C;} .nr-step-stat.done-s{color:#22C55E;} .nr-step-stat.pend-s{color:#9CA3AF;}
 .nr-step-line{flex:1;height:2px;background:#E5E7EB;margin:0 14px;min-width:16px;} .nr-step-line.done-l{background:#22C55E;}
 .nr-layout{display:grid;grid-template-columns:1fr 296px;gap:20px;align-items:start;}
 .nr-card{background:#fff;border:1px solid #E5E7EB;border-radius:14px;box-shadow:0 1px 4px rgba(0,0,0,.06);overflow:hidden;margin-bottom:16px;}
 .nr-card-body{padding:20px 24px;}
 .nr-footer-card{background:#fff;border:1px solid #E5E7EB;border-radius:14px;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 1px 4px rgba(0,0,0,.06);}
 .nr-prev-btn{display:flex;align-items:center;gap:6px;padding:10px 18px;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;font-size:13px;font-weight:600;color:#374151;cursor:pointer;font-family:inherit;transition:border-color .15s;}
-.nr-prev-btn:hover{border-color:#4F46E5;color:#4F46E5;}
-.nr-continue-btn{display:flex;align-items:center;gap:7px;padding:11px 26px;background:#4F46E5;color:#fff;border:none;border-radius:10px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .15s;box-shadow:0 2px 8px rgba(79,70,229,.3);}
+.nr-prev-btn:hover{border-color:#2A195C;color:#2A195C;}
+.nr-continue-btn{display:flex;align-items:center;gap:7px;padding:11px 26px;background:#2A195C;color:#fff;border:none;border-radius:10px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .15s;box-shadow:0 2px 8px rgba(79,70,229,.3);}
 .nr-continue-btn:hover{background:#4338CA;}
 .rr-doc-row{display:flex;align-items:center;justify-content:space-between;padding:13px 0;border-bottom:1px solid #F3F4F6;}
 .rr-doc-row:last-child{border-bottom:none;}
 .rr-doc-left{display:flex;align-items:center;gap:12px;}
-.rr-doc-ic{width:38px;height:38px;border-radius:9px;background:#EEF2FF;display:flex;align-items:center;justify-content:center;color:#4F46E5;flex-shrink:0;}
+.rr-doc-ic{width:38px;height:38px;border-radius:9px;background:#EEF2FF;display:flex;align-items:center;justify-content:center;color:#2A195C;flex-shrink:0;}
 .rr-doc-name{font-size:13px;font-weight:700;color:#111827;}
 .rr-doc-note{font-size:11.5px;color:#9CA3AF;margin-top:2px;}
 .rr-doc-right{display:flex;align-items:center;gap:10px;}
 .rr-status-badge{display:flex;align-items:center;gap:5px;border-radius:7px;font-size:11.5px;font-weight:700;padding:4px 11px;}
 .rr-status-ok{background:#DCFCE7;color:#16A34A;}
 .rr-view-btn{display:flex;align-items:center;gap:5px;padding:7px 12px;background:#fff;border:1.5px solid #E5E7EB;border-radius:8px;font-size:12.5px;font-weight:600;color:#374151;cursor:pointer;font-family:inherit;transition:border-color .15s;}
-.rr-view-btn:hover{border-color:#4F46E5;color:#4F46E5;}
+.rr-view-btn:hover{border-color:#2A195C;color:#2A195C;}
 .rr-photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:4px;}
 .rr-photo-box{border:1.5px dashed #C7D2FE;border-radius:10px;background:#F5F3FF;height:90px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;transition:all .15s;}
-.rr-photo-box:hover{border-color:#4F46E5;background:#EEF2FF;}
+.rr-photo-box:hover{border-color:#2A195C;background:#EEF2FF;}
 .rr-photo-box.uploaded{border-style:solid;border-color:#22C55E;background:#F0FDF4;}
 .rr-photo-label{font-size:11.5px;color:#6B7280;font-weight:600;text-align:center;}
 .rr-kyc-section{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:12px;padding:14px 18px;margin-bottom:18px;display:flex;align-items:flex-start;gap:12px;}
@@ -66,7 +66,7 @@ const CSS = `
 .nr-rp-row{display:flex;align-items:flex-start;justify-content:space-between;padding:7px 0;border-bottom:1px solid #F9FAFB;font-size:12.5px;}
 .nr-rp-row:last-child{border-bottom:none;} .nr-rp-label{color:#6B7280;} .nr-rp-val{font-weight:600;color:#111827;}
 .nr-help-body{padding:14px 18px 16px;} .nr-help-sub{font-size:13px;color:#6B7280;margin-bottom:12px;}
-.nr-help-btn{width:100%;padding:10px;background:#4F46E5;color:#fff;border-radius:9px;font-size:13px;font-weight:600;cursor:pointer;border:none;font-family:inherit;}
+.nr-help-btn{width:100%;padding:10px;background:#2A195C;color:#fff;border-radius:9px;font-size:13px;font-weight:600;cursor:pointer;border:none;font-family:inherit;}
 .nr-help-btn:hover{background:#4338CA;}
 .nr-checklist-row{display:flex;align-items:center;gap:9px;padding:7px 18px;font-size:12.5px;color:#374151;border-bottom:1px solid #F9FAFB;}
 .nr-checklist-row:last-child{border-bottom:none;}
@@ -194,10 +194,10 @@ export default function RetainRiderDocumentsPage(){
               </div>
               <div className="nr-rp">
                 <div className="nr-rp-card">
-                  <div className="nr-rp-hdr"><div style={{color:'#4F46E5',display:'flex'}}><IUser/></div><div className="nr-rp-title">Rider Info</div></div>
+                  <div className="nr-rp-hdr"><div style={{color:'#2A195C',display:'flex'}}><IUser/></div><div className="nr-rp-title">Rider Info</div></div>
                   <div className="nr-rp-body">
                     <div style={{display:'flex',alignItems:'center',gap:10,marginBottom:10,paddingBottom:10,borderBottom:'1px solid #F3F4F6'}}>
-                      <div style={{width:44,height:44,borderRadius:'50%',background:'linear-gradient(135deg,#4F46E5,#7C3AED)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:14,fontWeight:800,color:'#fff'}}>AV</div>
+                      <div style={{width:44,height:44,borderRadius:'50%',background:'linear-gradient(135deg,#2A195C,#7C3AED)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:14,fontWeight:800,color:'#fff'}}>AV</div>
                       <div>
                         <div style={{fontSize:13.5,fontWeight:800,color:'#111827'}}>Akash Verma</div>
                         <div style={{fontSize:12,color:'#6B7280'}}>RDR00124</div>
@@ -209,19 +209,19 @@ export default function RetainRiderDocumentsPage(){
                   </div>
                 </div>
                 <div className="nr-rp-card">
-                  <div className="nr-rp-hdr"><div style={{color:'#4F46E5',display:'flex'}}><IFile/></div><div className="nr-rp-title">Document Checklist</div></div>
+                  <div className="nr-rp-hdr"><div style={{color:'#2A195C',display:'flex'}}><IFile/></div><div className="nr-rp-title">Document Checklist</div></div>
                   <div style={{padding:'8px 0'}}>
                     {CHECKLIST.map((item)=>(
                       <div key={item} className="nr-checklist-row">
                         <div className="nr-cl-check"><ICheck s={11}/></div>
                         <span style={{flex:1}}>{item}</span>
-                        {item==='Vehicle Images'&&<span style={{fontSize:11,color:'#4F46E5',fontWeight:700}}>{uploadedCount}/6</span>}
+                        {item==='Vehicle Images'&&<span style={{fontSize:11,color:'#2A195C',fontWeight:700}}>{uploadedCount}/6</span>}
                       </div>
                     ))}
                   </div>
                 </div>
                 <div className="nr-rp-card">
-                  <div className="nr-rp-hdr"><div style={{color:'#4F46E5',display:'flex'}}><IUser/></div><div className="nr-rp-title">Need Help?</div></div>
+                  <div className="nr-rp-hdr"><div style={{color:'#2A195C',display:'flex'}}><IUser/></div><div className="nr-rp-title">Need Help?</div></div>
                   <div className="nr-help-body"><div className="nr-help-sub">Facing issues with document upload?</div><button className="nr-help-btn">Contact Support</button></div>
                 </div>
               </div>

@@ -19,8 +19,8 @@ const CSS = `
 .on-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2px; }
 .on-title { font-size: 22px; font-weight: 800; color: #1E293B; margin: 0; }
 .on-sub { font-size: 13px; color: #64748B; margin-top: 4px; }
-.on-back-btn { display: flex; align-items: center; gap: 6px; padding: 8px 14px; background: #fff; border: 1.5px solid #E2E8F0; border-radius: 8px; font-size: 12px; font-weight: 700; color: #4F46E5; cursor: pointer; }
-.on-back-btn:hover { border-color: #4F46E5; }
+.on-back-btn { display: flex; align-items: center; gap: 6px; padding: 8px 14px; background: #fff; border: 1.5px solid #E2E8F0; border-radius: 8px; font-size: 12px; font-weight: 700; color: #2A195C; cursor: pointer; }
+.on-back-btn:hover { border-color: #2A195C; }
 
 /* Stepper header */
 .on-stepper { background: #fff; border: 1px solid #E2E8F0; border-radius: 12px; padding: 20px 30px; display: flex; justify-content: space-between; position: relative; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
@@ -86,7 +86,7 @@ const CSS = `
 /* Review section styles */
 .rev-box-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; background: #FAFBFD; border: 1px solid #E2E8F0; border-radius: 10px; padding: 16px; position: relative; }
 .rev-box-title { font-size: 12px; font-weight: 800; color: #0F172A; margin-bottom: 8px; }
-.rev-box-edit { position: absolute; right: 12px; top: 12px; font-size: 10.5px; font-weight: 700; color: #4F46E5; cursor: pointer; background: none; border: none; }
+.rev-box-edit { position: absolute; right: 12px; top: 12px; font-size: 10.5px; font-weight: 700; color: #2A195C; cursor: pointer; background: none; border: none; }
 .rev-box-row { display: flex; justify-content: space-between; font-size: 12px; border-bottom: 1px dashed #E2E8F0; padding-bottom: 6px; }
 .rev-box-row:last-child { border-bottom: none; padding-bottom: 0; }
 
@@ -118,7 +118,7 @@ const CSS = `
 .sig-pad-canvas { border: 1.5px dashed #CBD5E1; border-radius: 8px; background: #F8FAFC; cursor: crosshair; }
 
 .stamp-box { border: 1.5px dashed #CBD5E1; border-radius: 8px; padding: 12px; display: flex; align-items: center; justify-content: space-between; background: #F8FAFC; }
-.stamp-preview-img { width: 52px; height: 52px; border-radius: 50%; border: 2.2px double #4F46E5; display: flex; align-items: center; justify-content: center; font-size: 6px; font-weight: 800; text-align: center; color: #4F46E5; background: #fff; line-height: 1.2; text-transform: uppercase; font-family: monospace; flex-shrink: 0; box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.05); }
+.stamp-preview-img { width: 52px; height: 52px; border-radius: 50%; border: 2.2px double #2A195C; display: flex; align-items: center; justify-content: center; font-size: 6px; font-weight: 800; text-align: center; color: #2A195C; background: #fff; line-height: 1.2; text-transform: uppercase; font-family: monospace; flex-shrink: 0; box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.05); }
 
 /* Agreement checklist */
 .chk-item { display: flex; align-items: center; justify-content: space-between; font-size: 11.5px; padding-bottom: 8px; border-bottom: 1px solid #F1F5F9; }
@@ -130,7 +130,7 @@ const CSS = `
 .on-nav-btn { display: flex; align-items: center; gap: 6px; padding: 9px 16px; border: 1.5px solid #E2E8F0; border-radius: 8px; font-size: 12.5px; font-weight: 700; color: #475569; background: #fff; cursor: pointer; transition: all 0.15s; font-family: inherit; }
 .on-nav-btn:hover:not(:disabled) { border-color: #6366F1; color: #6366F1; }
 .on-nav-btn-primary { background: #6366F1; color: #fff; border-color: #6366F1; }
-.on-nav-btn-primary:hover { background: #4F46E5; border-color: #4F46E5; color: #fff; }
+.on-nav-btn-primary:hover { background: #2A195C; border-color: #2A195C; color: #fff; }
 .on-nav-btn:disabled { opacity: 0.4; cursor: not-allowed; }
 `;
 
@@ -777,7 +777,7 @@ export default function FranchiseOnboardWizard() {
                           ) : (
                             <div style={{ border: '1.5px dashed #CBD5E1', borderRadius: '8px', padding: '20px', textAlign: 'center', background: '#F8FAFC', cursor: 'pointer' }} onClick={() => setSignatureAdded(true)}>
                               <span style={{ fontSize: '20px' }}>📤</span>
-                              <div style={{ fontSize: '11.5px', fontWeight: 'bold', color: '#4F46E5', marginTop: '6px' }}>Upload Signature Image</div>
+                              <div style={{ fontSize: '11.5px', fontWeight: 'bold', color: '#2A195C', marginTop: '6px' }}>Upload Signature Image</div>
                               <div style={{ fontSize: '9px', color: '#94A3B8', marginTop: '2px' }}>PNG, JPG, JPEG (Max. 2MB)</div>
                             </div>
                           )}
@@ -810,7 +810,7 @@ export default function FranchiseOnboardWizard() {
                                   <span style={{ fontSize: '8.5px', color: '#64748B', marginTop: '4px' }}>PNG, JPG (Max. 2MB)</span>
                                 </div>
                                 <div style={{ position: 'relative', flexShrink: 0 }}>
-                                  <div className="stamp-preview-img" style={{ width: '60px', height: '60px', borderRadius: '50%', border: '2.5px double #4F46E5', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '6px', fontWeight: '800', textAlign: 'center', color: '#4F46E5', background: '#fff', lineHeight: '1.2', textTransform: 'uppercase', fontFamily: 'monospace', padding: '4px' }}>
+                                  <div className="stamp-preview-img" style={{ width: '60px', height: '60px', borderRadius: '50%', border: '2.5px double #2A195C', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '6px', fontWeight: '800', textAlign: 'center', color: '#2A195C', background: '#fff', lineHeight: '1.2', textTransform: 'uppercase', fontFamily: 'monospace', padding: '4px' }}>
                                     C.P. E-VEGAH<br/>HUB<br/>NEW DELHI
                                   </div>
                                   <button 
@@ -828,7 +828,7 @@ export default function FranchiseOnboardWizard() {
                                 onClick={() => setStampUploaded(true)}
                               >
                                 <span style={{ fontSize: '16px' }}>📤</span>
-                                <span style={{ fontSize: '11px', fontWeight: 'bold', color: '#4F46E5', marginTop: '4px' }}>Upload Stamp</span>
+                                <span style={{ fontSize: '11px', fontWeight: 'bold', color: '#2A195C', marginTop: '4px' }}>Upload Stamp</span>
                                 <span style={{ fontSize: '8.5px', color: '#94A3B8', marginTop: '2px' }}>PNG, JPG, JPEG (Max. 2MB)</span>
                               </div>
                             )}

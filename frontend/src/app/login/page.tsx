@@ -225,7 +225,7 @@ const CSS = `
   height: 32px;
   border-radius: 8px;
   background: #EEF2FF;
-  color: #4F46E5;
+  color: #2A195C;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -397,7 +397,7 @@ const CSS = `
 }
 
 .log-link:hover {
-  color: #4F46E5;
+  color: #2A195C;
 }
 
 /* Submit Button */
@@ -406,7 +406,7 @@ const CSS = `
   padding: 12px;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(135deg, #2a195c 0%, #4f46e5 100%);
+  background: linear-gradient(135deg, #2a195c 0%, #2A195C 100%);
   color: #fff;
   font-size: 13.5px;
   font-weight: 700;

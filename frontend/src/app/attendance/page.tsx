@@ -17,16 +17,16 @@ const CSS = `
 /* breadcrumb */
 .at-bc{display:flex;align-items:center;gap:6px;padding:14px 0 0;font-size:12px;color:#9CA3AF;}
 .at-bc a{color:#9CA3AF;text-decoration:none;}
-.at-bc a:hover{color:#4F46E5;}
+.at-bc a:hover{color:#2A195C;}
 .at-bc-sep{color:#D1D5DB;}
-.at-bc-cur{color:#4F46E5;font-weight:600;}
+.at-bc-cur{color:#2A195C;font-weight:600;}
 
 /* title */
 .at-title-row{display:flex;align-items:flex-start;justify-content:space-between;margin:12px 0 22px;gap:16px;}
 .at-h1{font-size:22px;font-weight:800;color:#111827;margin:0 0 4px;}
 .at-sub{font-size:13px;color:#6B7280;margin:0;}
 .at-export-btn{display:flex;align-items:center;gap:7px;padding:9px 18px;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;font-size:13px;font-weight:600;color:#374151;cursor:pointer;font-family:inherit;box-shadow:0 1px 3px rgba(0,0,0,.06);transition:border-color .15s;}
-.at-export-btn:hover{border-color:#4F46E5;color:#4F46E5;}
+.at-export-btn:hover{border-color:#2A195C;color:#2A195C;}
 
 /* top 3-col grid */
 .at-top-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:18px;margin-bottom:20px;}
@@ -52,7 +52,7 @@ const CSS = `
 .at-info-row{display:flex;align-items:center;justify-content:space-between;font-size:13px;}
 .at-info-label{color:#6B7280;display:flex;align-items:center;gap:7px;}
 .at-info-val{font-weight:600;color:#111827;}
-.at-info-val.elapsed{font-family:'JetBrains Mono',monospace;font-size:14px;color:#4F46E5;}
+.at-info-val.elapsed{font-family:'JetBrains Mono',monospace;font-size:14px;color:#2A195C;}
 .at-info-val.break-t{font-family:'JetBrains Mono',monospace;color:#D97706;}
 
 .at-btn-row{display:flex;gap:12px;margin-bottom:22px;}
@@ -67,7 +67,7 @@ const CSS = `
 .at-timeline{border-top:1px solid #F3F4F6;padding-top:16px;}
 .at-tl-label{font-size:12px;color:#9CA3AF;margin-bottom:8px;}
 .at-tl-bar-bg{height:8px;background:#E5E7EB;border-radius:4px;overflow:hidden;margin-bottom:6px;}
-.at-tl-bar-work{height:100%;background:linear-gradient(90deg,#4F46E5,#7C3AED);border-radius:4px;transition:width .5s;}
+.at-tl-bar-work{height:100%;background:linear-gradient(90deg,#2A195C,#7C3AED);border-radius:4px;transition:width .5s;}
 .at-tl-ticks{display:flex;justify-content:space-between;}
 .at-tl-tick{font-size:10px;color:#9CA3AF;}
 
@@ -81,7 +81,7 @@ const CSS = `
 .at-stat-val.amber{color:#D97706;}
 
 /* streak card */
-.at-streak-card{background:linear-gradient(135deg,#4F46E5,#7C3AED);border-radius:16px;padding:20px;color:#fff;box-shadow:0 4px 14px rgba(79,70,229,.3);}
+.at-streak-card{background:linear-gradient(135deg,#2A195C,#7C3AED);border-radius:16px;padding:20px;color:#fff;box-shadow:0 4px 14px rgba(79,70,229,.3);}
 .at-streak-title{font-size:13px;font-weight:700;color:rgba(255,255,255,.8);display:flex;align-items:center;gap:7px;margin-bottom:12px;}
 .at-streak-num{font-size:42px;font-weight:800;line-height:1;margin-bottom:4px;}
 .at-streak-lbl{font-size:11.5px;color:rgba(255,255,255,.85);margin-bottom:16px;}
@@ -97,7 +97,7 @@ const CSS = `
 .at-week-title{font-size:14px;font-weight:700;color:#111827;display:flex;align-items:center;gap:7px;}
 .at-week-nav{display:flex;align-items:center;gap:10px;}
 .at-week-nav-btn{width:28px;height:28px;border:1.5px solid #E5E7EB;border-radius:6px;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#374151;}
-.at-week-nav-btn:hover{border-color:#4F46E5;color:#4F46E5;}
+.at-week-nav-btn:hover{border-color:#2A195C;color:#2A195C;}
 .at-week-range{font-size:12.5px;font-weight:600;color:#374151;}
 .at-week-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;}
 .at-day-col{border:1px solid #F3F4F6;border-radius:10px;padding:12px 6px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;}
@@ -175,7 +175,7 @@ function DayDot({ type }: { type: string }) {
     present: '#22C55E',
     absent: '#EF4444',
     leave: '#F59E0B',
-    today: '#4F46E5',
+    today: '#2A195C',
     holiday: '#9CA3AF',
   };
   return <div style={{ width: 8, height: 8, borderRadius: '50%', background: colors[type] || '#E5E7EB' }} />;
@@ -361,9 +361,9 @@ export function AttendanceContent() {
           <div style={{marginTop:12,padding:'10px 14px',background:'#F9FAFB',borderRadius:10,fontSize:12,color:'#6B7280',lineHeight:1.6}}>
             <div style={{fontWeight:700,color:'#374151',marginBottom:4}}>Progress</div>
             <div style={{height:8,background:'#E5E7EB',borderRadius:4,overflow:'hidden'}}>
-              <div style={{height:'100%',background:'linear-gradient(90deg,#4F46E5,#7C3AED)',borderRadius:4,width:`${progressPct.toFixed(1)}%`,transition:'width .5s'}}/>
+              <div style={{height:'100%',background:'linear-gradient(90deg,#2A195C,#7C3AED)',borderRadius:4,width:`${progressPct.toFixed(1)}%`,transition:'width .5s'}}/>
             </div>
-            <div style={{marginTop:4,textAlign:'right',fontSize:11,fontWeight:700,color:'#4F46E5'}}>{progressPct.toFixed(0)}% of daily target</div>
+            <div style={{marginTop:4,textAlign:'right',fontSize:11,fontWeight:700,color:'#2A195C'}}>{progressPct.toFixed(0)}% of daily target</div>
           </div>
         </div>
 
@@ -390,7 +390,7 @@ export function AttendanceContent() {
         </div>
         <div className="at-week-grid">{WEEK_DAYS.map(d=>(<div key={d.name} className="at-day-col"><div className="at-day-name">{d.name}</div><div className={`at-day-dot-wrap ${d.type}`}><DayDot type={d.type}/></div><div className="at-day-date">{d.date}</div><div className="at-day-hours">{d.hours}</div></div>))}</div>
         <div style={{display:'flex',alignItems:'center',gap:16,marginTop:18,paddingTop:14,borderTop:'1px solid #F3F4F6',flexWrap:'wrap'}}>
-          {[{color:'#22C55E',bg:'#DCFCE7',label:'Present'},{color:'#EF4444',bg:'#FEE2E2',label:'Absent'},{color:'#F59E0B',bg:'#FEF3C7',label:'Leave'},{color:'#4F46E5',bg:'#EEF2FF',label:'Today'},{color:'#9CA3AF',bg:'#F3F4F6',label:'Holiday'}].map(l=>(<div key={l.label} style={{display:'flex',alignItems:'center',gap:5,fontSize:12,color:'#6B7280'}}><div style={{width:12,height:12,borderRadius:3,background:l.bg,border:`1.5px solid ${l.color}`}}/>{l.label}</div>))}
+          {[{color:'#22C55E',bg:'#DCFCE7',label:'Present'},{color:'#EF4444',bg:'#FEE2E2',label:'Absent'},{color:'#F59E0B',bg:'#FEF3C7',label:'Leave'},{color:'#2A195C',bg:'#EEF2FF',label:'Today'},{color:'#9CA3AF',bg:'#F3F4F6',label:'Holiday'}].map(l=>(<div key={l.label} style={{display:'flex',alignItems:'center',gap:5,fontSize:12,color:'#6B7280'}}><div style={{width:12,height:12,borderRadius:3,background:l.bg,border:`1.5px solid ${l.color}`}}/>{l.label}</div>))}
         </div>
       </div>
 

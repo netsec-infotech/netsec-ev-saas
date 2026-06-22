@@ -69,7 +69,7 @@ const CSS = `
 .ad-bound-list { display: flex; flex-direction: column; gap: 8px; }
 .ad-bound-item { display: flex; justify-content: space-between; align-items: center; padding: 10px; border: 1.2px solid #E2E8F0; border-radius: 8px; background: #FAFBFD; font-size: 12px; }
 .ad-bound-item-left { display: flex; gap: 8px; align-items: center; }
-.ad-bound-ic { font-size: 16px; width: 28px; height: 28px; border-radius: 50%; background: #EEF2FF; display: flex; align-items: center; justify-content: center; color: #4F46E5; }
+.ad-bound-ic { font-size: 16px; width: 28px; height: 28px; border-radius: 50%; background: #EEF2FF; display: flex; align-items: center; justify-content: center; color: #2A195C; }
 .ad-bound-title { font-weight: 700; color: #1E293B; }
 .ad-bound-sub { font-size: 10.5px; color: #64748B; margin-top: 1px; }
 

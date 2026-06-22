@@ -56,9 +56,9 @@ const CSS = `
 /* Breadcrumb */
 .fr-bc { display: flex; align-items: center; gap: 6px; padding: 0 0 14px; font-size: 12px; color: #9CA3AF; }
 .fr-bc a { color: #9CA3AF; text-decoration: none; }
-.fr-bc a:hover { color: #4F46E5; }
+.fr-bc a:hover { color: #2A195C; }
 .fr-bc-sep { color: #D1D5DB; }
-.fr-bc-cur { color: #4F46E5; font-weight: 600; }
+.fr-bc-cur { color: #2A195C; font-weight: 600; }
 
 /* Title section */
 .fr-title-row { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 20px; gap: 16px; }
@@ -67,7 +67,7 @@ const CSS = `
 
 .fr-actions { display: flex; align-items: center; gap: 10px; }
 .fr-btn { display: flex; align-items: center; gap: 7px; padding: 9px 16px; background: #fff; border: 1.5px solid #E5E7EB; border-radius: 10px; font-size: 13px; font-weight: 600; color: #374151; cursor: pointer; transition: all .15s; }
-.fr-btn:hover { border-color: #4F46E5; color: #4F46E5; }
+.fr-btn:hover { border-color: #2A195C; color: #2A195C; }
 .fr-btn-primary { background: #2a195c; color: #fff; border-color: #2a195c; }
 .fr-btn-primary:hover { background: #4338CA; border-color: #4338CA; color: #fff; }
 
@@ -90,10 +90,10 @@ const CSS = `
 .fr-filter-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr auto; gap: 10px; align-items: center; }
 .fr-search-wrap { position: relative; }
 .fr-search-input { width: 100%; padding: 8px 12px 8px 32px; border: 1.5px solid #E5E7EB; border-radius: 8px; font-size: 13px; outline: none; transition: border-color .15s; }
-.fr-search-input:focus { border-color: #4F46E5; }
+.fr-search-input:focus { border-color: #2A195C; }
 .fr-search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #9CA3AF; }
 .fr-select { padding: 8px 10px; border: 1.5px solid #E5E7EB; border-radius: 8px; font-size: 13px; outline: none; background: #fff; color: #374151; cursor: pointer; }
-.fr-select:focus { border-color: #4F46E5; }
+.fr-select:focus { border-color: #2A195C; }
 .fr-reset-btn { font-size: 12px; font-weight: 700; color: #ef4444; background: none; border: none; cursor: pointer; padding: 5px; }
 .fr-reset-btn:hover { text-decoration: underline; }
 
@@ -126,7 +126,7 @@ const CSS = `
 .fr-tcard-ft-lbl { font-size: 12px; color: #6B7280; }
 .fr-pg { display: flex; align-items: center; gap: 4px; }
 .fr-pgb { width: 30px; height: 30px; border: 1.5px solid #E5E7EB; border-radius: 8px; background: #fff; font-size: 12.5px; font-weight: 600; color: #4B5563; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all .15s; }
-.fr-pgb:hover:not(:disabled) { border-color: #4F46E5; color: #4F46E5; }
+.fr-pgb:hover:not(:disabled) { border-color: #2A195C; color: #2A195C; }
 .fr-pgb.cur { background: #2a195c; color: #fff; border-color: #2a195c; }
 .fr-pgb:disabled { opacity: 0.5; cursor: not-allowed; }
 
@@ -143,7 +143,7 @@ const CSS = `
 .form-group { margin-bottom: 14px; }
 .form-lbl { display: block; font-size: 12px; font-weight: 600; color: #4B5563; margin-bottom: 5px; }
 .form-input { width: 100%; padding: 8px 12px; border: 1.5px solid #E5E7EB; border-radius: 8px; font-size: 13.5px; outline: none; transition: border-color .15s; }
-.form-input:focus { border-color: #4F46E5; }
+.form-input:focus { border-color: #2A195C; }
 
 @keyframes drawPath {
   to { stroke-dashoffset: 0; }
@@ -421,7 +421,7 @@ export default function FranchisePage() {
                     ) : (
                       filtered.map(f => (
                         <tr key={f.id}>
-                          <td style={{ fontWeight: 'bold', color: '#4F46E5' }}>{f.id}</td>
+                          <td style={{ fontWeight: 'bold', color: '#2A195C' }}>{f.id}</td>
                           <td style={{ fontWeight: '600' }}>{f.name}</td>
                           <td>{f.ownerName}</td>
                           <td>{f.location}</td>

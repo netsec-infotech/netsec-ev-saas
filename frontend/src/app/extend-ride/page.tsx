@@ -12,7 +12,7 @@ const CSS = `
 .ex-body{padding:20px 22px 70px;display:flex;flex-direction:column;gap:18px;flex:1}
 .ex-bc{display:flex;align-items:center;gap:7px;font-size:12px;color:#94A3B8}
 .ex-bc a{color:#94A3B8;text-decoration:none}
-.ex-bc a:hover{color:#4F46E5}
+.ex-bc a:hover{color:#2A195C}
 .ex-title-row{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .ex-h1{font-size:24px;font-weight:800;color:#111827;line-height:1.15;margin:0}
 .ex-sub{font-size:13px;color:#64748B;margin-top:5px;max-width:760px}
@@ -23,7 +23,7 @@ const CSS = `
 .ex-card-title{font-size:16px;font-weight:800;color:#111827}
 .ex-card-sub{font-size:12.5px;color:#64748B;margin-top:3px}
 .ex-card-body{padding:18px 20px}
-.ex-ride-chip{display:inline-flex;align-items:center;gap:7px;padding:6px 10px;border-radius:999px;background:#EEF2FF;color:#4F46E5;font-size:11.5px;font-weight:800;margin-bottom:14px}
+.ex-ride-chip{display:inline-flex;align-items:center;gap:7px;padding:6px 10px;border-radius:999px;background:#EEF2FF;color:#2A195C;font-size:11.5px;font-weight:800;margin-bottom:14px}
 .ex-meta-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:16px}
 .ex-meta{border:1px solid #E5E7EB;border-radius:12px;padding:12px 14px;background:#FAFAFF}
 .ex-meta-lbl{font-size:11px;color:#94A3B8;margin-bottom:4px}
@@ -32,14 +32,14 @@ const CSS = `
 .ex-field{display:flex;flex-direction:column;gap:6px}
 .ex-lbl{font-size:12px;font-weight:700;color:#334155}
 .ex-inp,.ex-select,.ex-textarea{width:100%;border:1.5px solid #E2E8F0;border-radius:10px;padding:10px 12px;font-size:13px;font-family:inherit;color:#0F172A;background:#fff;outline:none;transition:border-color .15s,box-shadow .15s}
-.ex-inp:focus,.ex-select:focus,.ex-textarea:focus{border-color:#4F46E5;box-shadow:0 0 0 3px rgba(79,70,229,.08)}
+.ex-inp:focus,.ex-select:focus,.ex-textarea:focus{border-color:#2A195C;box-shadow:0 0 0 3px rgba(79,70,229,.08)}
 .ex-select{appearance:none}
 .ex-textarea{min-height:112px;resize:vertical}
 .ex-field.full{grid-column:1/-1}
 .ex-quick-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
 .ex-quick-btn{padding:8px 12px;border-radius:999px;border:1px solid #E2E8F0;background:#fff;color:#475569;font-size:12px;font-weight:700;cursor:pointer;transition:all .15s}
-.ex-quick-btn:hover{border-color:#4F46E5;color:#4F46E5;background:#EEF2FF}
-.ex-quick-btn.active{border-color:#4F46E5;background:#4F46E5;color:#fff}
+.ex-quick-btn:hover{border-color:#2A195C;color:#2A195C;background:#EEF2FF}
+.ex-quick-btn.active{border-color:#2A195C;background:#2A195C;color:#fff}
 .ex-summary{display:flex;flex-direction:column;gap:14px;position:sticky;top:80px}
 .ex-summary-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;box-shadow:0 1px 4px rgba(15,23,42,.06);overflow:hidden}
 .ex-summary-hdr{padding:16px 18px;border-bottom:1px solid #F1F5F9;display:flex;align-items:center;justify-content:space-between;gap:10px}
@@ -50,14 +50,14 @@ const CSS = `
 .ex-slbl{color:#64748B}
 .ex-sval{font-weight:700;color:#111827;text-align:right}
 .ex-total{display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding-top:12px;border-top:1px solid #E2E8F0;font-size:13px;font-weight:800;color:#111827}
-.ex-total span:last-child{font-size:16px;color:#4F46E5}
+.ex-total span:last-child{font-size:16px;color:#2A195C}
 .ex-note{padding:12px 14px;border-radius:12px;border:1px solid #BBF7D0;background:#F0FDF4;color:#166534;font-size:12.5px;line-height:1.45}
 .ex-btn-row{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}
 .ex-btn{padding:11px 16px;border-radius:10px;font-size:13.5px;font-weight:800;border:1px solid transparent;cursor:pointer;font-family:inherit}
 .ex-btn.secondary{background:#fff;border-color:#E2E8F0;color:#334155}
-.ex-btn.primary{background:#4F46E5;color:#fff;box-shadow:0 2px 10px rgba(79,70,229,.2)}
+.ex-btn.primary{background:#2A195C;color:#fff;box-shadow:0 2px 10px rgba(79,70,229,.2)}
 .ex-btn.primary:hover{background:#4338CA}
-.ex-btn.secondary:hover{border-color:#4F46E5;color:#4F46E5}
+.ex-btn.secondary:hover{border-color:#2A195C;color:#2A195C}
 @media (max-width: 1100px){.ex-grid{grid-template-columns:1fr}.ex-summary{position:static}.ex-meta-grid{grid-template-columns:1fr}}
 `;
 
@@ -88,7 +88,7 @@ export default function ExtendRidePage() {
               <span>›</span>
               <span>Requests</span>
               <span>›</span>
-              <span style={{ color: '#4F46E5', fontWeight: 700 }}>Extend Ride</span>
+              <span style={{ color: '#2A195C', fontWeight: 700 }}>Extend Ride</span>
             </div>
 
             <div className="ex-title-row">

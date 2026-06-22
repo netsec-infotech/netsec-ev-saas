@@ -10,28 +10,28 @@ const CSS = `
 .nr-main{margin-left:230px;display:flex;flex-direction:column;min-height:100vh;flex:1;min-width:0;background:#fff;}
 .nr-page{flex:1;padding:20px 22px 70px;}
 .nr-bc{display:flex;align-items:center;gap:7px;padding:14px 0 0;font-size:12px;color:#9CA3AF;}
-.nr-bc a{color:#9CA3AF;text-decoration:none;} .nr-bc a:hover{color:#4F46E5;} .nr-bc-sep{color:#D1D5DB;} .nr-bc-cur{color:#4F46E5;font-weight:600;}
+.nr-bc a{color:#9CA3AF;text-decoration:none;} .nr-bc a:hover{color:#2A195C;} .nr-bc-sep{color:#D1D5DB;} .nr-bc-cur{color:#2A195C;font-weight:600;}
 .nr-title-row{display:flex;align-items:flex-start;justify-content:space-between;margin:14px 0 20px;gap:16px;}
 .nr-h1{font-size:24px;font-weight:800;color:#111827;line-height:1.2;margin:0;}
 .nr-sub{font-size:13px;color:#6B7280;margin-top:4px;}
 .nr-back-btn{display:flex;align-items:center;gap:7px;padding:10px 20px;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;font-size:13px;font-weight:600;color:#374151;cursor:pointer;white-space:nowrap;font-family:inherit;box-shadow:0 1px 3px rgba(0,0,0,.06);transition:border-color .15s;flex-shrink:0;}
-.nr-back-btn:hover{border-color:#4F46E5;color:#4F46E5;}
+.nr-back-btn:hover{border-color:#2A195C;color:#2A195C;}
 .nr-stepper{display:flex;align-items:center;background:#fff;border:1px solid #E5E7EB;border-radius:14px;padding:18px 24px;margin-bottom:22px;box-shadow:0 1px 4px rgba(0,0,0,.05);}
 .nr-step-wrap{display:flex;align-items:center;flex:1;}
 .nr-step{display:flex;align-items:center;gap:10px;}
 .nr-step-num{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;}
-.nr-step-num.active{background:#4F46E5;color:#fff;} .nr-step-num.done{background:#22C55E;color:#fff;} .nr-step-num.pend{background:#fff;color:#9CA3AF;border:2px solid #E5E7EB;}
+.nr-step-num.active{background:#2A195C;color:#fff;} .nr-step-num.done{background:#22C55E;color:#fff;} .nr-step-num.pend{background:#fff;color:#9CA3AF;border:2px solid #E5E7EB;}
 .nr-step-label{font-size:13px;font-weight:600;color:#111827;white-space:nowrap;} .nr-step-label.pend{color:#9CA3AF;font-weight:500;}
 .nr-step-stat{font-size:11.5px;margin-top:2px;white-space:nowrap;}
-.nr-step-stat.active-s{color:#4F46E5;} .nr-step-stat.done-s{color:#22C55E;} .nr-step-stat.pend-s{color:#9CA3AF;}
+.nr-step-stat.active-s{color:#2A195C;} .nr-step-stat.done-s{color:#22C55E;} .nr-step-stat.pend-s{color:#9CA3AF;}
 .nr-step-line{flex:1;height:2px;background:#E5E7EB;margin:0 14px;min-width:16px;} .nr-step-line.done-l{background:#22C55E;}
 .nr-layout{display:grid;grid-template-columns:1fr 296px;gap:20px;align-items:start;}
 .nr-card{background:#fff;border:1px solid #E5E7EB;border-radius:14px;box-shadow:0 1px 4px rgba(0,0,0,.06);overflow:hidden;margin-bottom:16px;}
 .nr-card-body{padding:20px 24px;}
 .nr-footer-card{background:#fff;border:1px solid #E5E7EB;border-radius:14px;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 1px 4px rgba(0,0,0,.06);}
 .nr-prev-btn{display:flex;align-items:center;gap:6px;padding:10px 18px;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;font-size:13px;font-weight:600;color:#374151;cursor:pointer;font-family:inherit;transition:border-color .15s;}
-.nr-prev-btn:hover{border-color:#4F46E5;color:#4F46E5;}
-.nr-continue-btn{display:flex;align-items:center;gap:7px;padding:11px 26px;background:#4F46E5;color:#fff;border:none;border-radius:10px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .15s;box-shadow:0 2px 8px rgba(79,70,229,.3);}
+.nr-prev-btn:hover{border-color:#2A195C;color:#2A195C;}
+.nr-continue-btn{display:flex;align-items:center;gap:7px;padding:11px 26px;background:#2A195C;color:#fff;border:none;border-radius:10px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .15s;box-shadow:0 2px 8px rgba(79,70,229,.3);}
 .nr-continue-btn:hover{background:#4338CA;}
 /* charges */
 .rr-table{width:100%;border-collapse:collapse;margin-bottom:18px;}
@@ -41,13 +41,13 @@ const CSS = `
 .rr-table td:last-child{text-align:right;font-weight:600;}
 .rr-table tr:last-child td{border-bottom:none;}
 .rr-total-row td{background:#F5F3FF;font-weight:800;font-size:14px;color:#111827;}
-.rr-total-row td:last-child{color:#4F46E5;font-size:18px;}
+.rr-total-row td:last-child{color:#2A195C;font-size:18px;}
 /* deposit */
 .rr-deposit-card{border:1.5px solid #C7D2FE;border-radius:12px;overflow:hidden;margin-bottom:14px;display:flex;}
 .rr-deposit-left{background:#EEF2FF;padding:16px 20px;flex:0 0 230px;border-right:1px solid #C7D2FE;display:flex;flex-direction:column;gap:4px;}
 .rr-deposit-label{font-size:13px;font-weight:700;color:#3730A3;display:flex;align-items:center;gap:7px;}
 .rr-deposit-sub{font-size:11.5px;color:#6B7280;}
-.rr-deposit-amount{font-size:18px;font-weight:800;color:#4F46E5;margin-top:4px;}
+.rr-deposit-amount{font-size:18px;font-weight:800;color:#2A195C;margin-top:4px;}
 .rr-deposit-right{flex:1;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
 .rr-deposit-saving{font-size:13px;font-weight:800;color:#22C55E;}
 .rr-toggle{width:42px;height:24px;border-radius:12px;position:relative;cursor:pointer;flex-shrink:0;transition:background .2s;}
@@ -55,7 +55,7 @@ const CSS = `
 /* final */
 .rr-final-card{border:1.5px solid #E5E7EB;border-radius:12px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;}
 .rr-final-left{display:flex;align-items:center;gap:10px;}
-.rr-final-ic{width:36px;height:36px;border-radius:9px;background:#EEF2FF;display:flex;align-items:center;justify-content:center;color:#4F46E5;flex-shrink:0;}
+.rr-final-ic{width:36px;height:36px;border-radius:9px;background:#EEF2FF;display:flex;align-items:center;justify-content:center;color:#2A195C;flex-shrink:0;}
 .rr-final-label{font-size:13px;font-weight:700;color:#374151;}
 .rr-final-amount{font-size:26px;font-weight:800;color:#111827;}
 .rr-deposit-applied{font-size:12px;font-weight:700;color:#22C55E;}
@@ -63,10 +63,10 @@ const CSS = `
 .rr-pm-title{font-size:13px;font-weight:700;color:#111827;margin-bottom:12px;}
 .rr-pm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
 .rr-pm-card{border:1.5px solid #E5E7EB;border-radius:12px;padding:14px;cursor:pointer;transition:border-color .15s;}
-.rr-pm-card.selected{border-color:#4F46E5;background:#F5F3FF;}
+.rr-pm-card.selected{border-color:#2A195C;background:#F5F3FF;}
 .rr-pm-card:hover:not(.selected){border-color:#C7D2FE;}
 .rr-pm-radio{width:16px;height:16px;border-radius:50%;border:2px solid #E5E7EB;display:flex;align-items:center;justify-content:center;margin-bottom:10px;}
-.rr-pm-radio.on{border-color:#4F46E5;background:#4F46E5;}
+.rr-pm-radio.on{border-color:#2A195C;background:#2A195C;}
 .rr-pm-name{font-size:12.5px;font-weight:700;color:#111827;margin-bottom:3px;}
 .rr-pm-sub{font-size:11.5px;color:#9CA3AF;}
 /* rp */
@@ -78,11 +78,11 @@ const CSS = `
 .nr-rp-row{display:flex;align-items:flex-start;justify-content:space-between;padding:6.5px 0;border-bottom:1px solid #F9FAFB;font-size:12.5px;}
 .nr-rp-row:last-child{border-bottom:none;} .nr-rp-label{color:#6B7280;} .nr-rp-val{font-weight:600;color:#111827;text-align:right;}
 .nr-rp-kyc{background:#DCFCE7;color:#16A34A;border-radius:5px;font-size:11px;font-weight:700;padding:2px 8px;}
-.nr-rp-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#4F46E5,#7C3AED);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#fff;flex-shrink:0;}
+.nr-rp-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#2A195C,#7C3AED);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#fff;flex-shrink:0;}
 .nr-rp-name{font-size:13.5px;font-weight:800;color:#111827;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
 .nr-rp-sub{font-size:12px;color:#6B7280;}
 .nr-help-body{padding:14px 18px 16px;} .nr-help-sub{font-size:13px;color:#6B7280;margin-bottom:12px;}
-.nr-help-btn{width:100%;padding:10px;background:#4F46E5;color:#fff;border-radius:9px;font-size:13px;font-weight:600;cursor:pointer;border:none;font-family:inherit;}
+.nr-help-btn{width:100%;padding:10px;background:#2A195C;color:#fff;border-radius:9px;font-size:13px;font-weight:600;cursor:pointer;border:none;font-family:inherit;}
 .nr-help-btn:hover{background:#4338CA;}
 `;
 
@@ -171,7 +171,7 @@ export default function RetainRiderPaymentPage(){
                           <div style={{fontSize:12,color:'#6B7280',marginTop:2}}>Deposit will be adjusted from total amount</div>
                           {depositApplied&&<div className="rr-deposit-saving" style={{marginTop:6}}>Saving ₹500.00</div>}
                         </div>
-                        <div className="rr-toggle" style={{background:depositApplied?'#4F46E5':'#D1D5DB'}} onClick={()=>setDepositApplied(p=>!p)}>
+                        <div className="rr-toggle" style={{background:depositApplied?'#2A195C':'#D1D5DB'}} onClick={()=>setDepositApplied(p=>!p)}>
                           <div className="rr-toggle-knob" style={{left:depositApplied?21:3}}/>
                         </div>
                       </div>
@@ -196,7 +196,7 @@ export default function RetainRiderPaymentPage(){
                       ].map(m=>(
                         <div key={m.id} className={`rr-pm-card ${payMethod===m.id?'selected':''}`} onClick={()=>setPayMethod(m.id)}>
                           <div className={`rr-pm-radio ${payMethod===m.id?'on':''}`}/>
-                          <div style={{color:payMethod===m.id?'#4F46E5':'#9CA3AF',marginBottom:8,display:'flex'}}>{m.icon}</div>
+                          <div style={{color:payMethod===m.id?'#2A195C':'#9CA3AF',marginBottom:8,display:'flex'}}>{m.icon}</div>
                           <div className="rr-pm-name">{m.name}</div>
                           <div className="rr-pm-sub">{m.sub}</div>
                         </div>
@@ -211,7 +211,7 @@ export default function RetainRiderPaymentPage(){
               </div>
               <div className="nr-rp">
                 <div className="nr-rp-card">
-                  <div className="nr-rp-hdr"><div style={{color:'#4F46E5',display:'flex'}}><IUser/></div><div className="nr-rp-title">Rider Summary</div></div>
+                  <div className="nr-rp-hdr"><div style={{color:'#2A195C',display:'flex'}}><IUser/></div><div className="nr-rp-title">Rider Summary</div></div>
                   <div className="nr-rp-body">
                     <div style={{display:'flex',alignItems:'center',gap:10,marginBottom:10,paddingBottom:10,borderBottom:'1px solid #F3F4F6'}}>
                       <div className="nr-rp-avatar">AV</div>
@@ -227,7 +227,7 @@ export default function RetainRiderPaymentPage(){
                   </div>
                 </div>
                 <div className="nr-rp-card">
-                  <div className="nr-rp-hdr"><div style={{color:'#4F46E5',display:'flex'}}><IReceipt/></div><div className="nr-rp-title">Ride Summary</div></div>
+                  <div className="nr-rp-hdr"><div style={{color:'#2A195C',display:'flex'}}><IReceipt/></div><div className="nr-rp-title">Ride Summary</div></div>
                   <div className="nr-rp-body">
                     {[{l:'Ride Start',v:'21 May 2024'},{l:'Expected Return',v:'20 Jun 2024'},{l:'Rental Plan',v:'Monthly'}].map(r=>(
                       <div key={r.l} className="nr-rp-row"><span className="nr-rp-label">{r.l}</span><span className="nr-rp-val">{r.v}</span></div>
@@ -235,12 +235,12 @@ export default function RetainRiderPaymentPage(){
                     <div style={{margin:'10px 0',height:1,background:'#F3F4F6'}}/>
                     <div style={{display:'flex',justifyContent:'space-between',fontSize:13}}>
                       <span style={{color:'#6B7280'}}>Total Payable</span>
-                      <span style={{fontWeight:800,color:'#4F46E5',fontSize:15}}>₹{depositApplied?'621.00':'1,121.00'}</span>
+                      <span style={{fontWeight:800,color:'#2A195C',fontSize:15}}>₹{depositApplied?'621.00':'1,121.00'}</span>
                     </div>
                   </div>
                 </div>
                 <div className="nr-rp-card">
-                  <div className="nr-rp-hdr"><div style={{color:'#4F46E5',display:'flex'}}><IUser/></div><div className="nr-rp-title">Need Help?</div></div>
+                  <div className="nr-rp-hdr"><div style={{color:'#2A195C',display:'flex'}}><IUser/></div><div className="nr-rp-title">Need Help?</div></div>
                   <div className="nr-help-body"><div className="nr-help-sub">Facing issues with payment?</div><button className="nr-help-btn">Contact Support</button></div>
                 </div>
               </div>

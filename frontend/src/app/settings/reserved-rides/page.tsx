@@ -11,7 +11,7 @@ const CSS = `
 /* Breadcrumb */
 .rr-bc { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #64748B; font-weight: 500; }
 .rr-bc-sep { color: #94A3B8; }
-.rr-bc-cur { color: #4F46E5; font-weight: 600; }
+.rr-bc-cur { color: #2A195C; font-weight: 600; }
 
 /* Title block */
 .rr-title-row { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; }
@@ -94,8 +94,8 @@ const CSS = `
 .sim-inp:focus { border-color: #6366F1; }
 .sim-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .sim-otp-box { display: flex; gap: 8px; }
-.sim-btn-otp { padding: 0 14px; background: #EEF2FF; border: 1.5px solid #C7D2FE; color: #4F46E5; border-radius: 8px; font-size: 12.5px; font-weight: 700; cursor: pointer; transition: all 0.15s; white-space: nowrap; }
-.sim-btn-otp:hover { background: #4F46E5; color: #fff; border-color: #4F46E5; }
+.sim-btn-otp { padding: 0 14px; background: #EEF2FF; border: 1.5px solid #C7D2FE; color: #2A195C; border-radius: 8px; font-size: 12.5px; font-weight: 700; cursor: pointer; transition: all 0.15s; white-space: nowrap; }
+.sim-btn-otp:hover { background: #2A195C; color: #fff; border-color: #2A195C; }
 
 /* Policies list */
 .sim-policies { background: #FAF5FF; border: 1px dashed #D8B4FE; border-radius: 10px; padding: 12px; display: flex; flex-direction: column; gap: 6px; }
@@ -503,7 +503,7 @@ export function ReservedRidesPageContent({ activePath = "/settings/reserved-ride
                       const payLower = (res.payment_status || '').toLowerCase();
                       return (
                         <tr key={res.id}>
-                          <td style={{ fontWeight: '750', color: '#4F46E5', fontFamily: 'monospace' }}>
+                          <td style={{ fontWeight: '750', color: '#2A195C', fontFamily: 'monospace' }}>
                             {res.reservation_id}
                           </td>
                           <td>
@@ -632,7 +632,7 @@ export function ReservedRidesPageContent({ activePath = "/settings/reserved-ride
             <div className="rr-modal-body">
               {/* Authenticate block */}
               <div style={{ background: '#F8FAFC', border: '1.5px solid #E2E8F0', borderRadius: '12px', padding: '14px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                <span style={{ fontSize: '11px', fontWeight: '850', color: '#4F46E5', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                <span style={{ fontSize: '11px', fontWeight: '850', color: '#2A195C', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                   Step 1: Customer Authentication by Mobile & OTP
                 </span>
                 <div className="sim-otp-box">
@@ -778,7 +778,7 @@ export function ReservedRidesPageContent({ activePath = "/settings/reserved-ride
               <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                 <div className="sim-detail-row">
                   <span className="sim-detail-key">Reservation Number</span>
-                  <span className="sim-detail-val" style={{ color: '#4F46E5', fontFamily: 'monospace' }}>{selectedRes.reservation_id}</span>
+                  <span className="sim-detail-val" style={{ color: '#2A195C', fontFamily: 'monospace' }}>{selectedRes.reservation_id}</span>
                 </div>
                 <div className="sim-detail-row">
                   <span className="sim-detail-key">Customer Name</span>
@@ -830,7 +830,7 @@ export function ReservedRidesPageContent({ activePath = "/settings/reserved-ride
               {/* Operator vehicle allocation widget */}
               {selectedRes.status.toLowerCase() === 'upcoming' && (
                 <div style={{ background: '#EEF2FF', border: '1.5px solid #C7D2FE', borderRadius: '12px', padding: '16px', display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '4px' }}>
-                  <span style={{ fontSize: '11px', fontWeight: '850', color: '#4F46E5', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  <span style={{ fontSize: '11px', fontWeight: '850', color: '#2A195C', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     🛠️ Operator Action: Allocate Vehicle & Start Ride
                   </span>
                   <div style={{ display: 'flex', gap: '8px' }}>

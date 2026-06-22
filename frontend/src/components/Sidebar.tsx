@@ -162,7 +162,7 @@ export default function Sidebar({ activePath, isOpen = true }: SidebarProps) {
       if (roleVal === 'admin') setUserRole('Platform Admin');
       else if (roleVal === 'zone_manager') setUserRole('Zone Admin');
       else if (roleVal === 'first_time_franchise') setUserRole('Franchise Manager');
-      else if (roleVal === 'employee') setUserRole('Employee');
+      else if (roleVal === 'employee') setUserRole('Zone Employee');
 
       // Load permissions
       try {

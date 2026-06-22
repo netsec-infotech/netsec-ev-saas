@@ -57,9 +57,9 @@ const CSS = `
 /* Breadcrumb */
 .bi-bc { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #64748B; font-weight: 500; }
 .bi-bc a { color: #64748B; text-decoration: none; }
-.bi-bc a:hover { color: #4F46E5; }
+.bi-bc a:hover { color: #2A195C; }
 .bi-bc-sep { color: #94A3B8; }
-.bi-bc-cur { color: #4F46E5; font-weight: 600; }
+.bi-bc-cur { color: #2A195C; font-weight: 600; }
 
 /* Header title */
 .bi-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
@@ -113,7 +113,7 @@ const CSS = `
 .bi-dt tr:last-child td { border-bottom: none; }
 .bi-dt tr:hover td { background: #F8FAFC; }
 
-.td-id { font-weight: 700; color: #4F46E5; text-decoration: none; cursor: pointer; }
+.td-id { font-weight: 700; color: #2A195C; text-decoration: none; cursor: pointer; }
 .td-id:hover { text-decoration: underline; }
 
 .status-badge { display: inline-flex; align-items: center; padding: 3px 8px; border-radius: 6px; font-size: 11px; font-weight: 700; text-transform: capitalize; }
@@ -394,7 +394,7 @@ export default function BatteryInventoryPage() {
   };
 
   // Colors list for location segments
-  const locationColors = ['#4F46E5', '#06B6D4', '#10B981', '#F59E0B', '#94A3B8'];
+  const locationColors = ['#2A195C', '#06B6D4', '#10B981', '#F59E0B', '#94A3B8'];
 
   const formatDate = (dateStr: string) => {
     if (!dateStr) return '-';

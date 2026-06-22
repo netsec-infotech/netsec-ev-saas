@@ -17,9 +17,9 @@ const CSS = `
 /* breadcrumb */
 .ar-bc{display:flex;align-items:center;gap:6px;padding:14px 0 0;font-size:12px;color:#9CA3AF;}
 .ar-bc a{color:#9CA3AF;text-decoration:none;}
-.ar-bc a:hover{color:#4F46E5;}
+.ar-bc a:hover{color:#2A195C;}
 .ar-bc-sep{color:#D1D5DB;}
-.ar-bc-cur{color:#4F46E5;font-weight:600;}
+.ar-bc-cur{color:#2A195C;font-weight:600;}
 
 /* Header Title row */
 .ar-title-row{display:flex;align-items:flex-start;justify-content:space-between;margin:12px 0 18px;gap:16px;}
@@ -27,18 +27,18 @@ const CSS = `
 .ar-sub{font-size:13px;color:#6B7280;margin:0;}
 .ar-hdr-actions{display:flex;align-items:center;gap:10px;}
 .ar-hdr-btn{display:flex;align-items:center;gap:7px;padding:9px 16px;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;font-size:13px;font-weight:600;color:#374151;cursor:pointer;font-family:inherit;box-shadow:0 1px 3px rgba(0,0,0,.06);transition:all .15s;}
-.ar-hdr-btn:hover{border-color:#4F46E5;color:#4F46E5;}
+.ar-hdr-btn:hover{border-color:#2A195C;color:#2A195C;}
 
 /* Stats cards (5 in a row) */
 .ar-stats-row{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:20px;}
 .ar-stat-card{background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 3px rgba(0,0,0,.05);}
-.ar-stat-ic{width:36px;height:36px;border-radius:8px;background:#F5F3FF;color:#4F46E5;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ar-stat-ic{width:36px;height:36px;border-radius:8px;background:#F5F3FF;color:#2A195C;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .ar-stat-info{min-width:0;flex:1;}
 .ar-stat-lbl{font-size:10.5px;color:#9CA3AF;font-weight:600;margin-bottom:2px;}
 .ar-stat-val{font-size:18px;font-weight:800;color:#111827;line-height:1;}
 .ar-dot{width:7px;height:7px;border-radius:50%;display:inline-block;}
 .ar-dot.online{background:#10B981;}
-.ar-dot.in_ride{background:#4F46E5;}
+.ar-dot.in_ride{background:#2A195C;}
 .ar-dot.warning{background:#F59E0B;}
 .ar-dot.danger{background:#EF4444;}
 
@@ -47,10 +47,10 @@ const CSS = `
 .ar-search-input-wrap{flex:1;min-width:260px;position:relative;display:flex;align-items:center;}
 .ar-search-ic{position:absolute;left:12px;color:#9CA3AF;display:flex;}
 .ar-search-input{width:100%;padding:9px 12px 9px 36px;border:1.5px solid #E5E7EB;border-radius:10px;font-size:13.5px;color:#111827;outline:none;background:#F9FAFB;transition:all .15s;font-family:inherit;}
-.ar-search-input:focus{border-color:#4F46E5;background:#fff;box-shadow:0 0 0 3px rgba(79,70,229,0.08);}
+.ar-search-input:focus{border-color:#2A195C;background:#fff;box-shadow:0 0 0 3px rgba(79,70,229,0.08);}
 .ar-filter-grp{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
 .ar-select{padding:9px 14px;border:1.5px solid #E5E7EB;border-radius:10px;font-size:13px;color:#374151;background:#fff;font-weight:600;cursor:pointer;outline:none;transition:border-color .15s;font-family:inherit;}
-.ar-select:focus{border-color:#4F46E5;}
+.ar-select:focus{border-color:#2A195C;}
 
 /* Rides Grid */
 .ar-rides-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));gap:20px;}
@@ -62,7 +62,7 @@ const CSS = `
 
 /* Renter details */
 .ar-renter-row{display:flex;align-items:center;gap:12px;}
-.ar-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#4F46E5,#7C3AED);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;}
+.ar-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#2A195C,#7C3AED);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;}
 .ar-renter-name{font-size:13.5px;font-weight:700;color:#111827;}
 .ar-ride-id{font-size:11px;color:#6B7280;margin-top:1px;}
 
@@ -84,7 +84,7 @@ const CSS = `
 .ar-route-node{display:flex;justify-content:space-between;align-items:center;font-size:12px;position:relative;}
 .ar-route-node::before{content:'';position:absolute;left:-14px;top:5px;width:7px;height:7px;border-radius:50%;border:1.5px solid #fff;box-shadow:0 1px 2px rgba(0,0,0,.15);z-index:2;}
 .ar-route-node.start::before{background:#10B981;}
-.ar-route-node.end::before{background:#4F46E5;}
+.ar-route-node.end::before{background:#2A195C;}
 .ar-route-lbl{color:#6B7280;}
 .ar-route-val{font-weight:600;color:#111827;}
 
@@ -96,9 +96,9 @@ const CSS = `
 
 /* Actions */
 .ar-btn{padding:7px 12px;border:1.5px solid #E5E7EB;border-radius:8px;background:#fff;font-size:11.5px;font-weight:700;color:#4B5563;cursor:pointer;display:flex;align-items:center;gap:5px;transition:all .15s;font-family:inherit;}
-.ar-btn:hover{color:#4F46E5;border-color:#C7D2FE;background:#F5F3FF;}
+.ar-btn:hover{color:#2A195C;border-color:#C7D2FE;background:#F5F3FF;}
 .ar-btn.danger-action:hover{color:#EF4444;border-color:#FCA5A5;background:#FEF2F2;}
-.ar-link{font-size:12px;font-weight:700;color:#4F46E5;text-decoration:none;display:flex;align-items:center;gap:4px;}
+.ar-link{font-size:12px;font-weight:700;color:#2A195C;text-decoration:none;display:flex;align-items:center;gap:4px;}
 .ar-link:hover{text-decoration:underline;}
 `;
 
@@ -303,7 +303,7 @@ export default function ActiveRidesPage() {
                         </div>
                         <div className="ar-metric-box">
                           <span className="ar-metric-lbl">Est. Fare</span>
-                          <span className="ar-metric-val" style={{ color: '#4F46E5' }}>{r.fare}</span>
+                          <span className="ar-metric-val" style={{ color: '#2A195C' }}>{r.fare}</span>
                         </div>
                       </div>
                     </div>

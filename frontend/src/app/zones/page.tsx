@@ -165,7 +165,7 @@ const CSS = `
 .zm-gf-param { display: flex; justify-content: space-between; align-items: center; font-size: 13px; padding: 8px 0; border-bottom: 1.5px solid #F1F5F9; }
 .zm-gf-param-lbl { color: #64748B; font-weight: 600; }
 .zm-gf-param-val { font-weight: 700; color: #1E293B; }
-.zm-badge-polygon { background: #EEF2FF; color: #4F46E5; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 700; border: 1.2px solid #C7D2FE; }
+.zm-badge-polygon { background: #EEF2FF; color: #2A195C; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 700; border: 1.2px solid #C7D2FE; }
 
 .zm-gf-right { display: flex; flex-direction: column; gap: 10px; }
 .zm-gf-coords-title { display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-weight: 700; color: #1E293B; }
@@ -181,7 +181,7 @@ const CSS = `
 .zm-tbl tr:last-child td { border-bottom: none; }
 .zm-tbl tr:hover td { background: #FAFBFD; }
 
-.zm-tbl-avatar { width: 26px; height: 26px; border-radius: 50%; background: #EEF2FF; display: inline-flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #4F46E5; border: 1.2px solid #E2E8F0; margin-right: 8px; }
+.zm-tbl-avatar { width: 26px; height: 26px; border-radius: 50%; background: #EEF2FF; display: inline-flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #2A195C; border: 1.2px solid #E2E8F0; margin-right: 8px; }
 
 /* Action row icons */
 .zm-tbl-act-btn { width: 28px; height: 28px; border: 1.5px solid #E2E8F0; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; color: #64748B; background: #fff; cursor: pointer; transition: all .15s; margin-right: 6px; }
@@ -217,10 +217,10 @@ const CSS = `
 .zl-summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .zl-summary-item { background: #F8FAFC; border: 1.5px solid #E2E8F0; border-radius: 10px; padding: 10px 12px; display: flex; align-items: center; gap: 10px; }
 .zl-summary-ic { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-.zl-summary-ic.green { background: #10B981; color: #fff; }
-.zl-summary-ic.red { background: #EF4444; color: #fff; }
-.zl-summary-ic.purple { background: #8B5CF6; color: #fff; }
-.zl-summary-ic.orange { background: #F97316; color: #fff; }
+.zl-summary-ic.green { background: #ECFDF5; color: #10B981; }
+.zl-summary-ic.red { background: #FEE2E2; color: #EF4444; }
+.zl-summary-ic.purple { background: #F5F3FF; color: #7C3AED; }
+.zl-summary-ic.orange { background: #FFF7ED; color: #F97316; }
 .zl-summary-num { font-size: 16px; font-weight: 800; color: #1E293B; line-height: 1.2; }
 .zl-summary-lbl { font-size: 10.5px; color: #64748B; font-weight: 600; }
 
@@ -238,11 +238,11 @@ const CSS = `
 .zs-kpi-row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
 .zs-kpi-card { background: #fff; border: 1px solid #E2E8F0; border-radius: 14px; padding: 14px 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.02); }
 .zs-kpi-ic { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #fff; }
-.zs-kpi-ic.purple { background: #8B5CF6; color: #fff; }
-.zs-kpi-ic.green { background: #10B981; color: #fff; }
-.zs-kpi-ic.blue { background: #3B82F6; color: #fff; }
-.zs-kpi-ic.orange { background: #F97316; color: #fff; }
-.zs-kpi-ic.red { background: #EF4444; color: #fff; }
+.zs-kpi-ic.purple { background: #7C3AED; }
+.zs-kpi-ic.green { background: #10B981; }
+.zs-kpi-ic.blue { background: #3B82F6; }
+.zs-kpi-ic.orange { background: #F97316; }
+.zs-kpi-ic.red { background: #EF4444; }
 .zs-kpi-info { flex: 1; min-width: 0; display: flex; flex-direction: column; }
 .zs-kpi-lbl { font-size: 11px; color: #64748B; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; }
 .zs-kpi-val { font-size: 19px; font-weight: 800; color: #0F172A; line-height: 1.2; margin-top: 2px; }
@@ -276,8 +276,8 @@ const CSS = `
 .zs-alert-item { display: flex; gap: 10px; align-items: start; border-bottom: 1.5px solid #F1F5F9; padding-bottom: 8px; }
 .zs-alert-item:last-child { border-bottom: none; padding-bottom: 0; }
 .zs-alert-ic { width: 24px; height: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.zs-alert-ic.red { background: #EF4444; color: #fff; }
-.zs-alert-ic.orange { background: #F97316; color: #fff; }
+.zs-alert-ic.red { background: #FEE2E2; color: #EF4444; }
+.zs-alert-ic.orange { background: #FFF7ED; color: #EA580C; }
 .zs-alert-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .zs-alert-txt { font-size: 12px; color: #334155; font-weight: 600; line-height: 1.45; }
 .zs-alert-time { font-size: 10.5px; color: #94A3B8; font-weight: 500; }
@@ -313,6 +313,72 @@ const CSS = `
   transform-origin: bottom;
   animation: growBar 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
+
+/* ──────────────────────────────────────────────────────────────
+   VEHICLE MAP STYLES COPIED FOR ZONE MAP
+   ────────────────────────────────────────────────────────────── */
+.vm-stats-row{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:20px;}
+.vm-stat-card{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+.vm-stat-ic{width:36px;height:36px;border-radius:8px;background:#F5F3FF;color:#2A195C;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.vm-stat-info{min-width:0;flex:1;}
+.vm-stat-lbl{font-size:10.5px;color:#9CA3AF;font-weight:600;margin-bottom:2px;display:flex;align-items:center;gap:5px;}
+.vm-stat-val{font-size:18px;font-weight:800;color:#111827;line-height:1;}
+.vm-dot{width:7px;height:7px;border-radius:50%;display:inline-block;}
+.vm-dot.online{background:#10B981;}
+.vm-dot.in_ride{background:#2A195C;}
+.vm-dot.offline{background:#9CA3AF;}
+.vm-dot.low_bat{background:#F59E0B;}
+.vm-dot.locked{background:#EF4444;}
+.vm-layout-grid{display:grid;grid-template-columns:1fr 310px;gap:20px;margin-bottom:20px;align-items:start;}
+.vm-map-card{background:#fff;border:1px solid #E2E8F0;border-radius:16px;box-shadow:0 1px 4px rgba(0,0,0,.06);overflow:hidden;position:relative;height:520px;}
+.vm-map-ctrls{position:absolute;top:20px;left:20px;display:flex;flex-direction:column;gap:8px;z-index:1000;}
+.vm-ctrl-btn{width:40px;height:48px;border-radius:10px;background:#fff;border:1px solid #E5E7EB;box-shadow:0 2px 8px rgba(0,0,0,.08);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;color:#4B5563;font-size:9px;font-weight:700;transition:all .15s;}
+.vm-ctrl-btn:hover{color:#2A195C;border-color:#C7D2FE;}
+.vm-ctrl-btn.active{background:#2A195C;color:#fff;border-color:#2A195C;}
+.vm-ctrl-btn-icon{display:flex;}
+.vm-zoom-ctrls{position:absolute;bottom:20px;left:20px;display:flex;flex-direction:column;gap:6px;z-index:1000;}
+.vm-zoom-btn{width:36px;height:36px;border-radius:8px;background:#fff;border:1px solid #E5E7EB;box-shadow:0 2px 8px rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#374151;font-size:18px;font-weight:700;transition:all .15s;}
+.vm-zoom-btn:hover{border-color:#2A195C;color:#2A195C;}
+.vm-map-loading{position:absolute;inset:0;background:rgba(243,244,249,0.9);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:20;font-size:14px;color:#2A195C;font-weight:600;gap:12px;}
+.vm-map-search{position:absolute;top:20px;right:20px;z-index:1000;display:flex;align-items:center;background:#fff;border:1.5px solid #E2E8F0;border-radius:10px;padding:6px 12px;width:220px;box-shadow:0 4px 12px rgba(0,0,0,.08);}
+.vm-map-search-input{border:none;font-size:12.5px;outline:none;width:100%;color:#1E293B;font-weight:500;margin-left:8px;}
+.vm-side-panel{background:#fff;border:1px solid #E2E8F0;border-radius:16px;box-shadow:0 1px 4px rgba(0,0,0,.06);overflow:hidden;height:520px;display:flex;flex-direction:column;}
+.vm-side-hdr{padding:14px 16px;border-bottom:1px solid #E2E8F0;display:flex;align-items:center;justify-content:space-between;}
+.vm-side-title{font-size:14px;font-weight:700;color:#111827;}
+.vm-side-body{padding:14px 16px;flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:12px;}
+.vm-veh-brief{display:flex;align-items:center;gap:12px;background:#F9FAFB;border-radius:10px;padding:10px 12px;border:1px solid #E2E8F0;}
+.vm-veh-img-wrap{width:46px;height:46px;border-radius:8px;background:#fff;border:1px solid #E5E7EB;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;}
+.vm-veh-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;display:inline-block;}
+.vm-veh-badge.online{background:#DCFCE7;color:#16A34A;}
+.vm-veh-badge.offline{background:#F3F4F6;color:#6B7280;}
+.vm-spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.vm-spec-box{display:flex;flex-direction:column;gap:2px;}
+.vm-spec-lbl{font-size:10.5px;color:#9CA3AF;font-weight:600;}
+.vm-spec-val{font-size:12.5px;font-weight:700;color:#111827;}
+.vm-action-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:2px;}
+.vm-act-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:8px 4px;border:1.5px solid #E5E7EB;border-radius:8px;background:#fff;cursor:pointer;transition:all .15s;}
+.vm-act-btn:hover{border-color:#2A195C;color:#2A195C;background:#F5F3FF;}
+.vm-act-btn-lbl{font-size:9.5px;font-weight:700;color:#374151;}
+.vm-ride-sec{border-top:1px solid #F3F4F6;padding-top:10px;display:flex;flex-direction:column;gap:6px;}
+.vm-ride-sec-tit{font-size:11.5px;font-weight:700;color:#6B7280;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;}
+.vm-ride-row{display:flex;justify-content:space-between;align-items:center;font-size:12px;}
+.vm-ride-lbl{color:#6B7280;}
+.vm-ride-val{font-weight:600;color:#111827;text-align:right;}
+.vm-cta-btn{width:100%;padding:10px;background:#2A195C;color:#fff;border-radius:8px;font-size:12.5px;font-weight:700;cursor:pointer;border:none;font-family:inherit;text-align:center;text-decoration:none;box-shadow:0 2px 6px rgba(79,70,229,.35);transition:background .15s;margin-top:auto;}
+.vm-cta-btn:hover{background:#4338CA;}
+.vm-bottom-grid{display:grid;grid-template-columns:1fr 1.3fr 1.1fr;gap:20px;}
+.vm-bot-card{background:#fff;border:1px solid #E2E8F0;border-radius:16px;box-shadow:0 1px 4px rgba(0,0,0,.06);overflow:hidden;height:350px;display:flex;flex-direction:column;}
+.vm-bot-hdr{padding:14px 18px;border-bottom:1px solid #E2E8F0;display:flex;align-items:center;justify-content:space-between;}
+.vm-bot-title{font-size:13.5px;font-weight:700;color:#111827;}
+.vm-bot-body{padding:14px 18px;flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:12px;}
+.vm-timeline{display:flex;flex-direction:column;gap:0;position:relative;padding-left:18px;}
+.vm-timeline::before{content:'';position:absolute;left:4px;top:6px;bottom:6px;width:1.5px;background:#E5E7EB;}
+.vm-tl-item{display:flex;align-items:flex-start;justify-content:space-between;padding-bottom:14px;position:relative;}
+.vm-tl-item:last-child{padding-bottom:0;}
+.vm-tl-item::before{content:'';position:absolute;left:-18px;top:5px;width:9px;height:9px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.2);z-index:2;}
+.vm-tl-item.online::before{background:#10B981;}
+.vm-tl-item.offline::before{background:#9CA3AF;}
+.vm-spinner{width:32px;height:32px;border:3px solid #E5E7EB;border-top-color:#2A195C;border-radius:50%;animation:spin 0.8s linear infinite;}
 `;
 
 interface Coordinate {
@@ -668,6 +734,28 @@ function ZoneManagementContent() {
     } catch (err: any) {
       console.error(err);
       alert('Error deleting zone: ' + err.message);
+    }
+  };
+
+  const handleToggleZoneStatus = async (id: string, currentStatus: string) => {
+    try {
+      const rawZone = dbZones.find(z => String(z.id) === id);
+      if (!rawZone) return;
+      const nextStatus = currentStatus === 'active' ? 'inactive' : 'active';
+      const response = await api.put(`/zones/${id}`, {
+        ...rawZone,
+        status: nextStatus,
+        points: Array.isArray(rawZone.points) ? rawZone.points : JSON.parse(rawZone.points || '[]')
+      });
+      if (response.status === 'success') {
+        alert('Zone status updated successfully!');
+        fetchZones();
+      } else {
+        alert('Failed to update status: ' + response.message);
+      }
+    } catch (err: any) {
+      console.error(err);
+      alert('Error updating status: ' + err.message);
     }
   };
 
@@ -1130,100 +1218,133 @@ function ZoneManagementContent() {
             {/* 1. ZONE MAP TAB */}
             {activeTab === 'Zone Map' && (
               <>
-                <div className="zm-map-grid">
-                  {/* Left: Map viewport */}
-                  <div className="zm-map-container">
-                    {/* Floating Toolbar Draw options */}
-                    <div className="zm-draw-toolbar">
-                      <button className="zm-draw-btn active" title="Select Tool">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-                          <polygon points="3 11 22 2 13 21 11 13 3 11" />
-                        </svg>
-                      </button>
-                      <button className="zm-draw-btn" title="Draw Polygon" onClick={() => router.push('/zones/new')}>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-                          <polygon points="12 2 22 8.5 22 19.5 12 22 2 19.5 2 8.5" />
-                        </svg>
-                      </button>
-                      <button className="zm-draw-btn" title="Draw Circle" onClick={() => router.push('/zones/new')}>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-                          <circle cx="12" cy="12" r="10" />
-                        </svg>
-                      </button>
-                      <button className="zm-draw-btn" title="Edit Zone" onClick={() => router.push('/zones/new')}>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-                          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
-                          <path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
-                        </svg>
-                      </button>
-                      <button className="zm-draw-btn" title="Move Map">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-                          <polyline points="5 9 2 12 5 15" /><polyline points="9 5 12 2 15 5" />
-                          <polyline points="15 19 12 22 9 19" /><polyline points="19 9 22 12 19 15" />
-                          <line x1="2" y1="12" x2="22" y2="12" /><line x1="12" y1="2" x2="12" y2="22" />
-                        </svg>
-                      </button>
-                      <button className="zm-draw-btn" title="Delete Point" onClick={() => alert('Delete point tool active...')}>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-                          <polyline points="3 6 5 6 21 6" />
-                          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-                        </svg>
-                      </button>
+                {/* Metric KPI cards */}
+                <div className="vm-stats-row">
+                  <div className="vm-stat-card">
+                    <div className="vm-stat-ic" style={{ color: '#2a195c', background: '#ECEBFF' }}>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                        <polyline points="2 17 12 22 22 17" />
+                        <polyline points="2 12 12 17 22 12" />
+                      </svg>
+                    </div>
+                    <div className="vm-stat-info">
+                      <div className="vm-stat-lbl">Total Zones</div>
+                      <div className="vm-stat-val">{zonesList.length}</div>
+                    </div>
+                  </div>
+
+                  <div className="vm-stat-card">
+                    <div className="vm-stat-ic">
+                      <div className="vm-dot online" />
+                    </div>
+                    <div className="vm-stat-info">
+                      <div className="vm-stat-lbl">Active Zones</div>
+                      <div className="vm-stat-val">{zonesList.filter((z: any) => z.status === 'active').length}</div>
+                    </div>
+                  </div>
+
+                  <div className="vm-stat-card">
+                    <div className="vm-stat-ic">
+                      <div className="vm-dot offline" />
+                    </div>
+                    <div className="vm-stat-info">
+                      <div className="vm-stat-lbl">Inactive Zones</div>
+                      <div className="vm-stat-val">{zonesList.filter((z: any) => z.status !== 'active').length}</div>
+                    </div>
+                  </div>
+
+                  <div className="vm-stat-card">
+                    <div className="vm-stat-ic" style={{ color: '#3B82F6', background: '#EFF6FF' }}>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                        <line x1="12" y1="18" x2="12.01" y2="18" />
+                      </svg>
+                    </div>
+                    <div className="vm-stat-info">
+                      <div className="vm-stat-lbl">Total Vehicles</div>
+                      <div className="vm-stat-val">{zonesList.reduce((acc: number, z: any) => acc + (z.vehicles || 0), 0)}</div>
+                    </div>
+                  </div>
+
+                  <div className="vm-stat-card">
+                    <div className="vm-stat-ic" style={{ color: '#8B5CF6', background: '#F5F3FF' }}>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                      </svg>
+                    </div>
+                    <div className="vm-stat-info">
+                      <div className="vm-stat-lbl">Total Renters</div>
+                      <div className="vm-stat-val">{zonesList.reduce((acc: number, z: any) => acc + (z.renters || 0), 0)}</div>
+                    </div>
+                  </div>
+
+                  <div className="vm-stat-card">
+                    <div className="vm-stat-ic" style={{ color: '#EF4444', background: '#FEF2F2' }}>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                        <line x1="12" y1="9" x2="12" y2="13" />
+                        <line x1="12" y1="17" x2="12.01" y2="17" />
+                      </svg>
+                    </div>
+                    <div className="vm-stat-info">
+                      <div className="vm-stat-lbl">Zone Violations</div>
+                      <div className="vm-stat-val">3</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Main Layout Grid */}
+                <div className="vm-layout-grid" style={{ gridTemplateColumns: '1fr 340px' }}>
+                  
+                  {/* Left Column: Map viewport */}
+                  <div className="vm-map-card" style={{ height: '520px' }}>
+                    {!leafletLoaded && (
+                      <div className="vm-map-loading">
+                        <div className="vm-spinner" />
+                        Loading interactive Zone Map...
+                      </div>
+                    )}
+                    
+                    <div id="dashboard-zone-map" style={{ width: '100%', height: '100%', background: '#E5E7EB' }} />
+
+                    {/* Floating map controls (left side) */}
+                    <div className="vm-map-ctrls">
+                      <div className={`vm-ctrl-btn ${subtab==='Geo Fence'?'active':''}`} onClick={() => setSubtab('Geo Fence')}>
+                        <span className="vm-ctrl-btn-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                            <polygon points="12 2 22 8.5 22 19.5 12 22 2 19.5 2 8.5" />
+                          </svg>
+                        </span>
+                        Geofence
+                      </div>
+                      <div className={`vm-ctrl-btn ${subtab==='Zone Statistics'?'active':''}`} onClick={() => setSubtab('Zone Statistics')}>
+                        <span className="vm-ctrl-btn-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                            <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" />
+                          </svg>
+                        </span>
+                        Stats
+                      </div>
+                      <div className="vm-ctrl-btn" onClick={() => router.push('/zones/new')}>
+                        <span className="vm-ctrl-btn-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                            <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
+                          </svg>
+                        </span>
+                        Create
+                      </div>
                     </div>
 
-                    {/* Floating Search panel */}
-                    <div className="zm-search-panel" style={{ display: 'flex', alignItems: 'center' }}>
-                      <button className="zm-search-back-btn" onClick={() => setMapSearchQuery('')}>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                          <line x1="19" y1="12" x2="5" y2="12" /><polyline points="12 19 5 12 12 5" />
-                        </svg>
-                      </button>
-                      <input 
-                        type="text" 
-                        className="zm-search-input" 
-                        placeholder="Search location..." 
-                        value={mapSearchQuery} 
-                        onChange={(e) => setMapSearchQuery(e.target.value)} 
-                        onKeyDown={(e) => { if (e.key === 'Enter') handleMapSearch(); }}
-                      />
-                      <button 
-                        onClick={handleMapSearch} 
-                        style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '11px', fontWeight: '700', color: '#2a195c', padding: '2px 6px' }}
-                      >
-                        Go
-                      </button>
-                    </div>
-
-                    {/* Floating layers menu */}
-                    <div className="zm-layer-toolbar" style={{ zIndex: 1000 }}>
-                      <button className="zm-layer-btn" onClick={() => alert('Layers option toggled')}>
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-                          <polygon points="12 2 2 7 12 12 22 7 12 2" /><polygon points="2 17 12 22 22 17 2 17" /><polygon points="2 12 12 17 22 12 2 12" />
-                        </svg>
-                        Layers
-                      </button>
-                      <button className="zm-layer-btn" onClick={() => alert('Traffic density overlays loaded')}>
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-                          <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
-                          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                        </svg>
-                        Traffic
-                      </button>
-                    </div>
-
-                    {/* Floating Zoom controls */}
-                    <div className="zm-control-toolbar" style={{ zIndex: 1000 }}>
-                      <button className="zm-control-btn" onClick={() => mapRef.current?.zoomIn()}>+</button>
-                      <button className="zm-control-btn" onClick={() => mapRef.current?.zoomOut()}>-</button>
-                      <button className="zm-control-btn" onClick={() => alert('Grid overlay loaded')}>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                          <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                          <line x1="9" y1="3" x2="9" y2="21" /><line x1="15" y1="3" x2="15" y2="21" />
-                          <line x1="3" y1="9" x2="21" y2="9" /><line x1="3" y1="15" x2="21" y2="15" />
-                        </svg>
-                      </button>
-                      <button className="zm-control-btn" onClick={() => {
-                        const activeZoneObj = zonesList.find(z => z.id === selectedZoneId);
+                    {/* Zoom controls */}
+                    <div className="vm-zoom-ctrls">
+                      <div className="vm-zoom-btn" onClick={() => mapRef.current?.zoomIn()}>+</div>
+                      <div className="vm-zoom-btn" onClick={() => mapRef.current?.zoomOut()}>-</div>
+                      <div className="vm-zoom-btn" style={{ fontSize: 13 }} onClick={() => {
+                        const activeZoneObj = zonesList.find((z: any) => z.id === selectedZoneId);
                         if (activeZoneObj && activeZoneObj.points && activeZoneObj.points.length > 0) {
                           const activePoly = polygonsRef.current[selectedZoneId];
                           if (activePoly) {
@@ -1234,209 +1355,213 @@ function ZoneManagementContent() {
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                           <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="3" />
                         </svg>
-                      </button>
+                      </div>
                     </div>
 
-                    {!leafletLoaded ? (
-                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', color: '#64748B', fontSize: '13px' }}>
-                        Loading Map...
+                    {/* Floating Map Search Bar */}
+                    {leafletLoaded && (
+                      <div className="vm-map-search" style={{ width: '240px' }}>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ color: '#9CA3AF', flexShrink: 0 }}>
+                          <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                        <input
+                          type="text"
+                          className="vm-map-search-input"
+                          placeholder="Search location..."
+                          value={mapSearchQuery}
+                          onChange={(e) => setMapSearchQuery(e.target.value)}
+                          onKeyDown={(e) => { if (e.key === 'Enter') handleMapSearch(); }}
+                        />
                       </div>
-                    ) : (
-                      <div id="dashboard-zone-map" style={{ width: '100%', height: '100%' }} />
                     )}
                   </div>
 
-                  {/* Right: Zones Sidebar list */}
-                  <div className="zm-list-sidebar">
-                    <span className="zm-sidebar-title">All Zones ({filteredSidebarZones.length})</span>
-                    
-                    <div className="zm-sidebar-search">
-                      <div className="zm-sidebar-search-wrap">
-                        <span className="zm-sidebar-search-ic">
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-                            <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  {/* Right Column: Selected Zone Side Panel */}
+                  <div className="vm-side-panel" style={{ height: '520px' }}>
+                    <div className="vm-side-hdr">
+                      <div className="vm-side-title">Selected Zone</div>
+                      <div style={{ color: '#9CA3AF', fontSize: 13, cursor: 'pointer' }} onClick={() => setSelectedZoneId(zonesList[0]?.id || '1')}>✕</div>
+                    </div>
+                    <div className="vm-side-body">
+                      
+                      {/* Zone Brief */}
+                      <div className="vm-veh-brief">
+                        <div className="vm-veh-img-wrap" style={{ background: selectedZone.color, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5">
+                            <polygon points="12 2 22 8.5 22 19.5 12 22 2 19.5 2 8.5" />
                           </svg>
-                        </span>
-                        <input
-                          type="text"
-                          className="zm-sidebar-input"
-                          placeholder="Search zone"
-                          value={zoneSearch}
-                          onChange={(e) => setZoneSearch(e.target.value)}
-                        />
+                        </div>
+                        <div>
+                          <div style={{ fontSize: 14, fontWeight: 800, color: '#111827', marginBottom: 2 }}>{selectedZone.name}</div>
+                          <span className={`vm-veh-badge ${selectedZone.status === 'active' ? 'online' : 'offline'}`}>{selectedZone.status === 'active' ? 'Active' : 'Inactive'}</span>
+                        </div>
                       </div>
-                      <button className="zm-sidebar-filter" onClick={() => alert('Filter applied')}>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                          <line x1="4" y1="21" x2="4" y2="14" /><line x1="4" y1="10" x2="4" y2="3" />
-                          <line x1="12" y1="21" x2="12" y2="12" /><line x1="12" y1="8" x2="12" y2="3" />
-                          <line x1="20" y1="21" x2="20" y2="16" /><line x1="20" y1="12" x2="20" y2="3" />
-                          <line x1="1" y1="14" x2="7" y2="14" /><line x1="9" y1="8" x2="15" y2="8" /><line x1="17" y1="16" x2="23" y2="16" />
-                        </svg>
-                      </button>
-                    </div>
 
-                    <div className="zm-items-list">
-                      {filteredSidebarZones.length === 0 ? (
-                        <span style={{ fontSize: '12px', color: '#64748B', textAlign: 'center', padding: '20px' }}>No zones found</span>
-                      ) : (
-                        filteredSidebarZones.map((z) => (
-                          <div
-                            key={z.id}
-                            className={`zm-item-card ${selectedZoneId === z.id ? 'active' : ''}`}
-                            onClick={() => setSelectedZoneId(z.id)}
-                          >
-                            <div className="zm-item-hdr">
-                              <span className="zm-item-title">
-                                <span className="zm-item-dot" style={{ background: z.color }} />
-                                {z.name}
-                              </span>
-                              <span className={`status-pill ${z.status === 'active' ? 'pill-active' : 'pill-inactive'}`}>
-                                {z.status === 'active' ? 'Active' : 'Inactive'}
-                              </span>
-                            </div>
-                            <div className="zm-item-stats">
-                              <span className="zm-item-stat-el">
-                                <strong>{z.vehicles}</strong> Vehicles
-                              </span>
-                              <span className="zm-item-stat-el">
-                                <strong>{z.renters}</strong> Renters
-                              </span>
-                            </div>
+                      {/* Specs */}
+                      <div className="vm-spec-grid">
+                        <div className="vm-spec-box">
+                          <span className="vm-spec-lbl">Zone Code</span>
+                          <span className="vm-spec-val">{selectedZone.code}</span>
+                        </div>
+                        <div className="vm-spec-box">
+                          <span className="vm-spec-lbl">Zone Area</span>
+                          <span className="vm-spec-val">{selectedZone.areaKm2} km²</span>
+                        </div>
+                        <div className="vm-spec-box">
+                          <span className="vm-spec-lbl">Total Vehicles</span>
+                          <span className="vm-spec-val">{selectedZone.vehicles} EVs</span>
+                        </div>
+                        <div className="vm-spec-box">
+                          <span className="vm-spec-lbl">Total Renters</span>
+                          <span className="vm-spec-val">{selectedZone.renters} Renters</span>
+                        </div>
+                        <div className="vm-spec-box">
+                          <span className="vm-spec-lbl">Locality/Manager</span>
+                          <span className="vm-spec-val">{selectedZone.manager}</span>
+                        </div>
+                        <div className="vm-spec-box">
+                          <span className="vm-spec-lbl">Created On</span>
+                          <span className="vm-spec-val">{selectedZone.createdOn.split(',')[0]}</span>
+                        </div>
+                      </div>
+
+                      {/* Zone Actions */}
+                      <div style={{ borderTop: '1px solid #F3F4F6', paddingTop: 10 }}>
+                        <span className="vm-ride-sec-tit">Zone Actions</span>
+                        <div className="vm-action-grid">
+                          <div className="vm-act-btn" onClick={() => router.push(`/zones/new?id=${selectedZone.id}`)}>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                              <path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
+                            </svg>
+                            <span className="vm-act-btn-lbl">Edit</span>
                           </div>
-                        ))
-                      )}
-                    </div>
-
-                    {/* Pagination */}
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid #F1F5F9', paddingTop: '10px' }}>
-                      <button className="zm-sidebar-filter" style={{ width: '28px', height: '28px' }} disabled>
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                          <polyline points="15 18 9 12 15 6" />
-                        </svg>
-                      </button>
-                      <div style={{ display: 'flex', gap: '4px' }}>
-                        <button className="zm-control-btn" style={{ width: '26px', height: '26px', fontSize: '11px', background: '#2a195c', color: '#fff', borderColor: '#2a195c' }}>1</button>
-                        <button className="zm-control-btn" style={{ width: '26px', height: '26px', fontSize: '11px' }}>2</button>
+                          <div className="vm-act-btn" onClick={() => {
+                            const activePoly = polygonsRef.current[selectedZone.id];
+                            if (activePoly) {
+                              mapRef.current?.fitBounds(activePoly.getBounds(), { padding: [50, 50], maxZoom: 14 });
+                            }
+                          }}>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                              <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="3" />
+                            </svg>
+                            <span className="vm-act-btn-lbl">Locate</span>
+                          </div>
+                          <div className="vm-act-btn" onClick={() => handleToggleZoneStatus(selectedZone.id, selectedZone.status)}>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ color: selectedZone.status === 'active' ? '#EF4444' : '#10B981' }}>
+                              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                              <line x1="9" y1="9" x2="15" y2="15" /><line x1="15" y1="9" x2="9" y2="15" />
+                            </svg>
+                            <span className="vm-act-btn-lbl">{selectedZone.status === 'active' ? 'Disable' : 'Enable'}</span>
+                          </div>
+                          <div className="vm-act-btn" onClick={() => handleDeleteZone(selectedZone.id, selectedZone.name)}>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ color: '#EF4444' }}>
+                              <polyline points="3 6 5 6 21 6" /><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                            </svg>
+                            <span className="vm-act-btn-lbl">Delete</span>
+                          </div>
+                        </div>
                       </div>
-                      <button className="zm-sidebar-filter" style={{ width: '28px', height: '28px' }}>
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                          <polyline points="9 18 15 12 9 6" />
-                        </svg>
-                      </button>
+
+                      {/* Operational settings */}
+                      <div className="vm-ride-sec" style={{ marginTop: 'auto' }}>
+                        <span className="vm-ride-sec-tit">Operational Details</span>
+                        <div className="vm-ride-row">
+                          <span className="vm-ride-lbl">Pricing Tier</span>
+                          <span className="vm-ride-val">Standard (₹100/hr)</span>
+                        </div>
+                        <div className="vm-ride-row">
+                          <span className="vm-ride-lbl">Operational Hours</span>
+                          <span className="vm-ride-val">24/7 Active</span>
+                        </div>
+                      </div>
+
+                      <button className="vm-cta-btn" onClick={() => router.push(`/zones/pricing`)}>Setup Pricing Packages</button>
                     </div>
                   </div>
                 </div>
 
-                {/* Bottom detail stats sheet */}
-                <div className="zm-bottom-cards">
-                  <div className="zm-detail-card">
-                    <div className="zm-detail-hdr">
-                      <span className="zm-detail-tit">Zone Details</span>
-                      <button className="zm-detail-edit-btn" onClick={() => router.push(`/zones/new?id=${selectedZone.id}`)}>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-                          <path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
-                        </svg>
-                      </button>
+                {/* Bottom Row grid */}
+                <div className="vm-bottom-grid">
+                  
+                  {/* Bottom Card 1: Geofence Coordinates */}
+                  <div className="vm-bot-card">
+                    <div className="vm-bot-hdr">
+                      <span className="vm-bot-title">Geo Fence Boundaries ({selectedZone.coordinates.length} points)</span>
+                      <button className="zm-sidebar-filter" style={{ height: '24px', padding: '0 8px', fontSize: '10.5px' }} onClick={handleCopyCoords}>Copy All</button>
                     </div>
-
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                      <span style={{ fontSize: '16px', fontWeight: 'bold', color: '#1E293B' }}>{selectedZone.name}</span>
-                      <span className={`status-pill ${selectedZone.status === 'active' ? 'pill-active' : 'pill-inactive'}`}>
-                        {selectedZone.status === 'active' ? 'Active' : 'Inactive'}
-                      </span>
-                    </div>
-
-                    <div className="zm-detail-grid">
-                      <div className="zm-detail-subcard">
-                        <span className="zm-detail-sublbl">Total Vehicles</span>
-                        <div className="zm-detail-subval">{selectedZone.vehicles}</div>
+                    <div className="vm-bot-body">
+                      <div className="zm-coords-grid" style={{ maxHeight: 'none', flex: 1, border: 'none', background: 'none', padding: 0 }}>
+                        {selectedZone.coordinates.map((c: any, i: number) => (
+                          <div key={i} className="zm-coord-row" style={{ padding: '6px 0', borderBottom: '1px solid #F1F5F9' }}>
+                            <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" style={{ color: selectedZone.color }}>
+                              <circle cx="12" cy="12" r="10" />
+                            </svg>
+                            <span>{c}</span>
+                          </div>
+                        ))}
                       </div>
-                      <div className="zm-detail-subcard">
-                        <span className="zm-detail-sublbl">Total Renters</span>
-                        <div className="zm-detail-subval">{selectedZone.renters}</div>
-                      </div>
-                      <div className="zm-detail-subcard">
-                        <span className="zm-detail-sublbl">Zone Area</span>
-                        <div className="zm-detail-subval">{selectedZone.areaKm2} km²</div>
-                      </div>
-                    </div>
-
-                    <div className="zm-detail-meta">
-                      <span>Created On: <span className="zm-detail-metaval">{selectedZone.createdOn}</span></span>
-                      <span>Created By: <span className="zm-detail-metaval">{selectedZone.manager}</span></span>
                     </div>
                   </div>
 
-                  {/* Right coordinates detail card */}
-                  <div className="zm-detail-card">
-                    <div className="zm-subtabs-row">
-                      <button className={`zm-subtab ${subtab === 'Geo Fence' ? 'active' : ''}`} onClick={() => setSubtab('Geo Fence')}>Geo Fence</button>
-                      <button className={`zm-subtab ${subtab === 'Zone Statistics' ? 'active' : ''}`} onClick={() => setSubtab('Zone Statistics')}>Zone Statistics</button>
+                  {/* Bottom Card 2: Peak Hours Heatmap */}
+                  <div className="vm-bot-card">
+                    <div className="vm-bot-hdr">
+                      <span className="vm-bot-title">Peak Usage Hours ( swaps/hr )</span>
                     </div>
+                    <div className="vm-bot-body" style={{ justifyContent: 'center' }}>
+                      <div className="zs-heatmap-row" style={{ width: '100%', padding: '0 10px 10px', borderBottom: '1px solid #E2E8F0' }}>
+                        {Array.from({ length: 24 }).map((_, i) => {
+                          const val = [12, 18, 30, 45, 50, 40, 20, 10, 8, 15, 32, 58, 70, 85, 90, 80, 65, 52, 44, 38, 25, 20, 15, 10][i];
+                          return (
+                            <div 
+                              key={i} 
+                              className="zs-heatmap-cell" 
+                              style={{ '--bar-height': `${val}%`, '--bar-opacity': `${0.3 + (val/100) * 0.7}` } as any}
+                              title={`${i}:00 - ${val} swaps`}
+                            />
+                          );
+                        })}
+                      </div>
+                      <div className="zs-heatmap-hours-labels" style={{ width: '100%', padding: '0 10px' }}>
+                        {Array.from({ length: 24 }).map((_, i) => (
+                          <span key={i}>{i}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
 
-                    {subtab === 'Geo Fence' && (
-                      <div className="zm-geofence-grid">
-                        <div className="zm-gf-left">
-                          <div className="zm-gf-param">
-                            <span className="zm-gf-param-lbl">Zone Type</span>
-                            <span className="zm-badge-polygon">Polygon</span>
+                  {/* Bottom Card 3: Zone Activity History */}
+                  <div className="vm-bot-card">
+                    <div className="vm-bot-hdr">
+                      <span className="vm-bot-title">Zone Activity Timeline</span>
+                    </div>
+                    <div className="vm-bot-body">
+                      <div className="vm-timeline">
+                        <div className="vm-tl-item online">
+                          <div style={{ display: 'flex', flexDirection: 'column' }}>
+                            <span style={{ fontSize: '12px', fontWeight: 700, color: '#334155' }}>EV Inward Completed</span>
+                            <span style={{ fontSize: '10px', color: '#94A3B8', marginTop: 2 }}>Vehicle BAT001 assigned to {selectedZone.name}</span>
                           </div>
-                          <div className="zm-gf-param">
-                            <span className="zm-gf-param-lbl">Total Points</span>
-                            <span className="zm-gf-param-val">{selectedZone.coordinates.length}</span>
+                          <span style={{ fontSize: '10px', color: '#94A3B8', fontWeight: 600 }}>03:35 PM</span>
+                        </div>
+                        
+                        <div className="vm-tl-item online">
+                          <div style={{ display: 'flex', flexDirection: 'column' }}>
+                            <span style={{ fontSize: '12px', fontWeight: 700, color: '#334155' }}>Geofence Check Passed</span>
+                            <span style={{ fontSize: '10px', color: '#94A3B8', marginTop: 2 }}>GPS coordinates verified in CP Zone limits</span>
                           </div>
-                          <div className="zm-gf-param">
-                            <span className="zm-gf-param-lbl">Last Updated</span>
-                            <span className="zm-gf-param-val">20 May 2024, 09:15 AM</span>
-                          </div>
-                          <button className="zm-btn btn-violet" style={{ marginTop: '10px', padding: '8px 12px', fontSize: '12.5px' }} onClick={() => router.push('/zones/new')}>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ marginRight: 4 }}>
-                              <path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
-                            </svg>
-                            Edit Geo Fence
-                          </button>
+                          <span style={{ fontSize: '10px', color: '#94A3B8', fontWeight: 600 }}>02:40 PM</span>
                         </div>
 
-                        <div className="zm-gf-right">
-                          <div className="zm-gf-coords-title">
-                            <span>Geo Fence Coordinates ({selectedZone.coordinates.length} Points)</span>
-                            <button
-                              className="zm-btn"
-                              style={{ padding: '3px 8px', fontSize: '11px', color: '#2a195c', borderColor: '#DDD6FE' }}
-                              onClick={handleCopyCoords}
-                            >
-                              Copy All
-                            </button>
+                        <div className="vm-tl-item offline">
+                          <div style={{ display: 'flex', flexDirection: 'column' }}>
+                            <span style={{ fontSize: '12px', fontWeight: 700, color: '#475569' }}>Renter Assigned</span>
+                            <span style={{ fontSize: '10px', color: '#94A3B8', marginTop: 2 }}>Rahul Sharma allocated ride in {selectedZone.name}</span>
                           </div>
-                          <div className="zm-coords-grid">
-                            {selectedZone.coordinates.map((c, i) => (
-                              <div key={i} className="zm-coord-row">
-                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" style={{ color: '#2a195c' }}>
-                                  <circle cx="12" cy="12" r="10" />
-                                </svg>
-                                <span>{c}</span>
-                              </div>
-                            ))}
-                          </div>
+                          <span style={{ fontSize: '10px', color: '#94A3B8', fontWeight: 600 }}>10:15 AM</span>
                         </div>
                       </div>
-                    )}
-
-                    {subtab === 'Zone Statistics' && (
-                      <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', padding: '10px 0' }}>
-                        <span style={{ fontSize: '13px', color: '#64748B', fontWeight: '500' }}>Active Statistics for {selectedZone.name}</span>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
-                          <div style={{ background: '#F8FAFC', padding: '10px', borderRadius: '8px', border: '1px solid #F1F5F9' }}>
-                            <div style={{ fontSize: '11px', color: '#64748B' }}>Swap Rate / day</div>
-                            <div style={{ fontSize: '15px', fontWeight: '800', color: '#1E293B', marginTop: '4px' }}>18.4 swaps</div>
-                          </div>
-                          <div style={{ background: '#F8FAFC', padding: '10px', borderRadius: '8px', border: '1px solid #F1F5F9' }}>
-                            <div style={{ fontSize: '11px', color: '#64748B' }}>Avg. Ride Duration</div>
-                            <div style={{ fontSize: '15px', fontWeight: '800', color: '#1E293B', marginTop: '4px' }}>42.5 mins</div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
+                    </div>
                   </div>
                 </div>
               </>

@@ -20,9 +20,9 @@ const CSS = `
 /* ── breadcrumb ── */
 .nr-bc { display: flex; align-items: center; gap: 7px; padding: 14px 0 0; font-size: 12px; color: #9CA3AF; }
 .nr-bc a { color: #9CA3AF; display: flex; align-items: center; gap: 4px; text-decoration: none; transition: color .15s; }
-.nr-bc a:hover { color: #4F46E5; }
+.nr-bc a:hover { color: #2A195C; }
 .nr-bc-sep { color: #D1D5DB; }
-.nr-bc-cur { color: #4F46E5; font-weight: 600; }
+.nr-bc-cur { color: #2A195C; font-weight: 600; }
 
 /* ── title row ── */
 .nr-title-row { display: flex; align-items: flex-start; justify-content: space-between; margin: 14px 0 20px; gap: 16px; }
@@ -35,7 +35,7 @@ const CSS = `
   cursor: pointer; white-space: nowrap; font-family: inherit;
   box-shadow: 0 1px 3px rgba(0,0,0,.06); transition: border-color .15s, color .15s; flex-shrink: 0;
 }
-.nr-back-btn:hover { border-color: #4F46E5; color: #4F46E5; }
+.nr-back-btn:hover { border-color: #2A195C; color: #2A195C; }
 
 /* ── stepper ── */
 .nr-stepper {
@@ -46,14 +46,14 @@ const CSS = `
 .nr-step-wrap  { display: flex; align-items: center; flex: 1; }
 .nr-step       { display: flex; align-items: center; gap: 10px; }
 .nr-step-num   { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
-.nr-step-num.active { background: #4F46E5; color: #fff; }
+.nr-step-num.active { background: #2A195C; color: #fff; }
 .nr-step-num.done   { background: #22C55E; color: #fff; }
 .nr-step-num.pend   { background: #fff; color: #9CA3AF; border: 2px solid #E5E7EB; }
 .nr-step-label      { font-size: 13px; font-weight: 600; color: #111827; white-space: nowrap; }
 .nr-step-label.pend { color: #9CA3AF; font-weight: 500; }
 .nr-step-stat       { font-size: 11.5px; margin-top: 2px; white-space: nowrap; }
 .nr-step-stat.done-s   { color: #22C55E; }
-.nr-step-stat.active-s { color: #4F46E5; }
+.nr-step-stat.active-s { color: #2A195C; }
 .nr-step-stat.pend-s   { color: #9CA3AF; }
 .nr-step-line { flex: 1; height: 2px; background: #E5E7EB; margin: 0 14px; min-width: 16px; }
 .nr-step-line.done-l { background: #22C55E; }
@@ -87,10 +87,10 @@ const CSS = `
   cursor: pointer; font-family: inherit; transition: border-color .15s, color .15s;
   text-decoration: none;
 }
-.nr-prev-btn:hover { border-color: #4F46E5; color: #4F46E5; }
+.nr-prev-btn:hover { border-color: #2A195C; color: #2A195C; }
 .nr-continue-btn {
   display: flex; align-items: center; gap: 8px;
-  padding: 11px 28px; background: #4F46E5; border: none;
+  padding: 11px 28px; background: #2A195C; border: none;
   border-radius: 10px; font-size: 13px; font-weight: 700; color: #fff;
   cursor: pointer; font-family: inherit; transition: background .15s;
   text-decoration: none;
@@ -102,7 +102,7 @@ const CSS = `
 .nr-rp { display: flex; flex-direction: column; gap: 16px; position: sticky; top: 80px; }
 .nr-rp-card { background: #fff; border: 1px solid #E5E7EB; border-radius: 14px; box-shadow: 0 1px 4px rgba(0,0,0,.06); overflow: hidden; }
 .nr-rp-hdr  { display: flex; align-items: center; gap: 9px; padding: 14px 18px; border-bottom: 1px solid #E5E7EB; }
-.nr-rp-hdr-ic { display: flex; align-items: center; flex-shrink: 0; color: #4F46E5; }
+.nr-rp-hdr-ic { display: flex; align-items: center; flex-shrink: 0; color: #2A195C; }
 .nr-rp-title  { font-size: 13.5px; font-weight: 700; color: #111827; }
 .nr-sum-body  { padding: 4px 0 8px; }
 .nr-sum-row   { display: flex; align-items: center; justify-content: space-between; padding: 7px 18px; font-size: 13px; }
@@ -116,7 +116,7 @@ const CSS = `
   padding: 12px 18px; margin: 8px 12px 12px; border-radius: 10px; background: #F5F3FF;
 }
 .nr-sum-total-l { font-size: 13px; font-weight: 700; color: #111827; }
-.nr-sum-total-r { font-size: 18px; font-weight: 800; color: #4F46E5; }
+.nr-sum-total-r { font-size: 18px; font-weight: 800; color: #2A195C; }
 
 /* checklist */
 .doc-checklist-body { padding: 6px 0 10px; }
@@ -126,7 +126,7 @@ const CSS = `
 
 .nr-help-body { padding: 14px 18px 16px; }
 .nr-help-sub  { font-size: 13px; color: #6B7280; margin-bottom: 12px; line-height: 1.5; }
-.nr-help-btn  { width: 100%; padding: 10px; background: #4F46E5; color: #fff; border-radius: 9px; font-size: 13px; font-weight: 600; cursor: pointer; border: none; font-family: inherit; transition: background .15s; }
+.nr-help-btn  { width: 100%; padding: 10px; background: #2A195C; color: #fff; border-radius: 9px; font-size: 13px; font-weight: 600; cursor: pointer; border: none; font-family: inherit; transition: background .15s; }
 .nr-help-btn:hover { background: #4338CA; }
 
 /* ─── REVIEW-SPECIFIC ─── */
@@ -135,14 +135,14 @@ const CSS = `
 .rv-sec:not(:last-child) { border-right: 1px solid #F3F4F6; }
 .rv-sec-hdr { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
 .rv-sec-title { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: #111827; }
-.rv-edit-btn { color: #4F46E5; font-size: 12px; font-weight: 600; cursor: pointer; border: none; background: none; display: flex; align-items: center; gap: 4px; font-family: inherit; }
+.rv-edit-btn { color: #2A195C; font-size: 12px; font-weight: 600; cursor: pointer; border: none; background: none; display: flex; align-items: center; gap: 4px; font-family: inherit; }
 .rv-row { display: flex; align-items: flex-start; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid #F9FAFB; font-size: 12.5px; }
 .rv-row-l { color: #6B7280; }
 .rv-row-v { font-weight: 600; color: #111827; text-align: right; }
 .rv-divider { height: 1px; background: #F3F4F6; }
 .rv-total-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 0 0; margin-top: 6px; border-top: 1.5px solid #E5E7EB; }
 .rv-total-l { font-size: 13px; font-weight: 800; color: #111827; }
-.rv-total-v { font-size: 20px; font-weight: 800; color: #4F46E5; }
+.rv-total-v { font-size: 20px; font-weight: 800; color: #2A195C; }
 .rv-vb-inner { display: grid; grid-template-columns: 1fr 170px; gap: 24px; }
 .rv-veh-thumbs { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-top: 10px; }
 .rv-thumb { border-radius: 8px; overflow: hidden; height: 60px; border: 1px solid #E5E7EB; }
@@ -179,7 +179,7 @@ const CSS = `
 .success-modal-title { font-size: 18px; font-weight: 800; color: #111827; margin-bottom: 8px; }
 .success-modal-sub { font-size: 13px; color: #6B7280; line-height: 1.5; margin-bottom: 24px; }
 .success-modal-btn {
-  width: 100%; padding: 12px; background: #4F46E5; color: #fff; border: none;
+  width: 100%; padding: 12px; background: #2A195C; color: #fff; border: none;
   border-radius: 10px; font-size: 13.5px; font-weight: 700; cursor: pointer;
   box-shadow: 0 4px 12px rgba(79,70,229,0.3); transition: background .15s;
 }
@@ -224,7 +224,7 @@ const VehicleThumb = ({ label, dark = false }: { label: string; dark?: boolean }
     <circle cx="98" cy="50" r="14" fill={dark ? '#374151' : '#D1D5DB'}/>
     <circle cx="98" cy="50" r="9"  fill={dark ? '#4B5563' : '#E5E7EB'}/>
     <circle cx="98" cy="50" r="4"  fill={dark ? '#6B7280' : '#9CA3AF'}/>
-    <path d="M32 36 L46 18 L84 14 L100 36 Z" fill={dark ? '#4f46e5' : '#818CF8'}/>
+    <path d="M32 36 L46 18 L84 14 L100 36 Z" fill={dark ? '#2A195C' : '#818CF8'}/>
     <path d="M84 14 L102 32 L100 36 L96 36 L82 20 L78 14 Z" fill={dark ? '#4338ca' : '#6366F1'}/>
     <rect x="45" y="36" width="54" height="5" fill={dark ? '#374151' : '#9CA3AF'} rx="1"/>
     <text x="65" y="67" fontFamily="Arial" fontSize="7" textAnchor="middle" fill={dark ? '#9CA3AF' : '#6B7280'}>{label}</text>
@@ -261,7 +261,7 @@ const SmallScooter = () => (
     <circle cx="10" cy="26" r="6" fill="#6B7280"/>
     <circle cx="50" cy="26" r="9" fill="#374151"/>
     <circle cx="50" cy="26" r="6" fill="#6B7280"/>
-    <path d="M10 17 L18 5 L42 3 L52 17 Z" fill="#4F46E5"/>
+    <path d="M10 17 L18 5 L42 3 L52 17 Z" fill="#2A195C"/>
     <rect x="20" y="17" width="32" height="3" fill="#374151" rx="1"/>
   </svg>
 );
@@ -451,7 +451,7 @@ export default function RetainRiderReviewPage() {
                     <div className="rv-sec">
                       <div className="rv-sec-hdr">
                         <div className="rv-sec-title">
-                          <span style={{ color: '#4F46E5', display: 'flex' }}><IUser s={15}/></span>
+                          <span style={{ color: '#2A195C', display: 'flex' }}><IUser s={15}/></span>
                           Rider Details
                         </div>
                         <Link href="/retain-rider" className="rv-edit-btn" style={{textDecoration:'none'}}><IPen/> Edit</Link>
@@ -475,7 +475,7 @@ export default function RetainRiderReviewPage() {
                     <div className="rv-sec">
                       <div className="rv-sec-hdr">
                         <div className="rv-sec-title">
-                          <span style={{ color: '#4F46E5', display: 'flex' }}><IClipboard s={15}/></span>
+                          <span style={{ color: '#2A195C', display: 'flex' }}><IClipboard s={15}/></span>
                           Rental Details
                         </div>
                         <Link href="/retain-rider/rental" className="rv-edit-btn" style={{textDecoration:'none'}}><IPen/> Edit</Link>
@@ -499,7 +499,7 @@ export default function RetainRiderReviewPage() {
                     <div className="rv-sec">
                       <div className="rv-sec-hdr">
                         <div className="rv-sec-title">
-                          <span style={{ color: '#4F46E5', display: 'flex' }}><IReceipt s={15}/></span>
+                          <span style={{ color: '#2A195C', display: 'flex' }}><IReceipt s={15}/></span>
                           Payment Summary
                         </div>
                         <Link href="/retain-rider/payment" className="rv-edit-btn" style={{textDecoration:'none'}}><IPen/> Edit</Link>
@@ -530,7 +530,7 @@ export default function RetainRiderReviewPage() {
                   <div className="rv-sec">
                     <div className="rv-sec-hdr">
                       <div className="rv-sec-title">
-                        <span style={{ color: '#4F46E5', display: 'flex' }}><IShield s={15}/></span>
+                        <span style={{ color: '#2A195C', display: 'flex' }}><IShield s={15}/></span>
                         Vehicle &amp; Battery
                       </div>
                       <Link href="/retain-rider/rental" className="rv-edit-btn" style={{textDecoration:'none'}}><IPen/> Edit</Link>
@@ -589,7 +589,7 @@ export default function RetainRiderReviewPage() {
                     <div className="rv-sec" style={{ borderRight: '1px solid #F3F4F6' }}>
                       <div className="rv-sec-hdr">
                         <div className="rv-sec-title">
-                          <span style={{ color: '#4F46E5', display: 'flex' }}><IFile s={15}/></span>
+                          <span style={{ color: '#2A195C', display: 'flex' }}><IFile s={15}/></span>
                           Documents Summary
                         </div>
                         <Link href="/retain-rider/documents" className="rv-edit-btn" style={{textDecoration:'none'}}><IPen/> Edit</Link>
@@ -615,7 +615,7 @@ export default function RetainRiderReviewPage() {
                     <div className="rv-sec">
                       <div className="rv-sec-hdr">
                         <div className="rv-sec-title">
-                          <span style={{ color: '#4F46E5', display: 'flex' }}><IShield s={15}/></span>
+                          <span style={{ color: '#2A195C', display: 'flex' }}><IShield s={15}/></span>
                           Terms &amp; Conditions
                         </div>
                         <Link href="/retain-rider/documents" className="rv-edit-btn" style={{textDecoration:'none'}}><IPen/> Edit</Link>
@@ -623,20 +623,20 @@ export default function RetainRiderReviewPage() {
                       {/* Checkbox row */}
                       <div style={{ display: 'flex', alignItems: 'flex-start', gap: 10, marginBottom: 10 }}>
                         <div style={{
-                          width: 18, height: 18, borderRadius: 5, border: '2px solid #4F46E5',
-                          background: '#4F46E5', display: 'flex', alignItems: 'center',
+                          width: 18, height: 18, borderRadius: 5, border: '2px solid #2A195C',
+                          background: '#2A195C', display: 'flex', alignItems: 'center',
                           justifyContent: 'center', flexShrink: 0, marginTop: 1
                         }}>
                           <ICheck s={11}/>
                         </div>
                         <span style={{ fontSize: 13, color: '#374151', lineHeight: 1.5 }}>
                           I have read, understood and agree to the{' '}
-                          <span style={{ color: '#4F46E5', fontWeight: 600 }}>Rider Terms &amp; Conditions.</span>
+                          <span style={{ color: '#2A195C', fontWeight: 600 }}>Rider Terms &amp; Conditions.</span>
                         </span>
                       </div>
                       <button style={{
                         display: 'inline-flex', alignItems: 'center', gap: 5,
-                        fontSize: 13, fontWeight: 600, color: '#4F46E5',
+                        fontSize: 13, fontWeight: 600, color: '#2A195C',
                         cursor: 'pointer', border: 'none', background: 'none',
                         fontFamily: 'inherit', padding: 0, marginBottom: 14
                       }}>

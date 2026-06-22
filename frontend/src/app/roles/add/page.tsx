@@ -14,7 +14,7 @@ const CSS = `
 .role-bc-link { color: #64748B; text-decoration: none; cursor: pointer; }
 .role-bc-link:hover { color: #2a195c; }
 .role-bc-sep { color: #CBD5E1; }
-.role-bc-curr { color: #4F46E5; }
+.role-bc-curr { color: #2A195C; }
 
 /* Header & actions */
 .role-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 4px; }

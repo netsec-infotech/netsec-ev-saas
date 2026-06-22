@@ -24,7 +24,7 @@ const CSS = `
 
 /* Header title */
 .pk-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-top: 4px; }
-.pk-back-link { display: flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 700; color: #4F46E5; text-decoration: none; cursor: pointer; margin-bottom: 6px; }
+.pk-back-link { display: flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 700; color: #2A195C; text-decoration: none; cursor: pointer; margin-bottom: 6px; }
 .pk-back-link:hover { text-decoration: underline; }
 .pk-h1 { font-size: 24px; font-weight: 800; color: #0F172A; margin: 0 0 6px; letter-spacing: -0.02em; }
 .pk-sub { font-size: 13.5px; color: #64748B; margin: 0; font-weight: 400; }
@@ -580,7 +580,7 @@ export default function EditPackagePage() {
                                 </select>
                               </td>
                               <td style={{ fontWeight: '600' }}>—</td>
-                              <td className="pk-limits-tbl-strong" style={{ color: '#4F46E5' }}>₹100 / Vehicle</td>
+                              <td className="pk-limits-tbl-strong" style={{ color: '#2A195C' }}>₹100 / Vehicle</td>
                             </tr>
                             <tr>
                               <td className="pk-limits-tbl-strong">Additional Renters</td>
@@ -591,7 +591,7 @@ export default function EditPackagePage() {
                                 </select>
                               </td>
                               <td style={{ fontWeight: '600' }}>—</td>
-                              <td className="pk-limits-tbl-strong" style={{ color: '#4F46E5' }}>₹20 / Renter</td>
+                              <td className="pk-limits-tbl-strong" style={{ color: '#2A195C' }}>₹20 / Renter</td>
                             </tr>
                             <tr>
                               <td className="pk-limits-tbl-strong">Additional Storage</td>
@@ -602,7 +602,7 @@ export default function EditPackagePage() {
                                 </select>
                               </td>
                               <td style={{ fontWeight: '600' }}>—</td>
-                              <td className="pk-limits-tbl-strong" style={{ color: '#4F46E5' }}>₹10 / GB</td>
+                              <td className="pk-limits-tbl-strong" style={{ color: '#2A195C' }}>₹10 / GB</td>
                             </tr>
                             <tr>
                               <td className="pk-limits-tbl-strong">SMS Notifications</td>
@@ -613,7 +613,7 @@ export default function EditPackagePage() {
                                 </select>
                               </td>
                               <td style={{ fontWeight: '600' }}>—</td>
-                              <td className="pk-limits-tbl-strong" style={{ color: '#4F46E5' }}>₹0.10 / SMS</td>
+                              <td className="pk-limits-tbl-strong" style={{ color: '#2A195C' }}>₹0.10 / SMS</td>
                             </tr>
                             <tr>
                               <td className="pk-limits-tbl-strong">Email Notifications</td>
@@ -624,7 +624,7 @@ export default function EditPackagePage() {
                                 </select>
                               </td>
                               <td style={{ fontWeight: '600' }}>—</td>
-                              <td className="pk-limits-tbl-strong" style={{ color: '#4F46E5' }}>₹0.05 / Email</td>
+                              <td className="pk-limits-tbl-strong" style={{ color: '#2A195C' }}>₹0.05 / Email</td>
                             </tr>
                           </tbody>
                         </table>

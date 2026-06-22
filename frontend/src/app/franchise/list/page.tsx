@@ -394,7 +394,7 @@ export default function FranchiseManagementPage() {
                   <tbody>
                     {filtered.map(row => (
                       <tr key={row.code}>
-                        <td style={{ fontWeight: '700', color: '#4F46E5' }}>{row.code}</td>
+                        <td style={{ fontWeight: '700', color: '#2A195C' }}>{row.code}</td>
                         <td style={{ fontWeight: '700', color: '#1E293B' }}>{row.name}</td>
                         <td style={{ fontWeight: '500' }}>{row.ownerName}</td>
                         <td style={{ color: '#475569', fontWeight: '500' }}>{row.zone}</td>

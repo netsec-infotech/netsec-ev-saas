@@ -26,9 +26,9 @@ const CSS = `
 /* breadcrumb */
 .vm-bc{display:flex;align-items:center;gap:6px;padding:14px 0 0;font-size:12px;color:#9CA3AF;}
 .vm-bc a{color:#9CA3AF;text-decoration:none;}
-.vm-bc a:hover{color:#4F46E5;}
+.vm-bc a:hover{color:#2A195C;}
 .vm-bc-sep{color:#D1D5DB;}
-.vm-bc-cur{color:#4F46E5;font-weight:600;}
+.vm-bc-cur{color:#2A195C;font-weight:600;}
 
 /* Header Title row */
 .vm-title-row{display:flex;align-items:flex-start;justify-content:space-between;margin:12px 0 18px;gap:16px;}
@@ -36,20 +36,20 @@ const CSS = `
 .vm-sub{font-size:13px;color:#6B7280;margin:0;}
 .vm-hdr-actions{display:flex;align-items:center;gap:10px;}
 .vm-select-dropdown{padding:9px 14px;border:1.5px solid #E5E7EB;border-radius:10px;font-size:13px;color:#374151;background:#fff;font-weight:600;cursor:pointer;outline:none;transition:border-color .15s;}
-.vm-select-dropdown:focus{border-color:#4F46E5;}
+.vm-select-dropdown:focus{border-color:#2A195C;}
 .vm-hdr-btn{display:flex;align-items:center;gap:7px;padding:9px 16px;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;font-size:13px;font-weight:600;color:#374151;cursor:pointer;font-family:inherit;box-shadow:0 1px 3px rgba(0,0,0,.06);transition:all .15s;}
-.vm-hdr-btn:hover{border-color:#4F46E5;color:#4F46E5;}
+.vm-hdr-btn:hover{border-color:#2A195C;color:#2A195C;}
 
 /* Stats cards (6 in a row) */
 .vm-stats-row{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:20px;}
 .vm-stat-card{background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 3px rgba(0,0,0,.05);}
-.vm-stat-ic{width:36px;height:36px;border-radius:8px;background:#F5F3FF;color:#4F46E5;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.vm-stat-ic{width:36px;height:36px;border-radius:8px;background:#F5F3FF;color:#2A195C;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .vm-stat-info{min-width:0;flex:1;}
 .vm-stat-lbl{font-size:10.5px;color:#9CA3AF;font-weight:600;margin-bottom:2px;display:flex;align-items:center;gap:5px;}
 .vm-stat-val{font-size:18px;font-weight:800;color:#111827;line-height:1;}
 .vm-dot{width:7px;height:7px;border-radius:50%;display:inline-block;}
 .vm-dot.online{background:#10B981;}
-.vm-dot.in_ride{background:#4F46E5;}
+.vm-dot.in_ride{background:#2A195C;}
 .vm-dot.offline{background:#9CA3AF;}
 .vm-dot.low_bat{background:#F59E0B;}
 .vm-dot.locked{background:#EF4444;}
@@ -64,17 +64,17 @@ const CSS = `
 /* Floating map controls (left side) */
 .vm-map-ctrls{position:absolute;top:20px;left:20px;display:flex;flex-direction:column;gap:8px;z-index:1000;}
 .vm-ctrl-btn{width:40px;height:48px;border-radius:10px;background:#fff;border:1px solid #E5E7EB;box-shadow:0 2px 8px rgba(0,0,0,.08);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;color:#4B5563;font-size:9px;font-weight:700;transition:all .15s;}
-.vm-ctrl-btn:hover{color:#4F46E5;border-color:#C7D2FE;}
-.vm-ctrl-btn.active{background:#4F46E5;color:#fff;border-color:#4F46E5;}
+.vm-ctrl-btn:hover{color:#2A195C;border-color:#C7D2FE;}
+.vm-ctrl-btn.active{background:#2A195C;color:#fff;border-color:#2A195C;}
 .vm-ctrl-btn-icon{display:flex;}
 
 /* Zoom buttons (bottom-left) */
 .vm-zoom-ctrls{position:absolute;bottom:20px;left:20px;display:flex;flex-direction:column;gap:6px;z-index:1000;}
 .vm-zoom-btn{width:36px;height:36px;border-radius:8px;background:#fff;border:1px solid #E5E7EB;box-shadow:0 2px 8px rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;cursor:pointer;color:#374151;font-size:18px;font-weight:700;transition:all .15s;}
-.vm-zoom-btn:hover{border-color:#4F46E5;color:#4F46E5;}
+.vm-zoom-btn:hover{border-color:#2A195C;color:#2A195C;}
 
 /* Map Loading Overlay */
-.vm-map-loading{position:absolute;inset:0;background:rgba(243,244,249,0.9);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:20;font-size:14px;color:#4F46E5;font-weight:600;gap:12px;}
+.vm-map-loading{position:absolute;inset:0;background:rgba(243,244,249,0.9);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:20;font-size:14px;color:#2A195C;font-weight:600;gap:12px;}
 .vm-map-search{position:absolute;top:20px;right:20px;z-index:1000;display:flex;align-items:center;background:#fff;border:1.5px solid #E2E8F0;border-radius:10px;padding:6px 12px;width:220px;box-shadow:0 4px 12px rgba(0,0,0,.08);}
 .vm-map-search-input{border:none;font-size:12.5px;outline:none;width:100%;color:#1E293B;font-weight:500;margin-left:8px;}
 .vm-search-dropdown{position:absolute;top:46px;left:0;right:0;background:#fff;border:1px solid #E2E8F0;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.08);max-height:150px;overflow-y:auto;z-index:1010;}
@@ -82,7 +82,7 @@ const CSS = `
 .vm-search-item:last-child{border-bottom:none;}
 .vm-search-item:hover{background:#F5F3FF;color:#2a195c;}
 .vm-search-item-empty{padding:8px 12px;font-size:12px;color:#94A3B8;text-align:center;}
-.vm-spinner{width:32px;height:32px;border:3px solid #E5E7EB;border-top-color:#4F46E5;border-radius:50%;animation:spin 0.8s linear infinite;}
+.vm-spinner{width:32px;height:32px;border:3px solid #E5E7EB;border-top-color:#2A195C;border-radius:50%;animation:spin 0.8s linear infinite;}
 @keyframes spin{to{transform:rotate(360deg);}}
 
 /* Map pin tags overlay */
@@ -92,7 +92,7 @@ const CSS = `
 .vm-pin-sub{font-size:9px;color:#9CA3AF;margin-top:1px;font-weight:500;}
 .vm-pin-orb{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.25);border:2px solid #fff;transition:transform .2s;color:#fff;}
 .vm-pin-orb.online{background:#10B981;}
-.vm-pin-orb.in_ride{background:#4F46E5;}
+.vm-pin-orb.in_ride{background:#2A195C;}
 .vm-pin-orb.offline{background:#9CA3AF;}
 .vm-pin-orb.low_bat{background:#F59E0B;}
 .vm-pin-orb.selected-ring{box-shadow:0 0 0 4px rgba(79,70,229,0.3), 0 2px 6px rgba(0,0,0,0.25);}
@@ -120,7 +120,7 @@ const CSS = `
 /* Action grid (2x4 buttons) */
 .vm-action-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:2px;}
 .vm-act-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:8px 4px;border:1.5px solid #E5E7EB;border-radius:8px;background:#fff;cursor:pointer;transition:all .15s;}
-.vm-act-btn:hover{border-color:#4F46E5;color:#4F46E5;background:#F5F3FF;}
+.vm-act-btn:hover{border-color:#2A195C;color:#2A195C;background:#F5F3FF;}
 .vm-act-btn-lbl{font-size:9.5px;font-weight:700;color:#374151;}
 
 /* Ride details section */
@@ -131,7 +131,7 @@ const CSS = `
 .vm-ride-val{font-weight:600;color:#111827;text-align:right;}
 .vm-ride-val-dot{display:flex;align-items:center;gap:6px;}
 
-.vm-cta-btn{width:100%;padding:10px;background:#4F46E5;color:#fff;border-radius:8px;font-size:12.5px;font-weight:700;cursor:pointer;border:none;font-family:inherit;text-align:center;text-decoration:none;box-shadow:0 2px 6px rgba(79,70,229,.35);transition:background .15s;margin-top:auto;}
+.vm-cta-btn{width:100%;padding:10px;background:#2A195C;color:#fff;border-radius:8px;font-size:12.5px;font-weight:700;cursor:pointer;border:none;font-family:inherit;text-align:center;text-decoration:none;box-shadow:0 2px 6px rgba(79,70,229,.35);transition:background .15s;margin-top:auto;}
 .vm-cta-btn:hover{background:#4338CA;}
 
 /* Bottom Grid cards */
@@ -149,7 +149,7 @@ const CSS = `
 .vm-tl-item::before{content:'';position:absolute;left:-18px;top:5px;width:9px;height:9px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.2);z-index:2;}
 .vm-tl-item.online::before{background:#10B981;}
 .vm-tl-item.warning::before{background:#F59E0B;}
-.vm-tl-item.in_ride::before{background:#4F46E5;}
+.vm-tl-item.in_ride::before{background:#2A195C;}
 .vm-tl-time{font-size:10.5px;color:#9CA3AF;font-weight:600;width:64px;flex-shrink:0;}
 .vm-tl-content{flex:1;min-width:0;padding-left:8px;}
 .vm-tl-tit{font-size:12px;font-weight:700;color:#111827;margin-bottom:2px;}
@@ -160,12 +160,12 @@ const CSS = `
 .vm-pb-ctrls{border-top:1px solid #F3F4F6;padding-top:12px;display:flex;flex-direction:column;gap:10px;}
 .vm-pb-slider-row{display:flex;align-items:center;gap:12px;}
 .vm-pb-slider{flex:1;height:5px;border-radius:3px;background:#E5E7EB;position:relative;cursor:pointer;}
-.vm-pb-fill{height:100%;border-radius:3px;background:#4F46E5;}
-.vm-pb-knob{position:absolute;top:-4px;width:13px;height:13px;border-radius:50%;background:#fff;border:2px solid #4F46E5;box-shadow:0 1px 3px rgba(0,0,0,.3);cursor:pointer;transform:translateX(-50%);}
+.vm-pb-fill{height:100%;border-radius:3px;background:#2A195C;}
+.vm-pb-knob{position:absolute;top:-4px;width:13px;height:13px;border-radius:50%;background:#fff;border:2px solid #2A195C;box-shadow:0 1px 3px rgba(0,0,0,.3);cursor:pointer;transform:translateX(-50%);}
 .vm-pb-time-lbl{font-size:10.5px;color:#6B7280;font-weight:600;min-width:68px;text-align:right;font-family:monospace;}
 .vm-pb-buttons{display:flex;align-items:center;justify-content:space-between;}
 .vm-pb-btn-group{display:flex;align-items:center;gap:12px;}
-.vm-play-btn{width:32px;height:32px;border-radius:50%;background:#4F46E5;color:#fff;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 6px rgba(79,70,229,.3);}
+.vm-play-btn{width:32px;height:32px;border-radius:50%;background:#2A195C;color:#fff;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 6px rgba(79,70,229,.3);}
 .vm-play-btn:hover{background:#4338CA;}
 
 /* Active rides list items */
@@ -175,9 +175,9 @@ const CSS = `
 .vm-ride-info{flex:1;min-width:0;}
 .vm-ride-name-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:1px;}
 .vm-ride-name{font-size:12px;font-weight:700;color:#111827;}
-.vm-ride-code{font-size:11px;color:#4F46E5;font-weight:700;}
+.vm-ride-code{font-size:11px;color:#2A195C;font-weight:700;}
 .vm-ride-path{font-size:10.5px;color:#6B7280;display:flex;align-items:center;gap:4px;}
-.vm-ride-badge{font-size:9.5px;font-weight:700;background:#EEF2FF;color:#4F46E5;padding:2px 7px;border-radius:5px;}
+.vm-ride-badge{font-size:9.5px;font-weight:700;background:#EEF2FF;color:#2A195C;padding:2px 7px;border-radius:5px;}
 
 /* Leaflet overrides */
 .custom-map-label{border:none !important;background:none !important;}
@@ -670,8 +670,8 @@ export default function VehicleMapPage() {
       
       // CP Geofence circle
       cpGeofencePolygon.current = L.circle([28.6304, 77.2177], {
-        color: '#4F46E5',
-        fillColor: '#4F46E5',
+        color: '#2A195C',
+        fillColor: '#2A195C',
         fillOpacity: 0.12,
         radius: 650,
         weight: 1.5,
@@ -698,7 +698,7 @@ export default function VehicleMapPage() {
       L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(pbMapInstance.current);
       
       pbPolyline.current = L.polyline([], {
-        color: '#4F46E5',
+        color: '#2A195C',
         weight: 4,
         opacity: 0.9
       }).addTo(pbMapInstance.current);
@@ -708,7 +708,7 @@ export default function VehicleMapPage() {
         className: 'scooter-pin-playback pb-marker-dot',
         html: `
           <div class="vm-pin-overlay selected">
-            <div class="vm-pin-orb in_ride selected-ring" style="background: #fff; padding: 2px; border: 2px solid #4F46E5;">
+            <div class="vm-pin-orb in_ride selected-ring" style="background: #fff; padding: 2px; border: 2px solid #2A195C;">
               <img src="/evegah_scooter.png" style="width: 100%; height: 100%; object-fit: contain;" alt="scooter" />
             </div>
           </div>
@@ -756,7 +756,7 @@ export default function VehicleMapPage() {
     Object.values(activeEvList).forEach(ev => {
       const isSel = ev.code === selectedEV;
       const statusCls = ev.status === 'In Ride' ? 'in_ride' : ev.status === 'Online' ? 'online' : ev.status === 'Low Battery' ? 'low_bat' : 'offline';
-      const borderColors = ev.status === 'In Ride' ? '#4F46E5' : ev.status === 'Online' ? '#10B981' : ev.status === 'Low Battery' ? '#F59E0B' : '#9CA3AF';
+      const borderColors = ev.status === 'In Ride' ? '#2A195C' : ev.status === 'Online' ? '#10B981' : ev.status === 'Low Battery' ? '#F59E0B' : '#9CA3AF';
       
       const pinIcon = L.divIcon({
         className: 'scooter-pin-live',
@@ -804,7 +804,7 @@ export default function VehicleMapPage() {
             [28.6304, 77.2177]
           ];
       const path1 = L.polyline(pts, {
-        color: '#4F46E5',
+        color: '#2A195C',
         weight: 3.5,
         opacity: 0.8,
         dashArray: '5, 5'
@@ -1080,7 +1080,7 @@ export default function VehicleMapPage() {
                     </div>
                     <div className="vm-spec-box">
                       <span className="vm-spec-lbl">Current Ride</span>
-                      <Link href={`/vehicles/detail`} className="vm-spec-val" style={{ color: '#4F46E5', textDecoration: 'underline' }}>{currentEVData.rideId}</Link>
+                      <Link href={`/vehicles/detail`} className="vm-spec-val" style={{ color: '#2A195C', textDecoration: 'underline' }}>{currentEVData.rideId}</Link>
                     </div>
                     <div className="vm-spec-box">
                       <span className="vm-spec-lbl">Renter</span>
@@ -1120,7 +1120,7 @@ export default function VehicleMapPage() {
                     <div className="vm-ride-row">
                       <span className="vm-ride-lbl">Destination</span>
                       <span className="vm-ride-val vm-ride-val-dot">
-                        <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#4F46E5' }}/>
+                        <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#2A195C' }}/>
                         {currentEVData.destination}
                       </span>
                     </div>
@@ -1148,7 +1148,7 @@ export default function VehicleMapPage() {
               <div className="vm-bot-card">
                 <div className="vm-bot-hdr">
                   <div className="vm-bot-title">Vehicle History ({currentEVData.code})</div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 11.5, color: '#4F46E5', fontWeight: 600 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 11.5, color: '#2A195C', fontWeight: 600 }}>
                     <ICalendar/> 20 May 2024
                   </div>
                 </div>
@@ -1171,7 +1171,7 @@ export default function VehicleMapPage() {
               <div className="vm-bot-card">
                 <div className="vm-bot-hdr">
                   <div className="vm-bot-title">Path Playback</div>
-                  <a href="#" style={{ fontSize: 11.5, color: '#4F46E5', fontWeight: 700, textDecoration: 'none' }}>Full History</a>
+                  <a href="#" style={{ fontSize: 11.5, color: '#2A195C', fontWeight: 700, textDecoration: 'none' }}>Full History</a>
                 </div>
                 <div className="vm-bot-body">
                   
@@ -1233,7 +1233,7 @@ export default function VehicleMapPage() {
               <div className="vm-bot-card">
                 <div className="vm-bot-hdr">
                   <div className="vm-bot-title">Active Rides ({Object.keys(activeEvList).length})</div>
-                  <Link href="/vehicles/active" style={{ fontSize: 11.5, color: '#4F46E5', fontWeight: 700, textDecoration: 'none' }}>View All</Link>
+                  <Link href="/vehicles/active" style={{ fontSize: 11.5, color: '#2A195C', fontWeight: 700, textDecoration: 'none' }}>View All</Link>
                 </div>
                 <div className="vm-bot-body">
                   

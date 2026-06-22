@@ -12,9 +12,9 @@ const CSS = `
 /* Breadcrumb */
 .bd-bc { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #64748B; font-weight: 500; }
 .bd-bc a { color: #64748B; text-decoration: none; }
-.bd-bc a:hover { color: #4F46E5; }
+.bd-bc a:hover { color: #2A195C; }
 .bd-bc-sep { color: #94A3B8; }
-.bd-bc-cur { color: #4F46E5; font-weight: 600; }
+.bd-bc-cur { color: #2A195C; font-weight: 600; }
 
 /* Header block */
 .bd-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-top: 4px; }
@@ -50,8 +50,8 @@ const CSS = `
 /* Tab system */
 .bd-tabs-bar { display: flex; gap: 20px; border-bottom: 1.5px solid #E2E8F0; padding-bottom: 1px; margin-top: 8px; }
 .bd-tab-btn { font-size: 13px; font-weight: 700; color: #64748B; background: none; border: none; border-bottom: 3px solid transparent; padding: 8px 4px 10px; cursor: pointer; transition: all .15s; }
-.bd-tab-btn:hover { color: #4F46E5; }
-.bd-tab-btn.active { color: #4F46E5; border-bottom-color: #4F46E5; }
+.bd-tab-btn:hover { color: #2A195C; }
+.bd-tab-btn.active { color: #2A195C; border-bottom-color: #2A195C; }
 
 /* 4 Column Row 1 Grid */
 .bd-grid-4col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }

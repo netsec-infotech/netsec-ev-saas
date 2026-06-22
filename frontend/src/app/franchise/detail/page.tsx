@@ -11,9 +11,9 @@ const CSS = `
 /* Breadcrumb */
 .fd-bc { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #64748B; font-weight: 500; }
 .fd-bc a { color: #64748B; text-decoration: none; }
-.fd-bc a:hover { color: #4F46E5; }
+.fd-bc a:hover { color: #2A195C; }
 .fd-bc-sep { color: #94A3B8; }
-.fd-bc-cur { color: #4F46E5; font-weight: 600; }
+.fd-bc-cur { color: #2A195C; font-weight: 600; }
 
 /* Top Header Profile Card */
 .fd-profile-card { background: #fff; border: 1px solid #E2E8F0; border-radius: 16px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,.02); display: grid; grid-template-columns: 220px 1.5fr 1.25fr 1fr; gap: 24px; align-items: start; }
@@ -113,12 +113,12 @@ const CSS = `
 .doc-tit { font-size: 12px; font-weight: 700; color: #334155; }
 .doc-date { font-size: 10px; color: #94A3B8; font-weight: 500; margin-top: 1px; }
 .doc-action { color: #64748B; background: none; border: none; cursor: pointer; padding: 4px; }
-.doc-action:hover { color: #4F46E5; }
+.doc-action:hover { color: #2A195C; }
 
 /* SVG Map simulation */
 .map-placeholder { width: 100%; height: 110px; border-radius: 8px; background: #E2E8F0; position: relative; overflow: hidden; border: 1px solid #CBD5E1; }
 .map-pulsing-pin { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; }
-.map-pin-circle { width: 14px; height: 14px; border-radius: 50%; background: #4F46E5; border: 2px solid #fff; box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.7); animation: mapPulse 1.4s infinite cubic-bezier(0.66, 0, 0, 1); }
+.map-pin-circle { width: 14px; height: 14px; border-radius: 50%; background: #2A195C; border: 2px solid #fff; box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.7); animation: mapPulse 1.4s infinite cubic-bezier(0.66, 0, 0, 1); }
 @keyframes mapPulse { to { box-shadow: 0 0 0 12px rgba(79, 70, 229, 0); } }
 `;
 
@@ -574,7 +574,7 @@ export default function FranchiseDetailPage() {
                         {/* Marker Pin */}
                         <g transform="translate(200, 40)">
                           <circle cx="0" cy="0" r="14" fill="rgba(79, 70, 229, 0.18)" />
-                          <circle cx="0" cy="0" r="7" fill="#4F46E5" stroke="#fff" strokeWidth="1.8" />
+                          <circle cx="0" cy="0" r="7" fill="#2A195C" stroke="#fff" strokeWidth="1.8" />
                         </g>
                       </svg>
                       <div style={{ position: 'absolute', bottom: '6px', left: '8px', background: 'rgba(255,255,255,0.9)', padding: '2px 6px', borderRadius: '4px', fontSize: '9.5px', fontWeight: 'bold', border: '1px solid #E2E8F0', color: '#334155' }}>
@@ -600,7 +600,7 @@ export default function FranchiseDetailPage() {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', flex: 1, justifyContent: 'center' }}>
                       <div style={{ fontSize: '13.5px', fontWeight: '700', color: '#0F172A' }}>Rahul Sharma</div>
                       <div style={{ fontSize: '11.5px', color: '#64748B', fontWeight: '600' }}>Hub Manager</div>
-                      <div style={{ fontSize: '12.5px', color: '#4F46E5', fontWeight: '700', display: 'flex', alignItems: 'center', gap: '4px', marginTop: '4px' }}>
+                      <div style={{ fontSize: '12.5px', color: '#2A195C', fontWeight: '700', display: 'flex', alignItems: 'center', gap: '4px', marginTop: '4px' }}>
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                         +91 98765 43210
                       </div>

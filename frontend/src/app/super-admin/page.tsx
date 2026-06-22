@@ -535,7 +535,7 @@ export default function SuperAdminDashboard() {
                       <circle cx="120" cy="40" r="5" fill="#6366F1" stroke="#fff" strokeWidth="1.5" />
                       <text x="120" y="33" fontSize="8" fill="#64748B" fontWeight="bold" textAnchor="middle">Karol Bagh</text>
                       
-                      <circle cx="210" cy="140" r="6" fill="#4F46E5" stroke="#fff" strokeWidth="2" />
+                      <circle cx="210" cy="140" r="6" fill="#2A195C" stroke="#fff" strokeWidth="2" />
                       <text x="210" y="128" fontSize="8.5" fill="#1E293B" fontWeight="800" textAnchor="middle">Connaught Place</text>
 
                       <circle cx="310" cy="160" r="5" fill="#6366F1" stroke="#fff" strokeWidth="1.5" />
